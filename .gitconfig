@@ -1,0 +1,8 @@
+[user]
+	email = sturpin677@gmail.com
+	name = Stephanie974
+
+[alias]
+    lg = "log --graph --pretty=format:'%C(#ff0000)%h -%C(#00ffff bold)%d%Creset %C(#eeeeff)%s %C(#00dd22)(%cr) %C(bold blue)<%an>' --abbrev-commit --date=relative"
+[credential]
+    helper = cache --timeout=86400

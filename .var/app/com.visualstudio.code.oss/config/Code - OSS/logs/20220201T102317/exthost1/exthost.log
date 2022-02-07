@@ -1,0 +1,22 @@
+[2022-02-01 10:23:19.780] [exthost] [info] extension host started
+[2022-02-01 10:23:19.824] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":false,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"onLanguage:html"}
+[2022-02-01 10:23:19.824] [exthost] [info] ExtensionService#loadCommonJSModule file:///app/share/code-oss/resources/app/extensions/emmet/dist/extension
+[2022-02-01 10:23:19.840] [exthost] [info] ExtensionService#_doActivateExtension vscode.html-language-features {"startup":false,"extensionId":{"value":"vscode.html-language-features","_lower":"vscode.html-language-features"},"activationEvent":"onLanguage:html"}
+[2022-02-01 10:23:19.840] [exthost] [info] ExtensionService#loadCommonJSModule file:///app/share/code-oss/resources/app/extensions/html-language-features/client/dist/htmlMain
+[2022-02-01 10:23:19.856] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2022-02-01 10:23:19.856] [exthost] [info] ExtensionService#loadCommonJSModule file:///app/share/code-oss/resources/app/extensions/debug-auto-launch/dist/extension
+[2022-02-01 10:23:19.859] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.git","_lower":"vscode.git"},"activationEvent":"*"}
+[2022-02-01 10:23:19.859] [exthost] [info] ExtensionService#loadCommonJSModule file:///app/share/code-oss/resources/app/extensions/git/dist/main
+[2022-02-01 10:23:19.888] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"*"}
+[2022-02-01 10:23:19.888] [exthost] [info] ExtensionService#loadCommonJSModule file:///app/share/code-oss/resources/app/extensions/merge-conflict/dist/extension
+[2022-02-01 10:23:19.892] [exthost] [info] ExtensionService#_doActivateExtension vscode.search-result {"startup":true,"extensionId":{"value":"vscode.search-result","_lower":"vscode.search-result"},"activationEvent":"*"}
+[2022-02-01 10:23:19.892] [exthost] [info] ExtensionService#loadCommonJSModule file:///app/share/code-oss/resources/app/extensions/search-result/dist/extension.js
+[2022-02-01 10:23:19.893] [exthost] [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode {"startup":true,"extensionId":{"value":"esbenp.prettier-vscode","_lower":"esbenp.prettier-vscode"},"activationEvent":"*"}
+[2022-02-01 10:23:19.894] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension
+[2022-02-01 10:23:19.986] [exthost] [info] eager extensions activated
+[2022-02-01 10:23:36.201] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"extensionId":{"value":"vscode.typescript-language-features","_lower":"vscode.typescript-language-features"},"activationEvent":"onLanguage:javascript"}
+[2022-02-01 10:23:36.201] [exthost] [info] ExtensionService#loadCommonJSModule file:///app/share/code-oss/resources/app/extensions/typescript-language-features/dist/extension
+[2022-02-01 10:23:42.174] [exthost] [info] ExtensionService#_doActivateExtension vscode.css-language-features {"startup":false,"extensionId":{"value":"vscode.css-language-features","_lower":"vscode.css-language-features"},"activationEvent":"onLanguage:css"}
+[2022-02-01 10:23:42.174] [exthost] [info] ExtensionService#loadCommonJSModule file:///app/share/code-oss/resources/app/extensions/css-language-features/client/dist/cssMain
+[2022-02-01 10:48:26.652] [exthost] [info] ExtensionService#_doActivateExtension vscode.extension-editing {"startup":false,"extensionId":{"value":"vscode.extension-editing","_lower":"vscode.extension-editing"},"activationEvent":"onLanguage:typescript"}
+[2022-02-01 10:48:26.653] [exthost] [info] ExtensionService#loadCommonJSModule file:///app/share/code-oss/resources/app/extensions/extension-editing/dist/extension

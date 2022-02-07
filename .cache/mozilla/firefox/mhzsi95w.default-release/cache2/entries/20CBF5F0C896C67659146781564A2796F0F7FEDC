@@ -1,0 +1,384 @@
+// ads loaded by passive cache busting
+window.advadsGAAjaxAds = {};
+
+// ads loaded by ajax cache busting
+window.advadsGAPassiveAds = {};
+
+( function( $ ) {
+    /**
+     * If cache-busting module is enabled.
+     * With 'document.ready' this function will be called after 'document.ready'
+     * from cache-busting when 'defer' attribute is added to scripts.
+     * It is too late, hence do not use 'document.ready'.
+     */
+    if ( typeof advanced_ads_pro !== 'undefined' ) {
+        advanced_ads_pro.observers.add( function( event ) {
+            // waiting for the moment when all passive cache-busting ads will be inserted into html
+            if ( event.event === 'inject_passive_ads' ) {
+				
+				var server = 'all';
+				if ( $.isArray( event.ad_ids ) && !event.ad_ids.length ) {
+					event.ad_ids = {};
+				}
+				advadsGAPassiveAds = advads_tracking_utils( 'concat', advadsGAPassiveAds, event.ad_ids );
+				var filteredIds = removeDelayedAdId( event.ad_ids );
+				
+                var advads_ad_ids;
+                if ( advadsTracking.method === 'frontend' ) {
+                    // cache-busting: off + cache-busting: passive
+                    advads_ad_ids = advads_tracking_utils( 'concat', advads_tracking_ads, filteredIds );
+                    // clean cache-busting: off
+                    advads_tracking_ads = [];
+                } else {
+                    // select only passive cache-busting ads
+                    advads_ad_ids = filteredIds;
+					server = 'passive';
+                }
+				
+				advads_track_ads( advads_ad_ids, server );
+				
+            }
+            if ( event.event === 'inject_ajax_ads' ) {
+				
+				if ( $.isArray( event.ad_ids ) && !event.ad_ids.length ) {
+					event.ad_ids = {};
+				}
+				
+				if ( 'ga' == advads_tracking_methods[ blogID ] ) {
+					
+					for ( var blogID in event.ad_ids ) {
+						
+						for ( var i in event.ad_ids[ blogID ] ) {
+							
+							if ( $( '[data-advadstrackid="' + event.ad_ids[ blogID ][ i ] + '"][data-advadstrackbid="' + blogID + '"]' ).length ) {
+								
+								var HTMLID = $( '[data-advadstrackid="' + event.ad_ids[ blogID ][ i ] + '"][data-advadstrackbid="' + blogID + '"]' ).attr( 'id' );
+								if ( 'undefined' != typeof advads_items.showed && -1 !== advads_items.showed.indexOf( HTMLID ) ) {
+									// this is a trigger-able ad. will be tracked on display if using frontend or ga method
+									continue;
+								} else {
+									if ( 'undefined' == typeof advadsGAAjaxAds[ blogID ] ) {
+										advadsGAAjaxAds[ blogID ] = [];
+									}
+									advadsGAAjaxAds[ blogID ].push( event.ad_ids[ blogID ][ i ] );
+								}
+								
+							}
+							
+						}
+						
+					}
+					advads_track_ads( advadsGAAjaxAds, 'analytics' );
+				}
+				
+			}
+        } );
+    }
+	
+	function triggerTrack( ev ) {
+		
+		var bid = $( ev.target ).attr( 'data-advadstrackbid' );
+		var id = parseInt( $( ev.target ).attr( 'data-advadstrackid' ) );
+		if ( ! bid ) {
+			return;
+		}
+		
+		if ( 'ga' == advads_tracking_methods[ bid ] || advads_tracking_parallel[ bid ] ) {
+			advads_gadelayed_track_event( ev );
+		} else {
+			$.post( advads_tracking_urls[bid],{ads:[id]}, function(response) {} );
+		}
+	}
+	
+	/**
+	 * On DOM ready.
+	 */
+	$(function(){
+		if ( 'undefined' != typeof advanced_ads_layer_settings ) {
+			$( document ).on( advanced_ads_layer_settings.layer_class + '-trigger', function ( ev ) {
+				triggerTrack( ev );
+			} );
+		}
+		if ( 'undefined' != typeof advanced_ads_sticky_check_position_fixed ) {
+			$( document ).on( 'advads-sticky-trigger', function ( ev ) {
+				triggerTrack( ev );
+			} );
+		}
+	});
+	
+}( jQuery ) );
+
+/**
+ * remove delayed ad ids
+ *
+ * @param [arr] ids, the original array of ids
+ * @return [arr] ids, the filtered array
+ */
+function removeDelayedAdId( ids ) {
+	if ( jQuery( '[data-advadstrackid]' ).length ) {
+		jQuery( '[data-advadstrackid]' ).each(function(){
+			var id = parseInt( jQuery( this ).attr( 'data-advadstrackid' ) );
+			var bid = parseInt( jQuery( this ).attr( 'data-advadstrackbid' ) );
+			if ( advads_tracking_utils( 'hasAd', ids ) ) {
+				if ( 'undefined' != typeof ids[bid] ) {
+					var index = ids[bid].indexOf( id );
+					if ( -1 != index ) {
+						ids[bid].splice( index, 1 );
+					}
+				}
+			}
+		});
+	}
+	return ids;
+}
+
+/**
+ * on DOM ready 
+ */
+jQuery(document).ready(function($){
+	if ( 'undefined' == typeof advads_tracking_ads ) return;
+	advads_tracking_ads = removeDelayedAdId( advads_tracking_ads );
+	
+    if ( typeof advanced_ads_pro === 'undefined' ) {
+		if ( advads_tracking_utils( 'hasAd', advads_tracking_ads ) ) {
+			for ( var bid in advads_tracking_ads ) {
+				if ( 'frontend' == advads_tracking_methods[bid] ) {
+					// cache-busting: off
+					advads_track_ads( advads_tracking_ads );
+					// clean cache-busting: off
+					advads_tracking_ads = {1:[]};
+				}
+			}
+		}
+    }
+	
+});
+
+jQuery( document ).on( 'advads_track_ads', function( e, ad_ids ) {
+    advads_track_ads( ad_ids );
+});
+
+/**
+ *  delayed tracking event
+ */
+function advads_gadelayed_track_event( ev ) {
+	/**
+	 * Retrieve the node with ad ids, can be the sticky/layer placement wrapper, or the ads themselves in case of groups 
+	 */
+	var $el = jQuery( ev.target );
+	var $vector = [];
+	if ( $el.attr( 'data-advadstrackid' ) ) {
+		$vector = $el;
+	} else {
+		$vector = $el.find( '[data-advadstrackid]' );
+	}
+	
+	if ( $vector.length ) {
+		var ids = {};
+		
+		// collect ad ids
+		$vector.each(function(){
+			var bid = parseInt( jQuery( this ).attr( 'data-advadstrackbid' ) );
+			if ( 'undefined' == typeof ids[bid] ) {
+				ids[bid] = [];
+			}
+			ids[bid].push( parseInt( jQuery( this ).attr( 'data-advadstrackid' ) ) );
+		});
+		if ( 'undefined' == typeof advadsGATracking.delayedAds ) {
+			advadsGATracking.delayedAds = {};
+		}
+		
+		// then send the delayed tracking request
+		advadsGATracking.delayedAds = advads_tracking_utils( 'concat', advadsGATracking.delayedAds, ids );
+		advads_track_ads( advadsGATracking.delayedAds, 'delayed' );
+	}
+}
+
+function advads_tracking_utils() {
+	if ( !arguments.hasOwnProperty( 0 ) ) return;
+	var fn = arguments[0];
+	var args = Array.prototype.slice.call( arguments, 1 );
+	
+	var utils = {
+		hasAd: function( data ) {
+			for ( var i in data ) {
+				if ( jQuery.isArray( data[i] ) ) {
+					if ( data[i].length ) {
+						return true;
+					}
+				}
+			}
+			return false;
+		},
+		concat: function() {
+			var result = {};
+			for ( var i in args ) {
+				for ( var j in args[i] ) {
+					if ( 'undefined' == typeof result[j] ) {
+						result[j] = args[i][j];
+					} else {
+						if ( 'function'== typeof result[j].concat ) {
+							result[j] = result[j].concat( args[i][j] );
+						}
+					}
+				}
+			}
+			return result;
+		},
+		blogUseGA: function( bid ) {
+			if ( 'ga' != advads_tracking_methods[bid] && false === advads_tracking_parallel[bid] ) {
+				return false;
+			}
+			if ( '' == advads_gatracking_uids[bid] ) {
+				return false;
+			}
+			return true;
+		},
+		adsByBlog: function( ads, bid ) {
+			var result = {};
+			if ( 'undefined' != typeof ads[bid] ) {
+				result[bid] = ads[bid];
+				return result;
+			}
+			return {};
+		},
+	};
+	if ( 'function' == typeof utils[fn] ) {
+		return utils[fn].apply( null, args );
+	}
+}
+
+/**
+ * track ads
+ *
+ * @param {arr} advads_ad_ids
+ * @param {str} server, to which server the tracking request should be sent all|local|analytics
+ */
+function advads_track_ads( advads_ad_ids, server ) {
+    if ( !advads_tracking_utils( 'hasAd', advads_ad_ids ) ) return; // do not send empty array
+	if ( 'undefined' == typeof server ) server = 'all';
+	
+	for ( var bid in advads_ad_ids ) {
+		var data = {
+			ads: advads_ad_ids[bid],
+		};
+        
+		if ( advads_tracking_utils( 'blogUseGA', bid ) ) {
+			// send tracking data to Google
+			if ( 'undefined' == typeof advadsGATracking ) {
+				window.advadsGATracking = {};
+			}
+			if ( 'undefined' == typeof advadsGATracking.deferedAds ) {
+				window.advadsGATracking.deferedAds = {};
+			}
+			if ( 'local' != server ) {
+				// ads ID-s already collected and will be sent automatically once the Analytics tracker is ready
+				advadsGATracking.deferedAds = advads_tracking_utils(
+					'concat',
+					advadsGATracking.deferedAds,
+					advads_tracking_utils( 'adsByBlog', advads_ad_ids, bid )
+				);
+				if ( 'delayed' == server ) {
+					
+					// "Delayed" tracking. Explicitly defined for placements that initially hide ads (timeout/scroll)
+					jQuery( document ).trigger( 'advadsGADelayedTrack' );
+					var passiveDelayed = {};
+					passiveDelayed[bid] = [];
+					// also track locally if needed ( passive cache busting )
+					if ( -1 == ['frontend','ga'].indexOf( advads_tracking_methods[bid] ) ) {
+						
+						if ( advads_tracking_utils( 'hasAd', advads_tracking_utils( 'adsByBlog', advadsGAPassiveAds, bid ) ) ) {
+							for ( var i in advads_ad_ids[bid] ) {
+								if ( -1 != advadsGAPassiveAds[bid].indexOf( advads_ad_ids[bid][i] ) ) {
+									passiveDelayed[bid].push( advads_ad_ids[i] );
+								}
+							}
+						}
+						if ( passiveDelayed[bid].length ) {
+							for( var j in passiveDelayed[bid] ) {
+								advadsGAPassiveAds[bid].splice( advadsGAPassiveAds[bid].indexOf( passiveDelayed[j] ), 1 );
+							}
+							jQuery.post( advads_tracking_urls[bid], {ads:passiveDelayed[bid]}, function(response) {} );
+						}
+					}
+					
+				} else {
+					
+					// normal passive cache busting in parallel tracking
+					if (
+						'passive' == server &&
+						advads_tracking_utils( 'hasAd', advads_tracking_utils( 'adsByBlog', advads_ad_ids, bid ) ) &&
+						-1 != ['onrequest','shutdown'].indexOf( advads_tracking_methods[bid] )
+					) {
+						jQuery.post( advads_tracking_urls[bid], data, function(response) {} );
+					}
+					
+					// the "usual" deferred tracking (once the GA tracker is ready)
+					jQuery( document ).trigger( 'advadsGADeferedTrack' );
+					
+				}
+				
+			}
+			
+			if ( advads_tracking_parallel[bid] && 'analytics' != server && advads_tracking_methods[bid] == 'frontend' ) {
+				// if concurrent tracking, also send data to the server
+				if ( advads_tracking_utils( 'hasAd', advads_tracking_utils( 'adsByBlog', advadsGAAjaxAds, bid ) ) ) {
+					
+					// remove first all ajax ads (already tracked)
+					var removed = [];
+					for ( var i in advadsGAAjaxAds[bid] ) {
+						var index = data.ads.indexOf( advadsGAAjaxAds[bid][i] );
+						if ( -1 != index ) {
+							data.ads.splice( index, 1 );
+							removed.push( advadsGAAjaxAds[bid][i] );
+						}
+					}
+					if ( removed.length ) {
+						for ( var j in removed ) {
+							index = advadsGAAjaxAds[bid].indexOf( removed[j] );
+							advadsGAAjaxAds[bid].splice( index, 1 );
+						}
+					}
+				}
+				
+				if ( data.ads.length ) {
+					jQuery.post( advads_tracking_urls[bid], data, function(response) {} );
+				}
+			}
+		} else {
+			if ( 'analytics' != server ) {
+				// just send tracking data to the server
+				jQuery.post( advads_tracking_urls[bid], {ads:data.ads}, function(response) {} );
+			}
+		}
+		
+	}
+	
+	
+}
+ÍÏUq$ù      a˜ìga˜ìhCÁ÷Ucÿ∆Á   ê    O^partitionKey=%28https%2Cphototrend.fr%29,:https://phototrend.fr/wp-content/plugins/advanced-ads-tracking/public/assets/js/script.js?ver=1.8.16 necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+Server: nginx/1.10.3
+Date: Mon, 31 Jan 2022 07:44:40 GMT
+Content-Type: application/javascript
+Content-Length: 10873
+Last-Modified: Thu, 13 Jun 2019 09:52:47 GMT
+ETag: "5d021cef-2a79"
+Expires: Tue, 31 Jan 2023 07:44:40 GMT
+Pragma: public
+Cache-Control: max-age=31536000, public, must-revalidate, proxy-revalidate
+X-Powered-By: W3 Total Cache/0.9.2.4
+Accept-Ranges: bytes
+ original-response-headers Server: nginx/1.10.3
+Date: Mon, 31 Jan 2022 07:44:40 GMT
+Content-Type: application/javascript
+Content-Length: 10873
+Last-Modified: Thu, 13 Jun 2019 09:52:47 GMT
+Connection: keep-alive
+ETag: "5d021cef-2a79"
+Expires: Tue, 31 Jan 2023 07:44:40 GMT
+Cache-Control: max-age=31536000
+Pragma: public
+Cache-Control: public, must-revalidate, proxy-revalidate
+X-Powered-By: W3 Total Cache/0.9.2.4
+Accept-Ranges: bytes
+ ctid 2 uncompressed-len 0 net-response-time-onstart 1183 net-response-time-onstop 1183   *y

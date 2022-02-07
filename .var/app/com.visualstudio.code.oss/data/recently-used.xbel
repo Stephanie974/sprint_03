@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/steph/Bureau/Maquette%20Lander/contact.html" added="2022-01-24T06:35:00Z" modified="2022-01-26T07:24:22Z" visited="2022-01-24T06:35:00Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code-oss" exec="&apos;code-oss %u&apos;" modified="2022-01-26T07:24:22Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Bureau/Maquette%20Lander/style.css" added="2022-01-24T06:35:21Z" modified="2022-01-27T05:48:13Z" visited="2022-01-24T06:35:21Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/css"/>
+        <bookmark:applications>
+          <bookmark:application name="code-oss" exec="&apos;code-oss %u&apos;" modified="2022-01-27T05:48:13Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Bureau/Sprint%2014%20JANVIER/Generateur%20aleatoire/css/index.html" added="2022-01-26T06:51:18Z" modified="2022-01-26T06:51:18Z" visited="2022-01-26T06:51:18Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code-oss" exec="&apos;code-oss %u&apos;" modified="2022-01-26T06:51:18Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Bureau/Sprint%2014%20JANVIER/Generateur%20aleatoire/css/style.css" added="2022-01-26T06:51:47Z" modified="2022-01-26T06:51:47Z" visited="2022-01-26T06:51:47Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/css"/>
+        <bookmark:applications>
+          <bookmark:application name="code-oss" exec="&apos;code-oss %u&apos;" modified="2022-01-26T06:51:47Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Documents/Maquette%20Lander/page%20fenetre/contact.html" added="2022-01-27T09:07:23Z" modified="2022-01-27T09:07:23Z" visited="2022-01-27T09:07:23Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code-oss" exec="&apos;code-oss %u&apos;" modified="2022-01-27T09:07:23Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Documents/Maquette%20Lander/page%20fenetre/style.css" added="2022-01-27T09:08:30Z" modified="2022-01-27T09:08:30Z" visited="2022-01-27T09:08:30Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/css"/>
+        <bookmark:applications>
+          <bookmark:application name="code-oss" exec="&apos;code-oss %u&apos;" modified="2022-01-27T09:08:30Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Documents/entrainement%20Julie/index.html" added="2022-01-28T07:35:25Z" modified="2022-01-28T07:35:25Z" visited="2022-01-28T07:35:25Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code-oss" exec="&apos;code-oss %u&apos;" modified="2022-01-28T07:35:25Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Documents/entrainement%20Julie/style.css" added="2022-01-28T07:35:57Z" modified="2022-01-28T07:35:57Z" visited="2022-01-28T07:35:57Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/css"/>
+        <bookmark:applications>
+          <bookmark:application name="code-oss" exec="&apos;code-oss %u&apos;" modified="2022-01-28T07:35:57Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/sprint_03/index.html" added="2022-01-31T10:43:27Z" modified="2022-01-31T10:43:58Z" visited="2022-01-31T10:43:27Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="code-oss" exec="&apos;code-oss %u&apos;" modified="2022-01-31T10:43:58Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/sprint_03/styles.css" added="2022-01-31T10:43:47Z" modified="2022-01-31T10:44:12Z" visited="2022-01-31T10:43:48Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="code-oss" exec="&apos;code-oss %u&apos;" modified="2022-01-31T10:44:12Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/sprint_03/script.js" added="2022-01-31T10:46:13Z" modified="2022-01-31T10:46:13Z" visited="2022-01-31T10:46:14Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/javascript"/>
+        <bookmark:applications>
+          <bookmark:application name="code-oss" exec="&apos;code-oss %u&apos;" modified="2022-01-31T10:46:13Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/sprint_02/style.css" added="2022-02-01T06:10:06Z" modified="2022-02-01T06:10:06Z" visited="2022-02-01T06:10:06.699626Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/css"/>
+        <bookmark:applications>
+          <bookmark:application name="code-oss" exec="&apos;code-oss %u&apos;" modified="2022-02-01T06:10:06Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

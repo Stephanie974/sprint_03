@@ -1,0 +1,1347 @@
+/*
+ * jQuery sprintf - perl based functionallity for sprintf and friends.
+ *
+ * Copyright ¬© 2008 Carl F√ºrstenberg
+ *
+ * Released under GPL, BSD, or MIT license.
+ * ---------------------------------------------------------------------------
+ *  GPL:
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Copyright (c) The Regents of the University of California.
+ * All rights reserved.
+ *
+ * ---------------------------------------------------------------------------
+ *  BSD:
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 3. Neither the name of the University nor the names of its contributors
+ *    may be used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ ¬∞* OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ * 
+ * ---------------------------------------------------------------------------
+ *  MIT:
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ * 
+ * ---------------------------------------------------------------------------
+ *
+ *  Version: 0.0.6
+ */
+
+/**
+ * Inserts the arguments into the format and returns the formated string
+ *
+ * @example alert($.vsprintf( "%s %s", [ "Hello", "world" ] ));
+ *
+ * @param String format the format to use
+ * @param Array args the arguments to insert into the format
+ * @return String the formated string
+ */
+jQuery.vsprintf = function jQuery_vsprintf( format, args ){
+    if ( format == null ) {
+        throw "Not enough arguments for vsprintf";
+    }
+    if ( args == null ) {
+        args = [];
+    }
+
+    function _sprintf_format( type, value, flags ){
+
+        // Similar to how perl printf works
+        if ( value == undefined ) {
+            if ( type == 's' ) {
+                return '';
+            } else {
+                return '0';
+            }
+        }
+
+        var result;
+        var prefix = '';
+        var fill = '';
+        var fillchar = ' ';
+        if ( flags['short'] || flags['long'] || flags['long_long'] ) {
+            /* This is pretty ugly, but as JS ignores bit lengths except 
+             * somewhat when working with bit operators. 
+             * So we fake a bit :) */
+            switch ( type ) {
+                case 'e':
+                case 'f':
+                case 'G':
+                case 'E':
+                case 'G':
+                case 'd': /* signed */
+                    if ( flags['short'] ) {
+                        if ( value >= 32767 ) {
+                            value = 32767;
+                        } else if ( value <= -32767 - 1 ) {
+                            value = -32767 - 1;
+                        }
+                    } else if ( flags['long'] ) {
+                        if ( value >= 2147483647 ) {
+                            value = 2147483647;
+                        } else if ( value <= -2147483647 - 1 ) {
+                            value = -2147483647 - 1;
+                        }
+                    } else /*if ( flags['long_long'] )*/ {
+                        if ( value >= 9223372036854775807 ) {
+                            value = 9223372036854775807;
+                        } else if ( value <= -9223372036854775807 - 1 ) {
+                            value = -9223372036854775807 - 1;
+                        }
+                    }
+                    break;
+                case 'X':
+                case 'B':
+                case 'u':
+                case 'o':
+                case 'x':
+                case 'b': /* unsigned */
+                    if ( value < 0 ) {
+                        /* Pretty ugly, but one only solution */
+                        value = Math.abs(value) - 1;
+                    }
+                    if ( flags['short'] ) {
+                        if ( value >= 65535 ) {
+                            value = 65535;
+                        }
+                    } else if ( flags['long'] ) {
+                        if ( value >= 4294967295 ) {
+                            value = 4294967295;
+                        }
+
+                    } else /*if ( flags['long_long'] )*/ {
+                        if ( value >= 18446744073709551615 ) {
+                            value = 18446744073709551615;
+                        }
+
+                    }
+                    break;
+            }
+        }
+        switch ( type ) {
+            case 'c':
+                result = String.fromCharCode(parseInt(value));
+                break;
+            case 's':
+                result = value.toString();
+                break;
+            case 'd':
+                result = (new Number(parseInt(value)) ).toString();
+                break;
+            case 'u':
+                result = (new Number(parseInt(value)) ).toString();
+                break;
+            case 'o':
+                result = (new Number(parseInt(value)) ).toString(8);
+                break;
+            case 'x':
+                result = (new Number(parseInt(value)) ).toString(16);
+                break;
+            case 'B':
+            case 'b':
+                result = (new Number(parseInt(value)) ).toString(2);
+                break;
+            case 'e':
+                var digits = flags['precision'] ? flags['precision'] : 6;
+                result = (new Number(value) ).toExponential(digits).toString();
+                break;
+            case 'f':
+                var digits = flags['precision'] ? flags['precision'] : 6;
+                result = (new Number(value) ).toFixed(digits).toString();
+                break;
+            case 'g':
+                var digits = flags['precision'] ? flags['precision'] : 6;
+                result = (new Number(value) ).toPrecision(digits).toString();
+                break;
+            case 'X':
+                result = (new Number(parseInt(value)) ).toString(16).toUpperCase();
+                break;
+            case 'E':
+                var digits = flags['precision'] ? flags['precision'] : 6;
+                result = (new Number(value) ).toExponential(digits).toString().toUpperCase();
+                break;
+            case 'G':
+                var digits = flags['precision'] ? flags['precision'] : 6;
+                result = (new Number(value) ).toPrecision(digits).toString().toUpperCase();
+                break;
+        }
+
+        if ( flags['+'] && parseFloat(value) > 0 && ['d', 'e', 'f', 'g', 'E', 'G'].indexOf(type) != -1 ) {
+            prefix = '+';
+        }
+
+        if ( flags[' '] && parseFloat(value) > 0 && ['d', 'e', 'f', 'g', 'E', 'G'].indexOf(type) != -1 ) {
+            prefix = ' ';
+        }
+
+        if ( flags['#'] && parseInt(value) != 0 ) {
+            switch ( type ) {
+                case 'o':
+                    prefix = '0';
+                    break;
+                case 'x':
+                case 'X':
+                    prefix = '0x';
+                    break;
+                case 'b':
+                    prefix = '0b';
+                    break;
+                case 'B':
+                    prefix = '0B';
+                    break;
+            }
+        }
+
+        if ( flags['0'] && !flags['-'] ) {
+            fillchar = '0';
+        }
+
+        if ( flags['width'] && flags['width'] > ( result.length + prefix.length ) ) {
+            var tofill = flags['width'] - result.length - prefix.length;
+            for ( var i = 0; i < tofill; ++i ) {
+                fill += fillchar;
+            }
+        }
+
+        if ( flags['-'] && !flags['0'] ) {
+            result += fill;
+        } else {
+            result = fill + result;
+        }
+
+        return prefix + result;
+    };
+
+    var result = "";
+
+    var index = 0;
+    var current_index = 0;
+    var flags = {
+        'long': false,
+        'short': false,
+        'long_long': false
+    };
+    var in_operator = false;
+    var relative = false;
+    var precision = false;
+    var fixed = false;
+    var vector = false;
+    var bitwidth = false;
+    var vector_delimiter = '.';
+
+    for ( var i = 0; i < format.length; ++i ) {
+        var current_char = format.charAt(i);
+        if ( in_operator ) {
+            // backward compat
+            switch ( current_char ) {
+                case 'i':
+                    current_char = 'd';
+                    break;
+                case 'D':
+                    flags['long'] = true;
+                    current_char = 'd';
+                    break;
+                case 'U':
+                    flags['long'] = true;
+                    current_char = 'u';
+                    break;
+                case 'O':
+                    flags['long'] = true;
+                    current_char = 'o';
+                    break;
+                case 'F':
+                    current_char = 'f';
+                    break;
+            }
+            switch ( current_char ) {
+                case 'c':
+                case 's':
+                case 'd':
+                case 'u':
+                case 'o':
+                case 'x':
+                case 'e':
+                case 'f':
+                case 'g':
+                case 'X':
+                case 'E':
+                case 'G':
+                case 'b':
+                case 'B':
+                    var value = args[current_index];
+                    if ( vector ) {
+                        var fixed_value = value;
+                        if ( value instanceof Array ) {
+                            // if the value is an array, assume to work on it directly
+                            fixed_value = value;
+                        } else if ( typeof(value) == 'string' || value instanceof String ) {
+                            // normal behavour, assume string is a bitmap
+                            fixed_value = value.split('').map(function ( value ){
+                                return value.charCodeAt();
+                            });
+                        } else if ( ( typeof(value) == 'number' || value instanceof Number ) && flags['bitwidth'] ) {
+                            // if we defined a width, assume we want to vectorize the bits directly
+                            fixed_value = [];
+                            do {
+                                fixed_value.unshift(value & ~(~0 << flags['bitwidth'] ));
+                            } while ( value >>>= flags['bitwidth'] );
+                        } else {
+                            fixed_value = value.toString().split('').map(function ( value ){
+                                return value.charCodeAt();
+                            });
+
+                        }
+                        result += fixed_value.map(function ( value ){
+                            return _sprintf_format(current_char, value, flags);
+                        }).join(vector_delimiter);
+                    } else {
+                        result += _sprintf_format(current_char, value, flags);
+                    }
+                    if ( !fixed ) {
+                        ++index;
+                    }
+                    current_index = index;
+                    flags = {};
+                    relative = false;
+                    in_operator = false;
+                    precision = false;
+                    fixed = false;
+                    vector = false;
+                    bitwidth = false;
+                    vector_delimiter = '.';
+                    break;
+                case 'v':
+                    vector = true;
+                    break;
+                case ' ':
+                case '0':
+                case '-':
+                case '+':
+                case '#':
+                    flags[current_char] = true;
+                    break;
+                case '*':
+                    relative = true;
+                    break;
+                case '.':
+                    precision = true;
+                    break;
+                case '@':
+                    bitwidth = true;
+                    break;
+                case 'l':
+                    if ( flags['long'] ) {
+                        flags['long_long'] = true;
+                        flags['long'] = false;
+                    } else {
+                        flags['long'] = true;
+                        flags['long_long'] = false;
+                    }
+                    flags['short'] = false;
+                    break;
+                case 'q':
+                case 'L':
+                    flags['long_long'] = true;
+                    flags['long'] = false;
+                    flags['short'] = false;
+                    break;
+                case 'h':
+                    flags['short'] = true;
+                    flags['long'] = false;
+                    flags['long_long'] = false;
+                    break;
+            }
+            if ( /\d/.test(current_char) ) {
+                var num = parseInt(format.substr(i));
+                var len = num.toString().length;
+                i += len - 1;
+                var next = format.charAt(i + 1);
+                if ( next == '$' ) {
+                    if ( num < 0 || num > args.length ) {
+                        throw "out of bound";
+                    }
+                    if ( relative ) {
+                        if ( precision ) {
+                            flags['precision'] = args[num - 1];
+                            precision = false;
+                        } else if ( format.charAt(i + 2) == 'v' ) {
+                            vector_delimiter = args[num - 1];
+                        } else {
+                            flags['width'] = args[num - 1];
+                        }
+                        relative = false;
+                    } else {
+                        fixed = true;
+                        current_index = num - 1;
+                    }
+                    ++i;
+                } else if ( precision ) {
+                    flags['precision'] = num;
+                    precision = false;
+                } else if ( bitwidth ) {
+                    flags['bitwidth'] = num;
+                    bitwidth = false;
+                } else {
+                    flags['width'] = num;
+                }
+            } else if ( relative && !/\d/.test(format.charAt(i + 1)) ) {
+                if ( precision ) {
+                    flags['precision'] = args[current_index];
+                    precision = false;
+                } else if ( format.charAt(i + 1) == 'v' ) {
+                    vector_delimiter = args[current_index];
+                } else {
+                    flags['width'] = args[current_index];
+                }
+                ++index;
+                if ( !fixed ) {
+                    current_index++;
+                }
+                relative = false;
+            }
+        } else {
+            if ( current_char == '%' ) {
+                // If the next character is an %, then we have an escaped %, 
+                // we'll take this as an exception to the normal lookup, as
+                // we don't want/need to process this.
+                if ( format.charAt(i + 1) == '%' ) {
+                    result += '%';
+                    ++i;
+                    continue;
+                }
+                in_operator = true;
+                continue;
+            } else {
+                result += current_char;
+                continue;
+            }
+        }
+    }
+    return result;
+};
+
+/**
+ * Inserts the arguments¬ß into the format and returns the formated string
+ *
+ * @example alert($.sprintf( "%s %s", "Hello", "world" ));
+ *
+ * @param String format the format to use
+ * @param Object args... the arguments to insert into the format
+ * @return String the formated string
+ */
+
+jQuery.sprintf = function jQuery_sprintf(){
+    if ( arguments.length == 0 ) {
+        throw "Not enough arguments for sprintf";
+    }
+
+    var args = Array.prototype.slice.call(arguments);
+    var format = args.shift();
+
+    return jQuery.vsprintf(format, args);
+};
+
+/**
+ * Inserts the arguments into the format and appends the formated string
+ * to the objects in question.
+ *
+ * @example $('p').printf( "%d <strong>%s</strong>", 2, "world" );
+ *
+ * @before <p>Hello</p>
+ *
+ * @after <p>Hello2 <strong>world</strong></p>
+ *
+ * @param String format the format to use
+ * @param Object args... the arguments to insert into the format
+ */
+
+jQuery.fn.printf = function jQuery_fn_printf(){
+    if ( arguments.length == 0 ) {
+        throw "Not enough arguments for sprintf";
+    }
+    var args = Array.prototype.slice.call(arguments);
+    var format = args.shift();
+
+    return this.append(jQuery.vsprintf(format, args));
+};
+
+/**
+ * Inserts the arguments into the format and appends the formated string
+ * to the objects in question.
+ *
+ * @example $('p').vprintf( "%d <strong>%s</strong>", [ 2, "world" ] );
+ *
+ * @before <p>Hello</p>
+ *
+ * @after <p>Hello2 <strong>world</strong></p>
+ *
+ * @param String format the format to use
+ * @param Array args the arguments to insert into the format
+ */
+jQuery.fn.vprintf = function jQuery_fn_vprintf( format, args ){
+    if ( arguments.length == 0 ) {
+        throw "Not enough arguments for sprintf";
+    }
+
+    return this.append(jQuery.vsprintf(format, args));
+};
+
+/**
+ * Formats the objects html in question and replaces the content
+ * with the formated content
+ *
+ * @example $('p').vformat( [ "Hello", "world" ] );
+ *
+ * @before <p>%s %s</p>
+ *
+ * @after <p>Hello world</p>
+ *
+ * @param Array args the arguments to insert into the format
+ */
+
+jQuery.fn.vformat = function jQuery_fn_vformat( args ){
+    if ( arguments.length == 0 ) {
+        throw "Not enough arguments for sprintf";
+    }
+    return this.each(function (){
+            self = jQuery(this);
+            self.html(jQuery.vsprintf(self.html(), args))
+        }
+    );
+}
+
+/**
+ * Formats the objects html in question and replaces the content
+ * with the formated content
+ *
+ * @example $('p').format( "Hello", "world" );
+ *
+ * @before <p>%s %s</p>
+ *
+ * @after <p>Hello world</p>
+ *
+ * @param Object args... the arguments to insert into the format
+ */
+jQuery.fn.format = function jQuery_fn_format(){
+    if ( arguments.length == 0 ) {
+        throw "Not enough arguments for sprintf";
+    }
+    var args = Array.prototype.slice.call(arguments);
+    return this.each(function (){
+            self = jQuery(this);
+            self.html(jQuery.vsprintf(self.html(), args))
+        }
+    );
+}
+
+/**
+ * Inserts the arguments into the format and prints formated string
+ * to console or dump
+ *
+ * @example $.printf( "%s %s", "Hello", "world" );
+ *
+ * @param String format the format to use
+ * @param Object args... the arguments to insert into the format
+ */
+jQuery.printf = function jQuery_printf(){
+    if ( arguments.length == 0 ) {
+        throw "Not enough arguments for sprintf";
+    }
+    var args = Array.prototype.slice.call(arguments);
+    var format = args.shift();
+    var ret = jQuery.vsprintf(format, args);
+
+    if ( window.console ) {
+        window.console.info(ret);
+    } else {
+        window.dump(ret);
+    }
+};
+/**
+ * Inserts the arguments into the format and prints formated string
+ * to console or dump
+ *
+ * @example $.vprintf( "%s %s", [ "Hello", "world" ] );
+ *
+ * @param String format the format to use
+ * @param Array args the arguments to insert into the format
+ */
+jQuery.vprintf = function jQuery_vprintf( format, args ){
+    if ( arguments.length == 0 ) {
+        throw "Not enough arguments for sprintf";
+    }
+    var ret = jQuery.vsprintf(format, args);
+
+    if ( window.console ) {
+        window.console.info(ret);
+    } else {
+        window.dump(ret);
+    }
+
+};
+           20211215221728-8l`   https://ucopia-lvbca.ngeconnect.fr/100/portal/resources/_javascript/jquery.sprintf.js?1637144850   ∂V  /*
+ * jQuery sprintf - perl based functionallity for sprintf and friends.
+ *
+ * Copyright ¬© 2008 Carl F√ºrstenberg
+ *
+ * Released under GPL, BSD, or MIT license.
+ * ---------------------------------------------------------------------------
+ *  GPL:
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Copyright (c) The Regents of the University of California.
+ * All rights reserved.
+ *
+ * ---------------------------------------------------------------------------
+ *  BSD:
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 3. Neither the name of the University nor the names of its contributors
+ *    may be used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ ¬∞* OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ * 
+ * ---------------------------------------------------------------------------
+ *  MIT:
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ * 
+ * ---------------------------------------------------------------------------
+ *
+ *  Version: 0.0.6
+ */
+
+/**
+ * Inserts the arguments into the format and returns the formated string
+ *
+ * @example alert($.vsprintf( "%s %s", [ "Hello", "world" ] ));
+ *
+ * @param String format the format to use
+ * @param Array args the arguments to insert into the format
+ * @return String the formated string
+ */
+jQuery.vsprintf = function jQuery_vsprintf( format, args ){
+    if ( format == null ) {
+        throw "Not enough arguments for vsprintf";
+    }
+    if ( args == null ) {
+        args = [];
+    }
+
+    function _sprintf_format( type, value, flags ){
+
+        // Similar to how perl printf works
+        if ( value == undefined ) {
+            if ( type == 's' ) {
+                return '';
+            } else {
+                return '0';
+            }
+        }
+
+        var result;
+        var prefix = '';
+        var fill = '';
+        var fillchar = ' ';
+        if ( flags['short'] || flags['long'] || flags['long_long'] ) {
+            /* This is pretty ugly, but as JS ignores bit lengths except 
+             * somewhat when working with bit operators. 
+             * So we fake a bit :) */
+            switch ( type ) {
+                case 'e':
+                case 'f':
+                case 'G':
+                case 'E':
+                case 'G':
+                case 'd': /* signed */
+                    if ( flags['short'] ) {
+                        if ( value >= 32767 ) {
+                            value = 32767;
+                        } else if ( value <= -32767 - 1 ) {
+                            value = -32767 - 1;
+                        }
+                    } else if ( flags['long'] ) {
+                        if ( value >= 2147483647 ) {
+                            value = 2147483647;
+                        } else if ( value <= -2147483647 - 1 ) {
+                            value = -2147483647 - 1;
+                        }
+                    } else /*if ( flags['long_long'] )*/ {
+                        if ( value >= 9223372036854775807 ) {
+                            value = 9223372036854775807;
+                        } else if ( value <= -9223372036854775807 - 1 ) {
+                            value = -9223372036854775807 - 1;
+                        }
+                    }
+                    break;
+                case 'X':
+                case 'B':
+                case 'u':
+                case 'o':
+                case 'x':
+                case 'b': /* unsigned */
+                    if ( value < 0 ) {
+                        /* Pretty ugly, but one only solution */
+                        value = Math.abs(value) - 1;
+                    }
+                    if ( flags['short'] ) {
+                        if ( value >= 65535 ) {
+                            value = 65535;
+                        }
+                    } else if ( flags['long'] ) {
+                        if ( value >= 4294967295 ) {
+                            value = 4294967295;
+                        }
+
+                    } else /*if ( flags['long_long'] )*/ {
+                        if ( value >= 18446744073709551615 ) {
+                            value = 18446744073709551615;
+                        }
+
+                    }
+                    break;
+            }
+        }
+        switch ( type ) {
+            case 'c':
+                result = String.fromCharCode(parseInt(value));
+                break;
+            case 's':
+                result = value.toString();
+                break;
+            case 'd':
+                result = (new Number(parseInt(value)) ).toString();
+                break;
+            case 'u':
+                result = (new Number(parseInt(value)) ).toString();
+                break;
+            case 'o':
+                result = (new Number(parseInt(value)) ).toString(8);
+                break;
+            case 'x':
+                result = (new Number(parseInt(value)) ).toString(16);
+                break;
+            case 'B':
+            case 'b':
+                result = (new Number(parseInt(value)) ).toString(2);
+                break;
+            case 'e':
+                var digits = flags['precision'] ? flags['precision'] : 6;
+                result = (new Number(value) ).toExponential(digits).toString();
+                break;
+            case 'f':
+                var digits = flags['precision'] ? flags['precision'] : 6;
+                result = (new Number(value) ).toFixed(digits).toString();
+                break;
+            case 'g':
+                var digits = flags['precision'] ? flags['precision'] : 6;
+                result = (new Number(value) ).toPrecision(digits).toString();
+                break;
+            case 'X':
+                result = (new Number(parseInt(value)) ).toString(16).toUpperCase();
+                break;
+            case 'E':
+                var digits = flags['precision'] ? flags['precision'] : 6;
+                result = (new Number(value) ).toExponential(digits).toString().toUpperCase();
+                break;
+            case 'G':
+                var digits = flags['precision'] ? flags['precision'] : 6;
+                result = (new Number(value) ).toPrecision(digits).toString().toUpperCase();
+                break;
+        }
+
+        if ( flags['+'] && parseFloat(value) > 0 && ['d', 'e', 'f', 'g', 'E', 'G'].indexOf(type) != -1 ) {
+            prefix = '+';
+        }
+
+        if ( flags[' '] && parseFloat(value) > 0 && ['d', 'e', 'f', 'g', 'E', 'G'].indexOf(type) != -1 ) {
+            prefix = ' ';
+        }
+
+        if ( flags['#'] && parseInt(value) != 0 ) {
+            switch ( type ) {
+                case 'o':
+                    prefix = '0';
+                    break;
+                case 'x':
+                case 'X':
+                    prefix = '0x';
+                    break;
+                case 'b':
+                    prefix = '0b';
+                    break;
+                case 'B':
+                    prefix = '0B';
+                    break;
+            }
+        }
+
+        if ( flags['0'] && !flags['-'] ) {
+            fillchar = '0';
+        }
+
+        if ( flags['width'] && flags['width'] > ( result.length + prefix.length ) ) {
+            var tofill = flags['width'] - result.length - prefix.length;
+            for ( var i = 0; i < tofill; ++i ) {
+                fill += fillchar;
+            }
+        }
+
+        if ( flags['-'] && !flags['0'] ) {
+            result += fill;
+        } else {
+            result = fill + result;
+        }
+
+        return prefix + result;
+    };
+
+    var result = "";
+
+    var index = 0;
+    var current_index = 0;
+    var flags = {
+        'long': false,
+        'short': false,
+        'long_long': false
+    };
+    var in_operator = false;
+    var relative = false;
+    var precision = false;
+    var fixed = false;
+    var vector = false;
+    var bitwidth = false;
+    var vector_delimiter = '.';
+
+    for ( var i = 0; i < format.length; ++i ) {
+        var current_char = format.charAt(i);
+        if ( in_operator ) {
+            // backward compat
+            switch ( current_char ) {
+                case 'i':
+                    current_char = 'd';
+                    break;
+                case 'D':
+                    flags['long'] = true;
+                    current_char = 'd';
+                    break;
+                case 'U':
+                    flags['long'] = true;
+                    current_char = 'u';
+                    break;
+                case 'O':
+                    flags['long'] = true;
+                    current_char = 'o';
+                    break;
+                case 'F':
+                    current_char = 'f';
+                    break;
+            }
+            switch ( current_char ) {
+                case 'c':
+                case 's':
+                case 'd':
+                case 'u':
+                case 'o':
+                case 'x':
+                case 'e':
+                case 'f':
+                case 'g':
+                case 'X':
+                case 'E':
+                case 'G':
+                case 'b':
+                case 'B':
+                    var value = args[current_index];
+                    if ( vector ) {
+                        var fixed_value = value;
+                        if ( value instanceof Array ) {
+                            // if the value is an array, assume to work on it directly
+                            fixed_value = value;
+                        } else if ( typeof(value) == 'string' || value instanceof String ) {
+                            // normal behavour, assume string is a bitmap
+                            fixed_value = value.split('').map(function ( value ){
+                                return value.charCodeAt();
+                            });
+                        } else if ( ( typeof(value) == 'number' || value instanceof Number ) && flags['bitwidth'] ) {
+                            // if we defined a width, assume we want to vectorize the bits directly
+                            fixed_value = [];
+                            do {
+                                fixed_value.unshift(value & ~(~0 << flags['bitwidth'] ));
+                            } while ( value >>>= flags['bitwidth'] );
+                        } else {
+                            fixed_value = value.toString().split('').map(function ( value ){
+                                return value.charCodeAt();
+                            });
+
+                        }
+                        result += fixed_value.map(function ( value ){
+                            return _sprintf_format(current_char, value, flags);
+                        }).join(vector_delimiter);
+                    } else {
+                        result += _sprintf_format(current_char, value, flags);
+                    }
+                    if ( !fixed ) {
+                        ++index;
+                    }
+                    current_index = index;
+                    flags = {};
+                    relative = false;
+                    in_operator = false;
+                    precision = false;
+                    fixed = false;
+                    vector = false;
+                    bitwidth = false;
+                    vector_delimiter = '.';
+                    break;
+                case 'v':
+                    vector = true;
+                    break;
+                case ' ':
+                case '0':
+                case '-':
+                case '+':
+                case '#':
+                    flags[current_char] = true;
+                    break;
+                case '*':
+                    relative = true;
+                    break;
+                case '.':
+                    precision = true;
+                    break;
+                case '@':
+                    bitwidth = true;
+                    break;
+                case 'l':
+                    if ( flags['long'] ) {
+                        flags['long_long'] = true;
+                        flags['long'] = false;
+                    } else {
+                        flags['long'] = true;
+                        flags['long_long'] = false;
+                    }
+                    flags['short'] = false;
+                    break;
+                case 'q':
+                case 'L':
+                    flags['long_long'] = true;
+                    flags['long'] = false;
+                    flags['short'] = false;
+                    break;
+                case 'h':
+                    flags['short'] = true;
+                    flags['long'] = false;
+                    flags['long_long'] = false;
+                    break;
+            }
+            if ( /\d/.test(current_char) ) {
+                var num = parseInt(format.substr(i));
+                var len = num.toString().length;
+                i += len - 1;
+                var next = format.charAt(i + 1);
+                if ( next == '$' ) {
+                    if ( num < 0 || num > args.length ) {
+                        throw "out of bound";
+                    }
+                    if ( relative ) {
+                        if ( precision ) {
+                            flags['precision'] = args[num - 1];
+                            precision = false;
+                        } else if ( format.charAt(i + 2) == 'v' ) {
+                            vector_delimiter = args[num - 1];
+                        } else {
+                            flags['width'] = args[num - 1];
+                        }
+                        relative = false;
+                    } else {
+                        fixed = true;
+                        current_index = num - 1;
+                    }
+                    ++i;
+                } else if ( precision ) {
+                    flags['precision'] = num;
+                    precision = false;
+                } else if ( bitwidth ) {
+                    flags['bitwidth'] = num;
+                    bitwidth = false;
+                } else {
+                    flags['width'] = num;
+                }
+            } else if ( relative && !/\d/.test(format.charAt(i + 1)) ) {
+                if ( precision ) {
+                    flags['precision'] = args[current_index];
+                    precision = false;
+                } else if ( format.charAt(i + 1) == 'v' ) {
+                    vector_delimiter = args[current_index];
+                } else {
+                    flags['width'] = args[current_index];
+                }
+                ++index;
+                if ( !fixed ) {
+                    current_index++;
+                }
+                relative = false;
+            }
+        } else {
+            if ( current_char == '%' ) {
+                // If the next character is an %, then we have an escaped %, 
+                // we'll take this as an exception to the normal lookup, as
+                // we don't want/need to process this.
+                if ( format.charAt(i + 1) == '%' ) {
+                    result += '%';
+                    ++i;
+                    continue;
+                }
+                in_operator = true;
+                continue;
+            } else {
+                result += current_char;
+                continue;
+            }
+        }
+    }
+    return result;
+};
+
+/**
+ * Inserts the arguments¬ß into the format and returns the formated string
+ *
+ * @example alert($.sprintf( "%s %s", "Hello", "world" ));
+ *
+ * @param String format the format to use
+ * @param Object args... the arguments to insert into the format
+ * @return String the formated string
+ */
+
+jQuery.sprintf = function jQuery_sprintf(){
+    if ( arguments.length == 0 ) {
+        throw "Not enough arguments for sprintf";
+    }
+
+    var args = Array.prototype.slice.call(arguments);
+    var format = args.shift();
+
+    return jQuery.vsprintf(format, args);
+};
+
+/**
+ * Inserts the arguments into the format and appends the formated string
+ * to the objects in question.
+ *
+ * @example $('p').printf( "%d <strong>%s</strong>", 2, "world" );
+ *
+ * @before <p>Hello</p>
+ *
+ * @after <p>Hello2 <strong>world</strong></p>
+ *
+ * @param String format the format to use
+ * @param Object args... the arguments to insert into the format
+ */
+
+jQuery.fn.printf = function jQuery_fn_printf(){
+    if ( arguments.length == 0 ) {
+        throw "Not enough arguments for sprintf";
+    }
+    var args = Array.prototype.slice.call(arguments);
+    var format = args.shift();
+
+    return this.append(jQuery.vsprintf(format, args));
+};
+
+/**
+ * Inserts the arguments into the format and appends the formated string
+ * to the objects in question.
+ *
+ * @example $('p').vprintf( "%d <strong>%s</strong>", [ 2, "world" ] );
+ *
+ * @before <p>Hello</p>
+ *
+ * @after <p>Hello2 <strong>world</strong></p>
+ *
+ * @param String format the format to use
+ * @param Array args the arguments to insert into the format
+ */
+jQuery.fn.vprintf = function jQuery_fn_vprintf( format, args ){
+    if ( arguments.length == 0 ) {
+        throw "Not enough arguments for sprintf";
+    }
+
+    return this.append(jQuery.vsprintf(format, args));
+};
+
+/**
+ * Formats the objects html in question and replaces the content
+ * with the formated content
+ *
+ * @example $('p').vformat( [ "Hello", "world" ] );
+ *
+ * @before <p>%s %s</p>
+ *
+ * @after <p>Hello world</p>
+ *
+ * @param Array args the arguments to insert into the format
+ */
+
+jQuery.fn.vformat = function jQuery_fn_vformat( args ){
+    if ( arguments.length == 0 ) {
+        throw "Not enough arguments for sprintf";
+    }
+    return this.each(function (){
+            self = jQuery(this);
+            self.html(jQuery.vsprintf(self.html(), args))
+        }
+    );
+}
+
+/**
+ * Formats the objects html in question and replaces the content
+ * with the formated content
+ *
+ * @example $('p').format( "Hello", "world" );
+ *
+ * @before <p>%s %s</p>
+ *
+ * @after <p>Hello world</p>
+ *
+ * @param Object args... the arguments to insert into the format
+ */
+jQuery.fn.format = function jQuery_fn_format(){
+    if ( arguments.length == 0 ) {
+        throw "Not enough arguments for sprintf";
+    }
+    var args = Array.prototype.slice.call(arguments);
+    return this.each(function (){
+            self = jQuery(this);
+            self.html(jQuery.vsprintf(self.html(), args))
+        }
+    );
+}
+
+/**
+ * Inserts the arguments into the format and prints formated string
+ * to console or dump
+ *
+ * @example $.printf( "%s %s", "Hello", "world" );
+ *
+ * @param String format the format to use
+ * @param Object args... the arguments to insert into the format
+ */
+jQuery.printf = function jQuery_printf(){
+    if ( arguments.length == 0 ) {
+        throw "Not enough arguments for sprintf";
+    }
+    var args = Array.prototype.slice.call(arguments);
+    var format = args.shift();
+    var ret = jQuery.vsprintf(format, args);
+
+    if ( window.console ) {
+        window.console.info(ret);
+    } else {
+        window.dump(ret);
+    }
+};
+/**
+ * Inserts the arguments into the format and prints formated string
+ * to console or dump
+ *
+ * @example $.vprintf( "%s %s", [ "Hello", "world" ] );
+ *
+ * @param String format the format to use
+ * @param Array args the arguments to insert into the format
+ */
+jQuery.vprintf = function jQuery_vprintf( format, args ){
+    if ( arguments.length == 0 ) {
+        throw "Not enough arguments for sprintf";
+    }
+    var ret = jQuery.vsprintf(format, args);
+
+    if ( window.console ) {
+        window.console.info(ret);
+    } else {
+        window.dump(ret);
+    }
+
+};
+”ò¿ŸC   B          >Â/      jQuery     §P`      vsprintf   æx≈·      jQuery_vsprintf    ‹Ÿú…      args   º
+)®!      Not enough arguments for vsprintf      
+/r      _sprintf_format    ›2†      prefix     ‰√ñ¸      fillchar   –º†      short	      >ú!      long
+   √ìÃ„	      long_long      ˛ .      abs    >¬≈      fromCharCode   ¬ß‚      digits     cø·L	      precision      ö'2∆      toExponential      ÿ8ª      toFixed    *”ãˆ      toPrecision    ¨‚s◊      toUpperCase    ⁄Eú¡      indexOf    ÎƒJ˚      width      ñF®„      tofill     P[      current_index      h`Ø      in_operator    Ï-k      relative   å≤ÜX      fixed      ËÎ€      vector     ’·«¡      bitwidth   è˜Í      vector_delimiter   ∂ã˘      current_char   våƒ      charAt     RÏ
+      fixed_value     9Ã      map!    (=S:
+      charCodeAt"     Yæçl      unshift#    G÷-;      \d$     Ív.|      num%    6ôfÿ      substr&     €õÕX      len'    .w≠      out of bound(   ∑ÿ-i      sprintf)    âj      jQuery_sprintf*     moÄå       Not enough arguments for sprintf+   ÿÖ Ã      slice,      Ç=äO      shift-      ´îÀ      printf.     LìâX      jQuery_fn_printf/   ‹B-      append0     Æõr,      vprintf1    jC      jQuery_fn_vprintf2      ±;M      vformat3    A("#      jQuery_fn_vformat4      ¡§\l      self5   ‘„X      html6   
+ŒÀ       jQuery_fn_format7   Âú      jQuery_printf8      t¥NŒ      ret9    ¯2áâ      window:     ˛Q1      console;    ¸ı‰      info<   NØU7      dump=   ØêX      jQuery_vprintf?     ¢8†•      jQuery_vsprintf/fixed_value<@   "–oΩ      jQuery_vsprintf/result<A    ~p^      jQuery_fn_vformat/<B    ∑ÎV∑      jQuery_fn_format/<      ◊ Ô%,â                                                                                                                                                                            	                                                                              	                 
+                                                                                                                            ≥Oåc                                    ó       Pm  –     è  `              i    P÷    $  &  #  
+            ∑  ÷  è   m    â         i               ÷               ÷               ÷            )                  ó                .                  ó      j             1              ó        j             3                P   j                 j             6                  P   j                 j             7                  ó   8               =              ó     8     Ø¬0∞#      #      IÙ$KEÆ˙ö         	    
+          á&’™ç!´!   ¸   ¸   ï                          µ   h   I   ÷µ   h   I   ÷µ   G   h   I   ÷µ   G   h	   I
+   ÷µ   G   h   I   ÷µ   G   h   I   ÷µ   h   I   ÷µ   h   I
+   ÷ü@W`Pê@Ä ·`Pê@Ä ˙`Pï@Ä `Pï@Ä &`Pï@Ä =`Pï@Ä R`Pê@Ä i`Pê@Ä vP   ®  à  ÿ
+               ƒ      h   ≈   ÷∂  î   ë      °ë   ∂ î   ë   c    √ ÷ë      ƒ   ÷ƒ  ÷ƒ  ÷6   9   9   9   ≈   ÷ƒ  ÷ƒ  ÷ƒ  ÷ƒ  ÷ƒ  ÷ƒ  ÷	   ƒ	  ÷ƒ
+  ÷í	   ∑
+  ∂  G
+   î
+  ë   ∂  ÿG   €∑
+  o ≈   ÷∑  îM	  ë   ∏   ÿ   ôS   ë   ÿ   ôW   ë   ÿ   ôg   ë   ÿ   ôw   ë   ÿ   ôá   ë   öí   ë      ≈   ÷ì}   ë   ∏   I   ÷   ≈   ÷ì\   ë   ∏   I   ÷   ≈   ÷ì;   ë   ∏   I   ÷   ≈   ÷ì   ë      ≈   ÷ì   ë   ∏   ÿ   ô…  ë   ÿ   ô∏  ë   ÿ   ôß  ë   ÿ   ôñ  ë   ÿ   ôÖ  ë   ÿ   ôt  ë   ÿ   ôc  ë   ÿ   ôR  ë   ÿ   ôA  ë    ÿ   ô0  ë!   ÿ   ô  ë"   ÿ   ô  ë#   ÿ   ô˝   ë$   ÿ   ôÏ   ë%   ÿ   ô$  ë&   ÿ    ô#  ë'   ÿ!   ô  ë(   ÿ"   ô  ë)   ÿ#   ô  ë*   ÿ$   ôﬂ  ë+   ÿ%   ôÂ  ë,   ÿ	   ô‰  ë-   ÿ&   ô„  ë.   ÿ'   ô‚  ë/   ÿ(   ô:  ë0   ÿ)   ô)  ë1   ÿ*   ôF  ë2   öj  ë2   ∂ ∑  Hƒ  ÷∑  î£  ë4   ∑  ƒ  ÷∑  µ+    î   ë7   ∑  ƒ  ÷ì>  ë7   ∑  ,   ó   ë:   ÷∑  µ-    ë<   î6   ë=   ∑  ÿG.   €   o ÿG/   €h0   o ƒ  ÷ìﬁ   ëA   ∑  1   ó   ëD   ÷∑  µ2    ëF   ñ   ëG   ÷∏   G3   ëH   î_   ëI   c    ƒ  ÷ﬁíJ   ∑  ÿG4   €∑  ˇ∏   G3   "s ÷∑  ∏   G3   $ƒ  ï≈ˇˇˇëS   ì;   ëS   ∑  ÿG5   €o  ÿG.   €   o ÿG/   €h6   o ƒ  ÷ëY   ∑   ∑  ÿG/   €h7   o ÿG8   €∑	  o %ƒ   ÷ì+   ë^   ∑   ∏    ∏   ∑  ∏   o %ƒ   ÷ë`   ∑  ï   ëa   ∑  .'ƒ  ÷ëc   ∑  ƒ  ÷69   ≈   ÷ƒ  ÷ƒ  ÷ƒ  ÷ƒ  ÷ƒ  ÷ƒ  ÷	   ƒ	  ÷ì!  ëd   ƒ  ÷ì  ëd   ∏   ∏   K÷ì˙   ëe   ƒ  ÷ìÍ   ëe   ƒ  ÷ì⁄   ëe   ƒ  ÷ì    ëe   ∏   G   î'   ëg   ∏   I   ÷∏   I   ÷ì"   ëi   ∏   I   ÷∏   I   ÷ëk   ∏   I   ÷ìa   ël   ∏   I   ÷∏   I   ÷∏   I   ÷ì3   ëo   ∏   I   ÷∏   I   ÷∏   I   ÷ì   ër   g:   ÿG;   €∏   o î˚  ëu   µ<    ∂  ÿG=   €∑
+  o o ƒ  ÷∑  ÿG5   €o  G
+   ƒ  ÷∑
+  ∑  &%ƒ
+  ÷∂  ÿG   €∑
+  %o ƒ  ÷∑  >   î  ëÉ   ∑  ó   ëÖ   ÷∑  ∂ G
+   ëá   î   ëà   ?   °ëà   ∑  îü   ëâ   ∑  î*   ëä   ∏   ∂ ∑  &HI@   ÷ƒ  ÷ì\   ëç   ∂  ÿG   €∑
+  %o    î   ëí   ∂ ∑  &Hƒ	  ÷ì   ëî   ∏   ∂ ∑  &HIA   ÷ëó   ƒ  ÷ì   ëó   ƒ  ÷∑  &ƒ  ÷ëò   ∑
+  .'ƒ
+  ÷ìs   ëö   ∑  î$   ëõ   ∏   ∑  I@   ÷ƒ  ÷ìF   ëú   ∑  î$   ëù   ∏   ∑  I3   ÷ƒ  ÷ì   ëû   ∏   ∑  IA   ÷ëü   ìˇ   ëü   ∑  ñ.   ë†   ÷gB   ÿG;   €∂  ÿG   €∑
+  %o o ë¶   îæ   ëß   ∑  î(   ë®   ∏   ∂ ∑  HI@   ÷ƒ  ÷ìW   ë™   ∂  ÿG   €∑
+  %o    î   ëØ   ∂ ∑  Hƒ	  ÷ì   ë∞   ∏   ∂ ∑  HIA   ÷ë≤   ∑  .'ƒ  ÷∑  ï   ëµ   ∑  .ÿ'ƒ  ÷÷ë∑   ƒ  ÷ë∑   ìè   ë∑   ∏   C   îa   ëπ   ∂  ÿG   €∑
+  %o C   î)   ëæ   ∑   C   %ƒ   ÷∑
+  .'ƒ
+  ÷ì3   ë¡   ƒ  ÷ì#   ì   ë¡   ∑   ∏   %ƒ   ÷ì   ë¬   ∑
+  .'ƒ
+  ÷ì·ıˇˇëƒ   ∑   úü; 	`P? `PK 	`P? `PNÄ  Æ00 `P:0 `P6 `P6 `P5 6 6 <0 `P6 `P6 `P6 `P6 `P6 `P6 `P:0 
+ `P&fPó0 `P.P9 `P>0 `P‰00 `P; `P:0 `P< `P; `P:0 `P< `P; `P:0 `P< `P; `P:0 `P; `P:0 `Pˇˇˇ›000000000000000  `P= `P> *`P9 `Pî00 `Pì0 $`PØ00 `Pê P/
+Pí000 &`P…00 `P: 1  FÄ  ˆ0  `P//ˇˇˇP4 &`Pô00 `P+P/P/
+PMÄ  ˇ `Pî P:0$Pê00 `Pò 
+P;0 `P> `Pê00 `P9 `P; `P6 `P6 `P6 `P6 `P6 `P6 `P: `P:0 `P6 `P:00000 `P= `P:0 `P6 `P:0 `P6 `P:0 `P6 `P:0 `Pî0 `P< `Pñ00 `P< `Pë00 `P< `P:00 `P< `P< `P< `P:0 `P< `P< `P< `P:0 `Pë P= `Pî P#ˇˇˇ¯P8 `P+P= `P6 `Pê P8 `Pî0 `P≠0 `P;0 `P> `P> `Pï0 `Pê0 $`Pë Pì0 `Pô00 `Pö00 `Pê00 `P6 `Pê00 `Pï0 `P> `P? `Pê0 `P> `P? `Pê00 `Pû00 `P/ú P#ˇˇˇÙPì0 `P> `Pì0 `Pê0 `Pê Pì0 `Pó00 `Pò00 `P; `P> `Pí00 `Pï000 `Pï0000 `Pê Pì0 `P6 `P; `P:0 `P6 `P?0 `P6 `PJÄ  ¡ (`Pï@Ä } `P4Q  ®         µ  @          ©   $
+  ¨  ú  Y                „      ∂ µ   î3   ë   ∂     î   ë      úì   ë      úë      ƒ  ÷   ƒ  ÷   ƒ  ÷∂ G   ó&   ë   ÷∂ G   ó   ë	   ÷∂ G   ë
+   îﬁ  ë   ∂  ÿ	   ô    ë   ÿ
+   ôπ   ë   ÿ   ô®   ë   ÿ   ôó   ë   ÿ   ôÜ   ë   ÿ   ôu   ë   ÿ   ôá  ë   ÿ   ôv  ë   ÿ   ôe  ë   ÿ   ôT  ë   ÿ   ôC  ë   ÿ   ô2  ë   ö  ë   ∂ G   îR   ë   ∂ ˇî   ë   ˇ√ ÷ì&   ë   ∂  Äˇˇî   ë    Äˇˇ√ ÷ë   ìø   ë   ∂ G   îV   ë   ∂ ˇˇˇî   ë!   ˇˇˇ√ ÷ì&   ë!   ∂    Äî   ë#      Ä√ ÷ë#   ì\   ë#   ∂ 
+      ‡Cî   ë%   
+      ‡C√ ÷ì.   ë%   ∂ 
+      ‡√î   ë'   
+      ‡√√ ÷ë'   ì‚   ë'   ∂ î"   ë)   µ   ÿG   €∂ o &√ ÷ë-   ∂ G   î,   ë/   ∂ ˇˇî   ë1   ˇˇ√ ÷ë1   ìs   ë1   ∂ G   î8   ë3   ∂ 
+  ‡ˇˇˇÔAî   ë5   
+  ‡ˇˇˇÔA√ ÷ë5   ì.   ë5   ∂ 
+      Cî   ë7   
+      C√ ÷ë7   ì   ë7   ∂  ÿ   ôÏ   ë8   ÿ   ô  ë9   ÿ   ô  ë:   ÿ   ô1  ë;   ÿ   ôR  ë<   ÿ   ôu  ë=   ÿ   ôò  ë>   ÿ   ôá  ë?   ÿ	   ô™  ë@   ÿ
+   ô   ëA   ÿ   ôV  ëB   ÿ   ô¨  ëC   ÿ   ôŸ  ëD   ÿ   ô9  ëE   ö†  ëE   µ   ÿG   €µ    ∂ o o ƒ   ÷ìv  ëJ   ∂ ÿG   €o  ƒ   ÷ìZ  ëL   µ   |µ    ∂ o ⁄  } ÿG   €o  ƒ   ÷ì(  ëR   µ   |µ    ∂ o ⁄  } ÿG   €o  ƒ   ÷ìˆ  ëX   µ   |µ    ∂ o ⁄  } ÿG   €o ƒ   ÷ì¬  ë^   µ   |µ    ∂ o ⁄  } ÿG   €o ƒ   ÷ìé  ëd   µ   |µ    ∂ o ⁄  } ÿG   €o ƒ   ÷ìZ  ëj   ∂ G   î   ël   ∂ G   ì   ëm   ëm   ƒ  ÷µ   |∂ ⁄  } ÿG   €∑  o ÿG   €o  ƒ   ÷ìÛ  ës   ∂ G   î   ëu   ∂ G   ì   ëv   ëv   ƒ  ÷µ   |∂ ⁄  } ÿG   €∑  o ÿG   €o  ƒ   ÷ìå  ë|   ∂ G   î   ë~   ∂ G   ì   ë   ë   ƒ  ÷µ   |∂ ⁄  } ÿG    €∑  o ÿG   €o  ƒ   ÷ì%  ëÖ   µ   |µ    ∂ o ⁄  } ÿG   €o ÿG!   €o  ƒ   ÷ìÁ   ëç   ∂ G   î   ëè   ∂ G   ì   ëê   ëê   ƒ  ÷µ   |∂ ⁄  } ÿG   €∑  o ÿG   €o  ÿG!   €o  ƒ   ÷ìv   ëò   ∂ G   î   ëö   ∂ G   ì   ëõ   ëõ   ƒ  ÷µ   |∂ ⁄  } ÿG    €∑  o ÿG   €o  ÿG!   €o  ƒ   ÷ì   ë£   ∂ G"   ñu   ë•   ÷µ#    ∂ o ñ\   ë©   ÷c      d    	   d   
+   d      d      d      d   ÿG$   €∂  o ˇë≠   î   ëÆ   "   ƒ  ÷ëÆ   ∂ G   ñu   ë∞   ÷µ#    ∂ o ñ\   ë¥   ÷c      d    	   d   
+   d      d      d      d   ÿG$   €∂  o ˇë∏   î   ëπ      ƒ  ÷ëπ   ∂ G%   ñ   ëª   ÷µ    ∂ o ëæ   î∑   ëø   ∂  ÿ   ôS   ë¿   ÿ   ôV   ë¡   ÿ   ôE   ë¬   ÿ   ôH   ë√   ÿ   ôK   ëƒ   öU   ëƒ      ƒ  ÷ìA   ëƒ   &   ƒ  ÷ì-   ëƒ   '   ƒ  ÷ì   ëƒ   (   ƒ  ÷ì   ëƒ   ∂ Hñ   ë∆   ÷∂ G)   ë»   î   ë…      ƒ  ÷ë…   ∂ G*   ñ'   ëÀ   ÷∂ G*   ∑   G+   ∑  G+   %ë–   îh   ë—   ∂ G*   ∑   G+   &∑  G+   &ƒ  ÷ƒ  ÷í÷   ∑  ∑  î(   ëÿ   ∑  ∑  %ƒ  ÷∑  .'ƒ  ÷ìŒˇˇˇë€   ∂ G)   ñ   ë›   ÷∂ Hëﬂ   î   ë‡   ∑   ∑  %ƒ   ÷ì   ë·   ∑  ∑   %ƒ   ÷ë‚   ∑  ∑   %úü@ `Pì0 `Pì0 `PEÄ  ¶ K0 `PEÄ  ¶ F0 `P: `P: `P: `PΩ@ `Pˇ⁄0000000 `Pí0 `Pë0 `Pë0 $`Pì0 `Pò@   `Pí0 `Pì0 `Pì0 $`Pì0 `Pò@&0 `Pó0 `Pó0 $`Pó0 `Pí@- `P:000000 `PO6 `P/PN8 `Pí0 `Pë0 `Pñ@<  `Pí0 `Pó0 `Pú@A0 `Pó0 `Pí@G `PJJ `Pˇ¸00 `Pï P#ˇˇˇÛP8 `P:0 `P*P8 `P:0 `P/P'ˇˇˇıP*P8 `P:0 `P/P'ˇˇˇıP*P8 `P:0 `P/P'ˇˇˇıP,P8 `P:0 `P/P'ˇˇˇıP,P8 `P:00 `P/P'ˇˇˇıP,P8 `P:0 `P∞0 `P-
+P.P*P8 `P:0 `P∞0 `P-
+P.P*P8 `P:0 `P∞0 `P-
+P.P*P8 `P:0 `P/P'ˇˇˇıP,P*P8 `P:0 `P∞0 `P-
+P.P*P*P8 `P:0 `P∞0 `P-
+P.P*P*P8 `PJz `Pú Pï *****î Pï0 `PO~ `Pú Pï *****î Pï0 `P?00 `Pú Pî0 `P‚00 `P: `P:00 `P: `P:0 `P: `P:0 `P: `P:000 `Pê ò0 `P?00 `Pæ0 `P°0  `P&fPì0 `PFÄ  ö )`Pï@Ä  ü `Pì ï0 `Pê00 `Pì000 `P9 Q    ¨         ø
+  7   @   @                            ∂  ÿG   €o  úü0  `P*P3 Q    @   @                            ∂  ÿG   €o  úü0  `P*P3 Q    H   H                            ∏    ∏   ∂  ∏   o úü0 `Pì P3 Q  ¿   ¿   t                       ”ƒ  ÷∑  G   î   ë      °ë   µ   G   G   ÿG   €∑  r ƒ   ÷∑   ÿG   €o  ƒ  ÷µ	   ÿG
+   €∑  ∑   o úü6 	`Pï0 `PK `Pö P8 `P+PH `Pî P3Q  ‹   ‹   à         
+              ”ƒ  ÷’ƒ  ÷∑  G   î   ë      °ë   µ   G   G   ÿG   €∑  r ƒ   ÷∑   ÿG   €o  ƒ  ÷∑  ÿG	   €µ
+   ÿG   €∑  ∑   o o úü< 	`Pï0 `PK `Pö P8 `P+PH `Pü P#ˇˇˇÚP3Q    ê   ê   Q                      ”ƒ   ÷’ƒ  ÷∑   G   î   ë      °ë   ∑  ÿG   €µ   ÿG   €∂  ∂ o o úü< 	`Pï0 `PK `Pù P#ˇˇˇÚP3Q |   |   A                      ”ƒ   ÷’ƒ  ÷∑   G   î   ë      °ë   ∑  ÿG   €h   o úü< 	`Pï0 `PK `Pê PC	Q  ò   ò   R                        ’ƒ   ÷≤   µ    ∑   o ¡   ÷µ   ÿG   €µ   ÿG   €µ   ÿG   €o  ∏   o s ÷ü6 `P/P9 `P§ P(ˇˇˇÚP#ˇˇˇÙP4 P    ®   ®   d               
+        ”ƒ   ÷’ƒ  ÷∑   G   î   ë      °ë   µ   G   G   ÿG   €∑   r ≈   ÷∑  ÿG   €h	   o úü< 	`Pï0 `PK `Pö P9 `Pê PC
+Q  ò   ò   R                        ’ƒ   ÷≤   µ    ∑   o ¡   ÷µ   ÿG   €µ   ÿG   €µ   ÿG   €o  ∏   o s ÷ü6 `P/P9 `P§ P(ˇˇˇÚP#ˇˇˇÙP4 P    0  0  »                       ”ƒ  ÷∑  G   î   ë      °ë   µ   G   G   ÿG   €∑  r ƒ   ÷∑   ÿG   €o  ƒ  ÷µ	   ÿG
+   €∑  ∑   o ƒ  ÷µ   G   î(   ë   µ   G   ÿG   €∑  s ÷ì   ë   µ   ÿG   €∑  s ÷ë   ü6 	`Pï0 `PK `Pö P8 `P+P8 `Pî PH 	`Pî0 `Pï P>0 `Pê PIP    Ë   Ë   ë                      ”ƒ  ÷∑  G   î   ë      °ë   µ   ÿG   €∂  ∂ o ƒ   ÷µ   G   î(   ë	   µ   G   ÿG   €∑   s ÷ì   ë   µ   ÿG	   €∑   s ÷ë   ü6 	`Pï0 `PK `Pí PH 	`Pî0 `Pï P>0 `Pê PIP    3ıÿ  `Û  s  o   0       	  
+  e  f  G  E  d  X  B  u  o  x  b      c  g      K  ¨              +  J    #  !    %  -    ˜     `!    `!    `  `  `  p  o      @	    
+  .  ˜     i  D  U  O  F  d  u  o  f  c  s  x  e  g  X  E  G  b  B  v     0  -  +  #  *  @  l  q  L  h  ˛  ˆ    V       p˜      "  ¨    p  pÒ     @   Pû  K  %  $  '        P%    `  `˜   *  ˛  Z  +  .   ,       	  `
+  `˜   *  ˛  Z  +  .   ,  /         `  `˜   *  /         `4     5      `  `˜   *  k   
+  p  `4     5      `  `˜   *  ˛  Z  +  .   k     p  `  `˜   *  ˛  Z  +  .   ,       9  :  ;  <    `  `˜   *       9  :  ;  <     `     p    p(  ◊   p-    p0  	  p2    pó     p  pˇXÑ∆                 1   D         †     ,         †  ,      ?      † .      ?      † 0      @      † u      )      † Ä      .      † å      1      † ò      3      † ì      A      † £   
+   6      † û      B      † ≠      7      † º   
+   =      † ùH©¿      ∂V      ∂V                 ÄX  OF  @  OF  X   *              S(  ˜  S(  `               ü0  1  ñ0  1  H  G            A3  §3  83  §3  R  R            ˝3  q4  Ù3  q4  W  ;            †G  ÅH  âG  ÅH  ‚  (            "J  K  	J  K  ˚  ,            ≤L  XM  òL  XM    .          Ç¢N  ñO  àN  ñO  '  .           %O  çO  O  çO  +             Ç€P  ˇQ  ¬P  ˇQ  >  ,            éQ  ˆQ  ÖQ  ˆQ  C               -S  {T  S  {T  S  &             ¨U  ¥V  ïU  ¥V  j  (          5°›â‚Ì*ƒo      Éb Á∆b Á∆CÒÁ¡b∞   å    O^partitionKey=%28https%2Cngeconnect.fr%29,:https://ucopia-lvbca.ngeconnect.fr/100/portal/resources/_javascript/jquery.sprintf.js?1637144850 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+Last-Modified: Wed, 08 Dec 2021 02:44:18 GMT
+ETag: "56b6-5d299776c31b6"
+Accept-Ranges: bytes
+Content-Length: 22198
+Content-Type: application/javascript
+Date: Mon, 07 Feb 2022 04:40:00 GMT
+Server: Apache
+ original-response-headers Date: Tue, 04 Jan 2022 04:33:35 GMT
+Server: Apache
+Last-Modified: Wed, 08 Dec 2021 02:44:18 GMT
+ETag: "56b6-5d299776c31b6"
+Accept-Ranges: bytes
+Content-Length: 22198
+Keep-Alive: timeout=1, max=96
+Connection: Keep-Alive
+Content-Type: application/javascript
+ ctid 2 uncompressed-len 0 net-response-time-onstart 5072 net-response-time-onstop 5075 necko:classified 1 alt-data 1;22198,javascript/moz-bytecode-20211215221728-8l alt-data-from-child 1   Ê2

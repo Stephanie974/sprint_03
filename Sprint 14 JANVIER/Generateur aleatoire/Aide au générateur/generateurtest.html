@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Generateur team</title>
+</head>
+<body>
+    
+    <h1>Générateur aléatoire d'équipes</h1> <!-- Titre-->
+<div class="global"> <!--Div global du selecteur de génération-->
+
+
+
+    <!--Bloc de saisie des personnes-->
+    <h2>Ajouter ou supprimer un élément d'un tableau</h2>
+    <label for="prenom">Prénom</label>
+    <input type="text" name="prenom" id="prenom" required>
+    <label for="nom">Nom</label>
+    <input type="text" name="nom" id="nom" required>
+    <input type="submit" value="ajouter" onclick="ajouterLigne()">
+    <!-- <table>
+    <thead>
+    <tr><th>Prénom</th><th>Nom</th></tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+    </table> -->
+    <table>
+        <thead>
+        <tr>
+            <th>nom</th>
+            <th>prenom</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+        
+        <tr>
+            <td>DOE</td>
+            <td>JOHN</td>
+        </tr>
+        </tbodyid="tbody">
+    </table>
+    <input type="submit" value="supprimer" onclick="supprimerLignes()">
+    <!--Fin du bloc de saisie-->
+    <!--Récupération de saisie-->
+
+  <!--Fin de Récupération de saisie-->
+  <script>
+//       function ajouterLigne(){  
+//  document.getElementById("tbody"); 
+ function ajouterLigne() {
+
+     document.getElementById("nom");
+      const tt = document.getElementById("nom");
+       console.log(tt);
+       console.log(tt.value);
+     document.getElementById("prenom");
+      const pp = document.getElementById("prenom");
+       console.log(pp);
+       console.log(pp.value);
+       
+        const dd = document.getElementById("tbody");
+        console.log(dd);
+        console.log(dd.value);
+        <input type="button" value="dd" onclick="ajouterLigne" />
+
+//Ceci ne fonctionne pas : b.appendChild('Texte écrit en JavaScript');
+//Ceci ne fonctionne pas non plus : b.appendChild(newP, newTexte);
+
+
+//   var currentColor = localStorage.getItem('nom');
+//   var currentFont = localStorage.getItem('prenom');
+//   var currentImage = localStorage.getItem('tbody');
+
+//   document.getElementById('nom').value = ajouterLigne;
+//   document.getElementById('prenom').value = ajouterLigne;
+//   document.getElementById('tbody').value = ajouterLigne;
+
+}
+ 
+//       var nom=e.offset
+//                     var prenom=e.offsetprenom
+// document.getElementbyId("nom");
+// document.getElementById("prenom");
+// document.getElementById("tbody");
+
+
+tirage = new Array;
+nombres=""
+nb= 7
+for (i=1 ;i<nb ;i++)
+{
+nb_aleatoire(20);
+tirage[i]= nombre;
+for (t=1 ; t<i ;t++){
+if (tirage[t]==nombre)
+{
+i=i-1;
+}
+}
+}
+for (i=1 ;i<nb ;i++)
+{
+nombres= nombres+tirage[i]+" ";
+}
+document.write(nombres);
+//-->
+</script>
+	<button>Générer !</button>
+
+	<div class="groups"></div><!--Div affichant le résultat-->
+
+</div><!--Fin de la Div Global-->
+</body>
+</html>

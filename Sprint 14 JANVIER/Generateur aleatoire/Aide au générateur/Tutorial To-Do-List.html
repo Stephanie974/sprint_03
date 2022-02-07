@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorial To-Do-List</title>
+
+  <link rel="stylesheet" href="Tutorial%20To-Do-List_fichiers/css.css">
+  <!-- CSS Font Awesome -->
+  <link rel="stylesheet" href="Tutorial%20To-Do-List_fichiers/font-awesome.css">
+
+  <!-- CSS App ToDoList -->
+  <link rel="stylesheet" href="Tutorial%20To-Do-List_fichiers/style.css">
+
+  <!-- CSS Bootstrap-->
+  <link rel="stylesheet" href="Tutorial%20To-Do-List_fichiers/bootstrap.css">
+  <!-- CSS style-->
+  <link rel="stylesheet" href="Tutorial%20To-Do-List_fichiers/index.css">
+  <script src="Tutorial%20To-Do-List_fichiers/jquery.js"></script>
+  <script src="Tutorial%20To-Do-List_fichiers/popper.js"></script>
+  <script src="Tutorial%20To-Do-List_fichiers/bootstrap.js"></script>
+  <style>
+    body {
+        position: relative; 
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+   <!-- Jumbotron Bootstrap-->
+   <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">To-Do-List en Javascript</h1>
+      <p class="lead">Je vais essayé de vous expliquer comment y parvenir.</p>
+      <p>Réalisé en suivant un tuto.<a href="https://www.youtube.com/watch?v=b8sUhU_eq3g">Youtube:</a></p>
+    </div>
+  </div>
+
+
+  
+ 
+
+
+  <div class="appBackground" id="toDoSection">
+    <div class="saisie">
+      <h4>Tape une tâche puis <span class="badge badge-secondary"> Press Entrer.</span></h4>
+    </div>
+    <!--Contient la to-do-list -->
+    <div class="containerApp">
+      <!-- Partie haute-->
+      <div class="headerApp">
+        <h1 class="titreApp">To Do List</h1>
+        <!-- Horloge -->
+        <div class="clockContainer">
+          <div class="clock">
+            <div class="hand hour" data-hour-hand="" style="--rotation: 404.325;"></div>
+            <div class="hand minute" data-minute-hand="" style="--rotation: 171.9;"></div>
+            <div class="hand second" data-second-hand="" style="--rotation: 234;"></div>
+            <div class="number number1">1</div>
+            <div class="number number2">2</div>
+            <div class="number number3">3</div>
+            <div class="number number4">4</div>
+            <div class="number number5">5</div>
+            <div class="number number6">6</div>
+            <div class="number number7">7</div>
+            <div class="number number8">8</div>
+            <div class="number number9">9</div>
+            <div class="number number10">10</div>
+            <div class="number number11">11</div>
+            <div class="number number12">12</div>
+          </div>
+        </div>
+
+        <!-- Contient le boutons effacer -->
+        <div class="clearApp" id="clearApp">
+          <!--image effacer font awesome-->
+          <i class="fa fa-refresh"></i>
+        </div>
+        <!-- Contien la date-->
+        <div id="dateApp">mardi 11 janvier</div>
+      </div>
+      <!-- Contient la liste sous le header-->
+      <div class="contentApp">
+        <ul id="listApp">
+        <li class="item">
+        <i class="fa  fa-circle-thin  co" job="complete" id="4"></i>
+        <p class="text "> fref </p>
+        <i class="fa fa-trash-o de" job="delete" id="4"></i>
+    </li></ul>
+      </div>
+      <!-- Partie ou l'on saisie la tâche-->
+      <div class="add-to-do">
+        <!-- Plus img font awesome-->
+        <i class="fa fa-plus-circle"></i>
+        <input type="text" id="input" placeholder="A Faire">
+      </div>
+    </div>
+  </div>
+
+    <!-- NavBar -->
+    <nav class="navbar sticky-top navbar-expand-sm navbar-light fixed-top justify-content-center" id="navigationBar">  
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#toDoSection">TO-DO-LIST</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#htmlSection">HTML</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#jsSection">JAVASCRIPT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#addToDoSection">ADD TO DO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#stockerSection">STOCKER</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#updateSection">UPDATE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#targetSection">TARGET</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#dataSection">LOCAL-DATA</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#dateSection">DATE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#telechargementSection">TELECHARGER</a>
+        </li>
+      </ul>
+    </nav>
+
+
+
+  <!-- 3 card Bootstrap-->
+  <br>
+  <div class="card-deck">
+    <div class="card">
+      <img src="Tutorial%20To-Do-List_fichiers/html.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">HTML</h5>
+        <p class="card-text">
+          Le code HTML, il sera abordé sans profondeur, mais de façon suffisante afin d'améliorer la compréhension.
+        </p>
+        <p class="card-text"><small class="text-muted">Facile</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Tutorial%20To-Do-List_fichiers/explain2.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Explication</h5>
+        <p class="card-text">
+          En suivant ce tuto j'ai découvert beaucoup de nouvelles choses.
+          <br>
+          Je vais essayer au mieux d'expliquer le code, sa logique, soyez indulgent, c'est ma premiere tentative.
+
+        </p>
+        <p class="card-text"><small class="text-muted">Difficile</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Tutorial%20To-Do-List_fichiers/js.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Javascript</h5>
+        <p class="card-text">
+          Enfin je vous divulguerai le code complet du projet.
+          <br> 
+          Je vous encourage fortement à regarder la video du <a href="https://www.youtube.com/watch?v=b8sUhU_eq3g">tuto.</a></p>
+        <p class="card-text"><small class="text-muted">Difficile</small></p>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <!-- HTML-->
+  <div class="htmlCode" id="htmlSection">
+    <div class="card">
+      <h2 class="card-header">HTML</h2>
+        <img src="Tutorial%20To-Do-List_fichiers/htmlToDo.png" class="card-img-top" alt="..." id="imageHTML" width="300px">
+        <div class="card-body">
+          <h5 class="card-title">La partie HTML</h5>
+          <p class="card-text">
+              La partie HTML n'est pas vraiment difficile à comprendre, prenez un instant pour comprendre l'image.
+              </p><ol>
+                <li>Nous avons une div de classe "container" qui contient entierment la To-Do List.</li>
+                <li>div class "header" représente la partie haute de la To-Do List (le boutons "effacer", la date).</li>
+                <li>div class "content" représente la liste entre le header et la zone de saisie.</li>
+                <li>div id="list" qui représente le To-Do, les classe représentant les logo (nous agirons dessus avec javascript)</li>
+                <li>div class "add-items" avec l'input (le plus étant liée à la class. (merci Font-awesome)</li>
+              </ol>
+          <p></p>
+          <p class="card-text"><small class="text-muted">L'horloge ne figure pas dans ce code c'est un rajout de ma part.</small></p>
+        </div>
+      </div>
+  </div>
+
+
+  <!--CSS-->
+  <div class="htmlCode">
+    <div class="card">
+      <h2 class="card-header">CSS</h2>
+        <img src="Tutorial%20To-Do-List_fichiers/linkCss.png" class="card-img-top" alt="..." id="imageHTML" width="300px">
+        <div class="card-body">
+          <h5 class="card-title">La partie CSS</h5>
+          <p class="card-text">
+              Nous allons survoler le CSS, le focus ici étant sur Javascript.
+              </p><ol>
+                <li>Utilisation de la police Titillium</li>
+                <li>Font-Awesome, trés utile permet d'attribuer des images par le biais de classe, 
+                  dans ce cas en changeant les classes dynamiquement par le biais de Javascript, 
+                  nous allons gérer les icônes de la To-Do-List (corbeille, cercle, rayé).
+                </li>
+                <li>Le CSS style.css pour gérer l'affichage de la page.</li>
+              </ol>
+          <p></p>
+          <p class="card-text"><small class="text-muted">Le CSS nous intéresse pas, nous allons donc trés vite. </small></p>
+        </div>
+      </div>
+  </div>
+
+
+
+  
+  <div class="alertCenter">
+    <div class="alert alert-danger" role="alert">
+        <h4 class="alert-heading">JavaScript</h4>
+        <p>Attention, les choses sérieuses commencent, nous allons attaquer l'explication du code JavaScript.</p>
+        <p class="mb-0">Alors courage, prenez bien le temp d'analiser et lire chaques images.</p>
+      </div>
+  </div>
+
+  
+
+
+  <div class="explication" id="jsSection">
+    <div class="card">
+      <h2 class="card-header">Selectionner les éléments</h2>
+        <img src="Tutorial%20To-Do-List_fichiers/selectionnerElement.png" class="card-img-top" alt="..." id="imageHTML" width="300px">
+        <div class="card-body">
+          <h5 class="card-title">Sélectionner les éléments</h5>
+          <p class="card-text">
+              </p><ol>
+                Lien utile: <a href="https://developer.mozilla.org/fr/docs/Web/API/Document/querySelector"><img src="Tutorial%20To-Do-List_fichiers/mdmLogo.svg" alt="" width="150px;"></a>
+                <li>On utilise ici .querySelector(".clear"), ce qui signifie que l'on sélectionne le premier élement avec la classe clear.</li>
+                <li>Pour sélectionner la date on utilise cette fois .getElementById (id="date") .</li>
+                <li>Idem avec list, qui représente la liste des To-Do.</li>
+                <li>Pour finir on récupère l'input, la saise.</li>
+              </ol>
+          <p></p>
+          <p class="card-text"><small class="text-muted">Maintenant que nous avons sélectionné nos élements, nous allons pouvoir agir dynamiquement dessus.</small></p>
+        </div>
+      </div>
+  </div>
+
+
+
+  <div class="explication">
+    <div class="card">
+      <h2 class="card-header">Insérer la To-Do</h2>
+        <img src="Tutorial%20To-Do-List_fichiers/insertAdjacentHTML.png" class="card-img-top" alt="..." id="imageHTML" width="300px">
+        <div class="card-body">
+          <h5 class="card-title">Position</h5>
+          <p class="card-text">
+            
+            Lien utile: <a href="https://developer.mozilla.org/fr/docs/Web/API/Element/insertAdjacentHTML"><img src="Tutorial%20To-Do-List_fichiers/mdmLogo.svg" alt="" width="150px;"></a>
+            </p><ol>
+              <li>Sélectionner l'élément avec l'id "element".</li>
+              <li>Insérer l'élement avec .insertAdjacentHTML, qui à deux parametres: position et text.</li>
+              <li>Bien lire le dessin est comprendre les différentes positions (beforeend, afterbegin...).</li>
+            </ol>
+          <p></p>
+
+
+          <div class="card mb-3" style="max-height: 440px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <a href="https://ar-todolist.netlify.app/img/text.png"><img src="Tutorial%20To-Do-List_fichiers/text.png" class="card-img" alt="..."></a>
+
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">"text"</h5>
+                  <p class="card-text">
+                    "text" représente le code html de la To-Do.
+                    <br>
+                    Pour résumer on insère un code html (ici text) à une certaine position (beforeend).
+                    <br>
+                    Je vous invite à cliquer sur l'image et lire les commentaires pour mieux comprendre le code.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="card-text"><small class="text-muted">Pas d'inquiétude à la fin tout sera plus claire.</small></p>
+        </div>
+      </div>
+  </div>
+
+
+
+
+  <div class="explication" id="addToDoSection">
+    <div class="card">
+      <h2 class="card-header">Ajouter un To-Do</h2>
+        <img src="Tutorial%20To-Do-List_fichiers/addToDo.png" class="card-img-top" alt="..." id="imageHTML" width="300px">
+        <div class="card-body">
+          <h5 class="card-title">Ajouter un To-Do</h5>
+          <p class="card-text">
+            </p><ol>
+              <li>On a récupéré "list", la div qui contient les To-Do.</li>
+              <li>function addToDo qui prend en paramètre To-Do (input).</li>
+              <li>"text" comme vue avant représente le code html de la To-Do. ( ${toDo} )</li>
+              <li>"position", vue précédement.</li>
+              <li>Insere la ToDo en utilisant .inserAdjacentHTML.</li>
+              <li>Fonction est exécuté avec "drink coffee" en paramètre.</li>
+            </ol>
+          <p></p>
+        </div>
+      </div>
+  </div>
+
+
+
+  <div class="explication">
+    <div class="card">
+      <h2 class="card-header">Ajouter un To-Do avec enter</h2>
+        <img src="Tutorial%20To-Do-List_fichiers/addToDo1.png" class="card-img-top" alt="..." id="imageHTML" width="300px">
+        <div class="card-body">
+          <h5 class="card-title">Ajouter un To-Do</h5>
+          <p class="card-text">
+            Lien utile: <a href="https://developer.mozilla.org/fr/docs/Web/API/KeyboardEvent/key"><img src="Tutorial%20To-Do-List_fichiers/mdmLogo.svg" alt="" width="150px;"></a>
+            </p><ol>
+              <li>On récupere l'input (la To-Do).</li>
+              <li>On écoute (.addEvenListener) les touches pressées (keyup) et plus particulièrement "entrer" (keycode:13).</li>
+              <li>Si entrer est pressée "toDo" = l'input</li>
+              <li>On contrôle si on a une "toDo".</li>
+              <li>Si oui, on ajoute la "toDo".</li>
+              <li>On réinitalise "input" à une phrase vide "".</li>
+            </ol>
+
+          <p></p>
+          <p class="card-text">
+            <small class="text-muted">
+              Dés que qu'une touche est pressée la fonction s'exécute et contrôle 
+              si la touche est "entrer", le code continue.
+            </small>
+          </p>
+        </div>
+      </div>
+  </div>
+
+
+
+
+  <div class="explication" id="stockerSection">
+    <div class="card">
+      <h2 class="card-header">Stocker un To-Do dans une collection LIST</h2>
+        <img src="Tutorial%20To-Do-List_fichiers/storeToDo.png" class="card-img-top" alt="..." id="imageHTML" width="300px">
+        <div class="card-body">
+          <h5 class="card-title">Ajouter un To-Do dans tableau d'objet</h5>
+          <p class="card-text">
+            Tableau d'objet:
+            <br>
+            var tableau = [];
+            <br>
+            var objet = {};
+            <br>
+            Lien utile: <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Collections_index%C3%A9es"><img src="Tutorial%20To-Do-List_fichiers/mdmLogo.svg" alt="" width="150px;"></a>
+            </p><ol>
+              <li>Chaque To-Do est stocké dans LIST.</li>
+              <li>"name" = To-Do (l'input).</li>
+              <li>"id" représente l'index.</li>
+              <li>"done": si true le To-Do est effectué.</li>
+              <li>"trash": si true le To-Do est effacé.</li>
+            </ol>
+            <h5 class="card-title">Maintenant que nous avons un tableau LIST, stockons nos objects To-Do.</h5>
+            <ol>
+              <li>Nous allons ajouter un élément à la fin de la liste avec LIST.push, To-Do est ajouté à LIST.</li>
+              <li>Il reste plus qu'à incrémenter l'id avec "id++".</li>
+            </ol>
+
+          <p></p>
+          <p class="card-text"><small class="text-muted">Au début, j'ai eu du mal à comprendre la LIST: tableau d'object, un conseil prendre le temps.</small></p>
+        </div>
+      </div>
+  </div>
+
+
+
+
+
+  <div class="explication" id="updateSection">
+    <div class="card">
+      <h2 class="card-header">Mettre à jour le To-Do</h2>
+        <img src="Tutorial%20To-Do-List_fichiers/updateToDo.png" class="card-img-top" alt="..." id="imageHTML" width="300px">
+        <div class="card-body">
+          <h5 class="card-title">Actualiser un To-Do</h5>
+          <p class="card-text">
+            Lien utile: <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_conditionnel"><img src="Tutorial%20To-Do-List_fichiers/mdmLogo.svg" alt="" width="150px;"></a>
+            <br>
+            Les 3 premieres constantes représentent les classes 
+utilisées par Front-Awesome pour gérer les logos (poubelle, cercle, 
+etc).
+            </p><ol>
+              <li>La function addToDo prend en paramètre: toDo, id, done, trash.</li>
+              <li>Si "trash = true"  on arrête (return).</li>
+              <li>const DONE = done ? CHECK : UNCHECK;
+                <br> 
+                Est un opérateur ternaire signifie:  condition ? siVrai : siFaux;
+              </li>
+              <li>Cela nous permet de gérer les logo par le biais des classes en utilisant "${}".</li>
+            </ol>
+          <p></p>
+          <p class="card-text"><small class="text-muted">Trés ingénieux ce système de classe Font-awesome, parfait pour les logos.</small></p>
+        </div>
+      </div>
+  </div>
+
+
+
+  <div class="explication">
+    <div class="card">
+      <h2 class="card-header">Le To-Do est effectué</h2>
+        <img src="Tutorial%20To-Do-List_fichiers/ToDoIsDone.png" class="card-img-top" alt="..." id="imageHTML" width="300px">
+        <div class="card-body">
+          <h5 class="card-title">To-Do done.</h5>
+          <p class="card-text">
+            Lien utile: <a href="https://developer.mozilla.org/fr/docs/Web/API/Element/classList"><img src="Tutorial%20To-Do-List_fichiers/mdmLogo.svg" alt="" width="150px;"></a>
+            
+            </p><div class="alert alert-info" role="alert">
+              "toggle( String [, force] )"
+              <br>
+              Si un seul argument est présent : change la présence d'une classe dans la liste.
+              <br> 
+              Si la classe existe, alors la supprime et renvoie false, 
+dans le cas inverse, ajoute cette classe et retourne true.
+              <br>
+              Si le second argument est présent : Si l'argument force 
+est à true, ajoute cette classe, si l'argument est à false, la supprime.
+            </div>
+            <ol>
+              <li>element.classList retourne la classe de notre élement.</li>
+              <li>La fonction completeToDo prend en paramètre élement, elle est appellé dés que l'on clique sur le cercle.</li>
+              <li>Si élement a pour classe CHECK l'effacer , sinon lui donner la class UNCHECK.</li>
+              <li>Si élement a pour classe UNCHECK l'effacer , sinon lui donner la class CHECK.</li>
+              <li>On utilise .parentNode pour accéder à l' élement parent, 
+                puis .querySelector(".text") apour accéder à l'element text et lui donner ou enlever la classe LINE_THROUGH.
+              </li>
+              <li>Enfin il faut actualiser le status de notre To-DO dans notre LIST, mais pour le faire nous devons connaitre son "Id".</li>
+              <li>On utilise la condition ternaire.
+                <br>
+                Rappel, une condition ternaire se lit ainsi: condition ? siVrai : siFaux;
+                <br><br> 
+                LIST[element.id].done ? false : true;
+                <br> 
+                Nous permet donc actualiser le boolean "done" dans notre "LIST" de To-do.</li>
+            </ol>
+          <p class="card-text"><small class="text-muted">Génial "classList.toggle" une belle découverte.</small></p>
+        </div>
+      </div>
+  </div>
+
+
+  <div class="explication">
+    <div class="card">
+      <h2 class="card-header">Effaccer un To-Do</h2>
+        <img src="Tutorial%20To-Do-List_fichiers/removeToDo.png" class="card-img-top" alt="..." id="imageHTML" width="300px">
+        <div class="card-body">
+          <h5 class="card-title">Effacer To-Do</h5>
+          <p class="card-text">
+            Lien utile: <a href="https://developer.mozilla.org/fr/docs/Web/API/ParentNode"><img src="Tutorial%20To-Do-List_fichiers/mdmLogo.svg" alt="" width="150px;"></a>
+            
+            </p><ol>
+              <li>On doit accéder à l'élement parent de l'élement parent (le grand parent).
+                <br>
+                element.parentNode.parentNode
+              </li>
+              <li>Puis on efface l'élement enfant du grand parent.
+                <br>
+                .removeChild(element.parentNode)
+              </li>
+              <li>Enfin rappelez-vous il faut actualiser LIST.
+                <br>
+                LIST[element.id].trash = true;
+              </li>
+              <li>Parfait To-Do effacé.</li>
+            </ol>
+          <p></p>
+          <p class="card-text"><small class="text-muted">Encore une découverte ".parentNode".</small></p>
+        </div>
+      </div>
+  </div>
+
+
+  <div class="explication" id="targetSection">
+    <div class="card">
+      <h2 class="card-header">Cibler un élément créer dynamiquement</h2>
+        <img src="Tutorial%20To-Do-List_fichiers/cibleElement.png" class="card-img-top" alt="..." id="imageHTML" width="300px">
+        <div class="card-body">
+          <h5 class="card-title">Ciblé</h5>
+          <p class="card-text">
+            Lien utile: <a href="https://developer.mozilla.org/fr/docs/Web/API/Event/target"><img src="Tutorial%20To-Do-List_fichiers/mdmLogo.svg" alt="" width="150px;"></a>
+            
+              Meme sans bouton il est possible d'écouter les clics.
+            </p><ol>
+              <li>Ecouter les clics sur la list et exécuter la fonction avec "event" comme paramètre.</li>
+              <li>Récupèrer la cible des clics (target) avec "let element".</li>
+              <li>Puis on récupère son job attribute (delete ou complete) avec elementJOB.</li>
+              <li>Si elementJOB = complete, alors exécuter la function completeToDo.</li>
+              <li>Sinon elementJOB = delete, alors exécuter la function removeToDo.</li>
+            </ol>
+          <p class="card-text"><small class="text-muted">Décidement j'aurai beaucoup appris durant ce projet.</small></p>
+        </div>
+      </div>
+  </div>
+
+  <div class="explication" id="dataSection">
+    <div class="card">
+      <h2 class="card-header">Sauvegarder le To-Do dans la mémoire local</h2>
+        <img src="Tutorial%20To-Do-List_fichiers/saveLocalStorage.png" class="card-img-top" alt="..." id="imageHTML" width="300px">
+        <div class="card-body">
+          <h5 class="card-title">Local Data</h5>
+          <p class="card-text">
+            Maintenant on doit sauvegarder notre LIST dans la mémoire local.
+            <br>
+            Lien utile: <a href="https://developer.mozilla.org/fr/docs/Web/API/Window/localStorage"><img src="Tutorial%20To-Do-List_fichiers/mdmLogo.svg" alt="" width="150px;"></a>
+            </p><ol>
+              <li>localStorage.setItem('key', 'value); c'est ainsi que l'on enregistre dans la mémoire local.</li>
+              <li>La méthode JSON.stringify() convertit une valeur JavaScript en chaîne JSON.</li>
+              <li>key = ToDo,  JSON.stringify(LIST) = value</li>
+              <li>On utilise localStorage.setItem dès que l'on doit mettre à jour (update) notre LIST.</li>
+            </ol>
+          <p></p>
+          <p class="card-text"><small class="text-muted">Ah bon c'est possible ? Bien sur !</small></p>
+        </div>
+      </div>
+  </div>
+
+
+  <div class="explication">
+    <div class="card">
+      <h2 class="card-header">Récupérer la To-Do-List dans la mémoire local</h2>
+        <img src="Tutorial%20To-Do-List_fichiers/restoreFromLocalStorage.png" class="card-img-top" alt="..." id="imageHTML" width="300px">
+        <div class="card-body">
+          <h5 class="card-title">Local</h5>
+          <p class="card-text">
+            Lien utile: <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/JSON/parse"><img src="Tutorial%20To-Do-List_fichiers/mdmLogo.svg" alt="" width="150px;"></a>
+            
+            </p><ol>
+              <li>.getItem("ToDO") nous permet de récupérer notre liste de To-Do,  que l'on assigne à data.</li>
+              <li>Si data n'est pas vide.</li>
+              <li>LIST = JSON.parse(data) permet de récupérer la liste enregistrée.</li>
+              <li>Puis on charge la LIST dans l'interface avec loadToDo(LIST).</li>
+              <li>id=LIST.length ce qui nous permet de prévoir l'id du prochain To-Do.</li>
+              <li>Si data est vide, on initailise LIST vide et l'id = 0.</li>
+              <li>La fonction loadToDo(array){}; fait une loop dans 
+notre table de To-Do (LIST) pour récuperer leurs informations (name, id,
+ done, trash).</li>
+            </ol>
+          <p></p>
+          <p class="card-text"><small class="text-muted">Elle va être superbe cette App</small></p>
+        </div>
+      </div>
+  </div>
+
+
+
+
+  <div class="explication">
+    <div class="card">
+      <h2 class="card-header">Effacer le stockage local</h2>
+        <img src="Tutorial%20To-Do-List_fichiers/clearLocalStorage.png" class="card-img-top" alt="..." id="imageHTML" width="300px">
+        <div class="card-body">
+          <h5 class="card-title">local storage</h5>
+          <p class="card-text">
+            Lien utile: <a href="https://developer.mozilla.org/fr/docs/Web/API/Storage/clear"><img src="Tutorial%20To-Do-List_fichiers/mdmLogo.svg" alt="" width="150px;"></a>
+            </p><ol>
+              <li>const clear nous permet d'accéder à l'élement de classe "clear" (notre logo).</li>
+              <li>Puis on écoute les clics qui déclenchent la fonction.</li>
+              <li>"localSorage.clear"  efface le stockage local.</li>
+              <li>Enfin on recharge la page.</li>
+            </ol>
+          <p></p>
+          <p class="card-text"><small class="text-muted">Ne pas oublier de recharger la page.</small></p>
+        </div>
+      </div>
+  </div>
+
+
+  <div class="explication" id="dateSection">
+    <div class="card">
+      <h2 class="card-header">Afficher la date</h2>
+        <img src="Tutorial%20To-Do-List_fichiers/showDate.png" class="card-img-top" alt="..." id="imageHTML" width="300px">
+        <div class="card-body">
+          <h5 class="card-title">C'est partie !</h5>
+          <p class="card-text">
+            Lien utile: <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/toLocaleDateString"><img src="Tutorial%20To-Do-List_fichiers/mdmLogo.svg" alt="" width="150px;"></a>
+            </p><ol>
+              <li>dateElement représente l'élement avec l'id "date".</li>
+              <li>"options" stock les options d'affichage de la date.</li>
+              <li>Puis on attribue à "today" la date actuelle.</li>
+              <li>Enfin on modifie la date avec dateElement.innertHTML.</li>
+              <li>Et on lui attribue la valeur de la local.</li>
+            </ol>
+          <p></p>
+          <p class="card-text"><small class="text-muted">Pensez à changer: "en-US" en "fr-FR".</small></p>
+        </div>
+      </div>
+  </div>
+
+
+  <div class="explication" id="telechargementSection">
+    <div class="card">
+      <h2 class="card-header">Bravo c'est terminé</h2>
+        <img src="Tutorial%20To-Do-List_fichiers/welldone.jpg" class="card-img-top" alt="..." width="300px">
+        <div class="card-body">
+          <h5 class="card-title">Félicitation vous avez suivi ce long tuto.</h5>
+          <p class="card-text" j'ai="" essayé="" de="" commenter="" au="" maximum="" le="" code="" afin="" faciliter="" sa="" compréhension.="" <br="">
+            Prenez donc le temps de comprendre le code, de lire les commentaires.
+            <br>
+            J'espère que ce tuto vous a été utile.
+            <br>
+            PS: le projet comporte un ajout l'horloge.
+            <br><br>
+            <a href="https://ar-todolist.netlify.app/To-Do-List.zip"> Télécharger le projet Final.</a>
+          </p>
+          <p class="card-text"><small class="text-muted">Réaliser un 
+tuto et expliquer du code n'est pas toujours facile. C'est la première 
+fois que je m'essaye à l'exercise soyez indulgent.</small></p>
+        </div>
+      </div>
+  </div>
+  
+
+  <script>
+    // function changeant la class de la navbar suivant la taille de l'écran
+    function resize(){
+      if ( $(window).width() > 739) {
+        $("#navigationBar").toggleClass("justify-content-center");
+      } 
+      else {
+        $("#navigationBar").toggleClass("");
+      }
+    }
+    $(window).on("resize", resize);
+    resize(); // call once initially
+  </script>
+
+
+  <!--To Do List JS-->
+  <script src="Tutorial%20To-Do-List_fichiers/app.js"></script>
+
+  <!-- JS Bootstrap-->
+  <script src="Tutorial%20To-Do-List_fichiers/jquery-3.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="Tutorial%20To-Do-List_fichiers/popper_002.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="Tutorial%20To-Do-List_fichiers/bootstrap_002.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+
+</body></html>

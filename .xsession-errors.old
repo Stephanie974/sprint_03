@@ -1,0 +1,310 @@
+dbus-update-activation-environment: setting DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1001/bus
+dbus-update-activation-environment: setting DISPLAY=:0
+dbus-update-activation-environment: setting XAUTHORITY=/home/steph/.Xauthority
+dbus-update-activation-environment: setting GTK_MODULES=gail:atk-bridge
+dbus-update-activation-environment: setting QT_ACCESSIBILITY=1
+dbus-update-activation-environment: setting SHELL=/bin/bash
+dbus-update-activation-environment: setting QT_ACCESSIBILITY=1
+dbus-update-activation-environment: setting XDG_CONFIG_DIRS=/etc/xdg/xdg-cinnamon:/etc/xdg
+dbus-update-activation-environment: setting XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+dbus-update-activation-environment: setting LANGUAGE=fr_FR
+dbus-update-activation-environment: setting MANDATORY_PATH=/usr/share/gconf/cinnamon.mandatory.path
+dbus-update-activation-environment: setting DESKTOP_SESSION=cinnamon
+dbus-update-activation-environment: setting GTK_MODULES=gail:atk-bridge
+dbus-update-activation-environment: setting PWD=/home/steph
+dbus-update-activation-environment: setting XDG_SESSION_DESKTOP=cinnamon
+dbus-update-activation-environment: setting LOGNAME=steph
+dbus-update-activation-environment: setting XDG_SESSION_TYPE=x11
+dbus-update-activation-environment: setting GPG_AGENT_INFO=/run/user/1001/gnupg/S.gpg-agent:0:1
+dbus-update-activation-environment: setting XAUTHORITY=/home/steph/.Xauthority
+dbus-update-activation-environment: setting XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/steph
+dbus-update-activation-environment: setting GDM_LANG=fr_FR
+dbus-update-activation-environment: setting HOME=/home/steph
+dbus-update-activation-environment: setting IM_CONFIG_PHASE=1
+dbus-update-activation-environment: setting LANG=fr_FR.UTF-8
+dbus-update-activation-environment: setting XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+dbus-update-activation-environment: setting XDG_SESSION_CLASS=user
+dbus-update-activation-environment: setting DEFAULTS_PATH=/usr/share/gconf/cinnamon.default.path
+dbus-update-activation-environment: setting USER=steph
+dbus-update-activation-environment: setting DISPLAY=:0
+dbus-update-activation-environment: setting SHLVL=1
+dbus-update-activation-environment: setting XDG_RUNTIME_DIR=/run/user/1001
+dbus-update-activation-environment: setting GTK3_MODULES=xapp-gtk3-module
+dbus-update-activation-environment: setting XDG_DATA_DIRS=/usr/share/cinnamon:/usr/share/gnome:/home/steph/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+dbus-update-activation-environment: setting PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+dbus-update-activation-environment: setting GDMSESSION=cinnamon
+dbus-update-activation-environment: setting DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1001/bus
+dbus-update-activation-environment: setting _=/usr/bin/dbus-update-activation-environment
+[cinnamon-settings-daemon-smartcard] Failed to start: impossible de trouver un pilote de carte à puce adapté
+[cinnamon-settings-daemon-smartcard] Failed to start: impossible de trouver un pilote de carte à puce adapté
+** Message: 10:41:30.452: Existing monitor config (/home/steph/.config/cinnamon-monitors.xml) not found at startup. Looking for legacy configuration (monitors.xml)
+Cjs-Message: 10:41:31.550: Profiler is disabled. Not setting up signals.
+Clutter-Message: 10:41:31.596: Sync method: PRESENTATION TIME
+Cjs-Message: 10:41:32.073: JS LOG: About to start Cinnamon
+Cjs-Message: 10:41:32.288: JS LOG: [LookingGlass/info] Cinnamon.AppSystem.get_default() started in 198 ms
+Cjs-Message: 10:41:32.303: JS LOG: [LookingGlass/info] loading user theme: /usr/share/themes/Mint-Y-Dark/cinnamon/cinnamon.css
+Cjs-Message: 10:41:32.335: JS LOG: [LookingGlass/info] added icon directory: /usr/share/themes/Mint-Y-Dark/cinnamon
+Cjs-Message: 10:41:32.563: JS LOG: [LookingGlass/info] loaded at Fri Feb 04 2022 10:41:32 GMT+0400 (heure de La Réunion)
+Cjs-Message: 10:41:32.563: JS LOG: Cinnamon started at Fri Feb 04 2022 10:41:32 GMT+0400 (heure de La Réunion)
+Cjs-Message: 10:41:32.592: JS LOG: [LookingGlass/info] ExtensionSystem started in 1 ms
+Cjs-Message: 10:41:32.592: JS LOG: [LookingGlass/info] NaNms
+Cjs-Message: 10:41:32.592: JS LOG: [LookingGlass/info] SearchProviderManager started in 1 ms
+openGL version 4.2 detected (GL3 Cogl Driver)
+MetaSyncRing disabled: couldn't find required GL extensions, or the minimum safe openGL version was not met
+cinnamon-session[1058]: WARNING: t+3,95814s: Detected that screensaver has appeared on the bus
+Cjs-Message: 10:41:32.723: JS LOG: [LookingGlass/info] Loaded applet show-desktop@cinnamon.org in 71 ms
+Cjs-Message: 10:41:32.733: JS LOG: [LookingGlass/info] Role locked: tray
+Cjs-Message: 10:41:32.738: JS LOG: [LookingGlass/info] Loaded applet systray@cinnamon.org in 15 ms
+Cjs-Message: 10:41:32.753: JS LOG: [LookingGlass/info] Loaded applet removable-drives@cinnamon.org in 15 ms
+Cjs-Message: 10:41:32.768: JS LOG: [LookingGlass/info] Loaded applet favorites@cinnamon.org in 15 ms
+St-Message: 10:41:32.772: cogl npot texture sizes SUPPORTED
+** Message: 10:41:32.775: nemo-desktop: session is cinnamon, establishing proxy
+Cjs-Message: 10:41:32.786: JS LOG: [LookingGlass/info] Role locked: notifications
+Cjs-Message: 10:41:32.799: JS LOG: [LookingGlass/info] Loaded applet notifications@cinnamon.org in 31 ms
+Cjs-Message: 10:41:32.818: JS LOG: [LookingGlass/info] Loaded applet keyboard@cinnamon.org in 19 ms
+Cjs-Message: 10:41:32.825: JS LOG: [LookingGlass/info] Loaded applet xapp-status@cinnamon.org in 7 ms
+Cjs-Message: 10:41:32.865: JS LOG: [LookingGlass/info] Loaded applet calendar@cinnamon.org in 40 ms
+Cjs-Message: 10:41:32.883: JS LOG: [LookingGlass/info] Loaded applet power@cinnamon.org in 18 ms
+Cjs-Message: 10:41:32.924: JS LOG: [LookingGlass/info] Loaded applet printers@cinnamon.org in 41 ms
+Cjs-Message: 10:41:32.972: JS LOG: [LookingGlass/info] Role locked: panellauncher
+Cjs-Message: 10:41:32.978: JS LOG: [LookingGlass/info] Loaded applet grouped-window-list@cinnamon.org in 54 ms
+Cjs-Message: 10:41:32.988: JS LOG: [LookingGlass/info] Adding XAppStatusIcon: nm-applet (:1.51/org/x/StatusIcon/Icon)
+
+** (csd-power:1173): CRITICAL **: 10:41:32.999: abs_to_percentage: assertion 'max > min' failed
+Cjs-Message: 10:41:33.042: JS LOG: [LookingGlass/info] Loaded applet sound@cinnamon.org in 64 ms
+Cjs-Message: 10:41:33.095: JS LOG: [LookingGlass/info] Hiding XAppStatusIcon (we have an applet): nm-applet (:1.51/org/x/StatusIcon/Icon)
+Cjs-Message: 10:41:33.103: JS LOG: [LookingGlass/info] Loaded applet network@cinnamon.org in 61 ms
+Cjs-Message: 10:41:33.304: JS LOG: [LookingGlass/info] Loaded applet menu@cinnamon.org in 201 ms
+Cjs-Message: 10:41:33.305: JS LOG: [LookingGlass/info] AppletManager started in 740 ms
+Cjs-Message: 10:41:33.308: JS LOG: [LookingGlass/info] Cinnamon took 1235 ms to start
+Cjs-Message: 10:41:33.344: JS LOG: Unknown network device type, is 14
+Cjs-Message: 10:41:36.899: JS LOG: [LookingGlass/info] Adding XAppStatusIcon: blueberry (:1.72/org/x/StatusIcon/Icon)
+cinnamon-session[1058]: WARNING: t+13,95735s: Detected that screensaver has left the bus
+Cjs-Message: 10:41:52.381: JS LOG: [LookingGlass/info] Adding XAppStatusIcon: mintUpdate.py (:1.75/org/x/StatusIcon/Icon)
+Cjs-Message: 10:42:11.935: JS LOG: [LookingGlass/info] Adding XAppStatusIcon: mintreport (:1.78/org/x/StatusIcon/Icon)
+libva error: /usr/lib/x86_64-linux-gnu/dri/iHD_drv_video.so init failed
+[Updates] Error fetching https://discord.com/api/updates/stable?platform=linux&version=0.0.16: getaddrinfo ENOTFOUND discord.com
+[Updates] Error fetching https://discord.com/api/updates/stable?platform=linux&version=0.0.16: getaddrinfo ENOTFOUND discord.com
+Cjs-Message: 10:43:19.192: JS LOG: [LookingGlass/info] Adding XAppStatusIcon: :1.79 (:1.48/org/x/StatusIcon/Icon)
+[2022-02-04 10:43:47.967] [1826] (audio_device_pulse_linux.cc:1861): Can't query latency
+[2022-02-04 10:43:47.990] [1820] (audio_send_stream.cc:344): Failed to set up send codec state.
+[2022-02-04 10:43:48.224] [1820] (audio_send_stream.cc:344): Failed to set up send codec state.
+[2022-02-04 10:43:48.225] [1820] (audio_device_generic.cc:32): BuiltInAECIsAvailable: Not supported on this platform
+[2022-02-04 10:47:15.525] [1820] (audio_send_stream.cc:344): Failed to set up send codec state.
+[2022-02-04 10:47:15.856] [1820] (audio_send_stream.cc:344): Failed to set up send codec state.
+[2022-02-04 10:47:15.856] [1820] (audio_device_generic.cc:32): BuiltInAECIsAvailable: Not supported on this platform
+[2022-02-04 10:55:08.656] [1820] (audio_send_stream.cc:344): Failed to set up send codec state.
+[2022-02-04 10:55:08.875] [1820] (audio_send_stream.cc:344): Failed to set up send codec state.
+[2022-02-04 10:55:08.875] [1820] (audio_device_generic.cc:32): BuiltInAECIsAvailable: Not supported on this platform
+Option 'sandbox' is unknown. Ignoring.
+[2022-02-04 11:04:19.476] [1825] (audio_device_pulse_linux.cc:1861): Can't query latency
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 12:02:49.724: gdk_pixbuf_get_width: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 12:02:49.724: gdk_pixbuf_get_height: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): St-WARNING **: 12:02:49.724: Could not load image from file: Impossible d’ouvrir le fichier « /tmp/.org.chromium.Chromium.KLokz7/discord1_402.png » : Aucun fichier ou dossier de ce type
+
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 12:03:15.008: gdk_pixbuf_get_width: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 12:03:15.008: gdk_pixbuf_get_height: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): St-WARNING **: 12:03:15.008: Could not load image from file: Impossible d’ouvrir le fichier « /tmp/.org.chromium.Chromium.lN99J3/discord1_448.png » : Aucun fichier ou dossier de ce type
+
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 12:04:11.546: gdk_pixbuf_get_width: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 12:04:11.546: gdk_pixbuf_get_height: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): St-WARNING **: 12:04:11.546: Could not load image from file: Impossible d’ouvrir le fichier « /tmp/.org.chromium.Chromium.dlv0i7/discord1_508.png » : Aucun fichier ou dossier de ce type
+
+cinnamon-session[1058]: WARNING: t+6116,16836s: Detected that screensaver has appeared on the bus
+cinnamon-session[1058]: WARNING: t+7851,57814s: Detected that screensaver has left the bus
+[2022-02-04 12:52:29.076] [1826] (audio_device_pulse_linux.cc:1861): Can't query latency
+[2022-02-04 12:52:29.076] [1826] (audio_device_pulse_linux.cc:1861): Can't query latency
+[2022-02-04 12:52:29.086] [1820] (audio_send_stream.cc:344): Failed to set up send codec state.
+[2022-02-04 12:52:29.308] [1820] (audio_send_stream.cc:344): Failed to set up send codec state.
+[2022-02-04 12:52:29.308] [1820] (audio_device_generic.cc:32): BuiltInAECIsAvailable: Not supported on this platform
+[2022-02-04 13:12:12.572] [1825] (audio_device_pulse_linux.cc:1861): Can't query latency
+
+(cinnamon:1332): Cjs-CRITICAL **: 13:30:50.806: Object St.Button (0x55f3e4648fd0), has been already deallocated — impossible to access it. This might be caused by the object having been destroyed from C code using something such as destroy(), dispose(), or remove() vfuncs.
+== Stack trace for context 0x55f3e3b8f170 ==
+#0   55f3e4c05278 i   /usr/share/cinnamon/js/misc/fileUtils.js line 211 > Function:127 (21e105e6a470 @ 101)
+#1   7ffc1aab6730 b   self-hosted:850 (363a2c8c2920 @ 454)
+#2   7ffc1aab6830 b   resource:///org/gnome/gjs/modules/core/_signals.js:133 (363a2c8ad880 @ 439)
+#3   55f3e4c051d0 i   /usr/share/cinnamon/js/ui/messageTray.js:1157 (2ee2fba30100 @ 148)
+#4   55f3e4c05130 i   /usr/share/cinnamon/js/ui/messageTray.js:1007 (2ee2fba303d0 @ 47)
+#5   55f3e4c05098 i   /usr/share/cinnamon/js/ui/tweener.js:256 (363a2c8bf600 @ 37)
+#6   7ffc1aab9730 b   resource:///org/gnome/gjs/modules/script/tweener/tweener.js:208 (363a2c8c2290 @ 74)
+#7   7ffc1aab9890 b   resource:///org/gnome/gjs/modules/script/tweener/tweener.js:339 (363a2c8c2240 @ 1969)
+#8   7ffc1aab9950 b   resource:///org/gnome/gjs/modules/script/tweener/tweener.js:352 (363a2c8c21f0 @ 144)
+#9   7ffc1aab99f0 b   resource:///org/gnome/gjs/modules/script/tweener/tweener.js:367 (363a2c8c21a0 @ 10)
+#10   7ffc1aab9ae0 b   resource:///org/gnome/gjs/modules/core/_signals.js:133 (363a2c8ad880 @ 439)
+#11   7ffc1aab9be0 b   /usr/share/cinnamon/js/ui/tweener.js:413 (363a2c8bf150 @ 128)
+#12   7ffc1aab9ca0 b   /usr/share/cinnamon/js/ui/tweener.js:389 (363a2c8bf1a0 @ 20)
+#13   7ffc1aab9d80 b   self-hosted:850 (363a2c8c2920 @ 454)
+
+(cinnamon:1332): Clutter-CRITICAL **: 13:30:50.808: clutter_actor_unparent: assertion 'CLUTTER_IS_ACTOR (self)' failed
+[2022-02-04 13:36:25.874] [1826] (audio_device_pulse_linux.cc:1861): Can't query latency
+[2022-02-04 13:36:25.874] [1826] (audio_device_pulse_linux.cc:1861): Can't query latency
+[2022-02-04 13:36:25.874] [1826] (audio_device_pulse_linux.cc:1861): Can't query latency
+[2022-02-04 13:36:25.883] [1820] (audio_send_stream.cc:344): Failed to set up send codec state.
+[2022-02-04 13:36:25.931] [1820] (audio_send_stream.cc:344): Failed to set up send codec state.
+[2022-02-04 13:36:25.932] [1820] (audio_device_generic.cc:32): BuiltInAECIsAvailable: Not supported on this platform
+[2022-02-04 13:37:25.361] [1820] (audio_send_stream.cc:344): Failed to set up send codec state.
+[2022-02-04 13:37:25.411] [1820] (audio_send_stream.cc:344): Failed to set up send codec state.
+[2022-02-04 13:37:25.413] [1820] (audio_device_generic.cc:32): BuiltInAECIsAvailable: Not supported on this platform
+[OpenH264] this = 0x0x3488b3c583f0, Warning:ParamValidationExt(), eSpsPpsIdStrategy setting (2) with iUsageType (1) not supported! eSpsPpsIdStrategy adjusted to CONSTANT_ID
+[OpenH264] this = 0x0x3488b3c583f0, Warning:ParamValidation(), AdaptiveQuant(1) is not supported yet for screen content, auto turned off
+[OpenH264] this = 0x0x3488b116b720, Warning:ParamValidationExt(), eSpsPpsIdStrategy setting (2) with iUsageType (1) not supported! eSpsPpsIdStrategy adjusted to CONSTANT_ID
+[OpenH264] this = 0x0x3488b116b720, Warning:ParamValidation(), AdaptiveQuant(1) is not supported yet for screen content, auto turned off
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 13:45:13.425: gdk_pixbuf_get_width: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 13:45:13.425: gdk_pixbuf_get_height: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): St-WARNING **: 13:45:13.425: Could not load image from file: Impossible d’ouvrir le fichier « /tmp/.org.chromium.Chromium.Jygag6/discord1_1016.png » : Aucun fichier ou dossier de ce type
+
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 13:54:47.295: gdk_pixbuf_get_width: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 13:54:47.295: gdk_pixbuf_get_height: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): St-WARNING **: 13:54:47.295: Could not load image from file: Impossible d’ouvrir le fichier « /tmp/.org.chromium.Chromium.lQgMC6/discord1_1538.png » : Aucun fichier ou dossier de ce type
+
+[2022-02-04 14:10:15.426] [1825] (audio_device_pulse_linux.cc:1861): Can't query latency
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 14:11:41.513: gdk_pixbuf_get_width: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 14:11:41.513: gdk_pixbuf_get_height: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): St-WARNING **: 14:11:41.513: Could not load image from file: Impossible d’ouvrir le fichier « /tmp/.org.chromium.Chromium.mqxof6/discord1_2302.png » : Aucun fichier ou dossier de ce type
+
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 14:19:28.514: gdk_pixbuf_get_width: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 14:19:28.515: gdk_pixbuf_get_height: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): St-WARNING **: 14:19:28.515: Could not load image from file: Impossible d’ouvrir le fichier « /tmp/.org.chromium.Chromium.5tGxx3/discord1_2756.png » : Aucun fichier ou dossier de ce type
+
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 14:31:08.789: gdk_pixbuf_get_width: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 14:31:08.789: gdk_pixbuf_get_height: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): St-WARNING **: 14:31:08.790: Could not load image from file: Impossible d’ouvrir le fichier « /tmp/.org.chromium.Chromium.vtMV14/discord1_3242.png » : Aucun fichier ou dossier de ce type
+
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 14:38:57.851: gdk_pixbuf_get_width: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 14:38:57.852: gdk_pixbuf_get_height: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): St-WARNING **: 14:38:57.852: Could not load image from file: Impossible d’ouvrir le fichier « /tmp/.org.chromium.Chromium.jkgzk5/discord1_3540.png » : Aucun fichier ou dossier de ce type
+
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 14:44:54.723: gdk_pixbuf_get_width: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 14:44:54.723: gdk_pixbuf_get_height: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): St-WARNING **: 14:44:54.723: Could not load image from file: Impossible d’ouvrir le fichier « /tmp/.org.chromium.Chromium.PNZeC5/discord1_3766.png » : Aucun fichier ou dossier de ce type
+
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 14:52:32.552: gdk_pixbuf_get_width: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 14:52:32.553: gdk_pixbuf_get_height: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): St-WARNING **: 14:52:32.553: Could not load image from file: Impossible d’ouvrir le fichier « /tmp/.org.chromium.Chromium.hkwj53/discord1_4120.png » : Aucun fichier ou dossier de ce type
+
+[2022-02-04 14:55:12.415] [1826] (audio_device_pulse_linux.cc:1861): Can't query latency
+[2022-02-04 14:55:12.421] [1820] (audio_send_stream.cc:344): Failed to set up send codec state.
+[2022-02-04 14:55:12.480] [1820] (audio_send_stream.cc:344): Failed to set up send codec state.
+[2022-02-04 14:55:12.483] [1820] (audio_device_generic.cc:32): BuiltInAECIsAvailable: Not supported on this platform
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 14:57:00.496: gdk_pixbuf_get_width: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 14:57:00.496: gdk_pixbuf_get_height: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): St-WARNING **: 14:57:00.497: Could not load image from file: Impossible d’ouvrir le fichier « /tmp/.org.chromium.Chromium.1M76i6/discord1_4308.png » : Aucun fichier ou dossier de ce type
+
+(node:1801) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 spellcheck-result listeners added to [EventEmitter]. Use emitter.setMaxListeners() to increase limit
+(Use `exe --trace-warnings ...` to show where the warning was created)
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 15:04:28.618: gdk_pixbuf_get_width: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 15:04:28.618: gdk_pixbuf_get_height: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): St-WARNING **: 15:04:28.618: Could not load image from file: Impossible d’ouvrir le fichier « /tmp/.org.chromium.Chromium.hxmR64/discord1_4534.png » : Aucun fichier ou dossier de ce type
+
+[2022-02-04 15:09:29.908] [1820] (audio_send_stream.cc:344): Failed to set up send codec state.
+[2022-02-04 15:09:29.960] [1820] (audio_send_stream.cc:344): Failed to set up send codec state.
+[2022-02-04 15:09:29.960] [1820] (audio_device_generic.cc:32): BuiltInAECIsAvailable: Not supported on this platform
+[OpenH264] this = 0x0x3488b1baa750, Warning:ParamValidationExt(), eSpsPpsIdStrategy setting (2) with iUsageType (1) not supported! eSpsPpsIdStrategy adjusted to CONSTANT_ID
+[OpenH264] this = 0x0x3488b1baa750, Warning:ParamValidation(), AdaptiveQuant(1) is not supported yet for screen content, auto turned off
+[OpenH264] this = 0x0x3488b0b747e0, Warning:ParamValidationExt(), eSpsPpsIdStrategy setting (2) with iUsageType (1) not supported! eSpsPpsIdStrategy adjusted to CONSTANT_ID
+[OpenH264] this = 0x0x3488b0b747e0, Warning:ParamValidation(), AdaptiveQuant(1) is not supported yet for screen content, auto turned off
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 15:11:26.001: gdk_pixbuf_get_width: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 15:11:26.001: gdk_pixbuf_get_height: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): St-WARNING **: 15:11:26.001: Could not load image from file: Impossible d’ouvrir le fichier « /tmp/.org.chromium.Chromium.OltLF3/discord1_4758.png » : Aucun fichier ou dossier de ce type
+
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 15:22:35.165: gdk_pixbuf_get_width: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 15:22:35.166: gdk_pixbuf_get_height: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): St-WARNING **: 15:22:35.166: Could not load image from file: Impossible d’ouvrir le fichier « /tmp/.org.chromium.Chromium.F3uWt5/discord1_5104.png » : Aucun fichier ou dossier de ce type
+
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 15:26:27.552: gdk_pixbuf_get_width: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 15:26:27.552: gdk_pixbuf_get_height: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): St-WARNING **: 15:26:27.552: Could not load image from file: Impossible d’ouvrir le fichier « /tmp/.org.chromium.Chromium.A1v0a6/discord1_5304.png » : Aucun fichier ou dossier de ce type
+
+[2022-02-04 15:34:24.744] [1826] (audio_device_pulse_linux.cc:1861): Can't query latency
+[2022-02-04 15:34:24.745] [1826] (audio_device_pulse_linux.cc:1861): Can't query latency
+[2022-02-04 15:34:24.749] [1826] (audio_device_pulse_linux.cc:1861): Can't query latency
+[2022-02-04 15:34:24.751] [1820] (audio_send_stream.cc:344): Failed to set up send codec state.
+[2022-02-04 15:34:24.804] [1820] (audio_send_stream.cc:344): Failed to set up send codec state.
+[2022-02-04 15:34:24.805] [1820] (audio_device_generic.cc:32): BuiltInAECIsAvailable: Not supported on this platform
+[2022-02-04 15:35:42.415] [1820] (audio_send_stream.cc:344): Failed to set up send codec state.
+[2022-02-04 15:35:42.470] [1820] (audio_send_stream.cc:344): Failed to set up send codec state.
+[2022-02-04 15:35:42.471] [1820] (audio_device_generic.cc:32): BuiltInAECIsAvailable: Not supported on this platform
+[OpenH264] this = 0x0x3488b07964e0, Warning:ParamValidationExt(), eSpsPpsIdStrategy setting (2) with iUsageType (1) not supported! eSpsPpsIdStrategy adjusted to CONSTANT_ID
+[OpenH264] this = 0x0x3488b07964e0, Warning:ParamValidation(), AdaptiveQuant(1) is not supported yet for screen content, auto turned off
+[OpenH264] this = 0x0x3488b1503510, Warning:ParamValidationExt(), eSpsPpsIdStrategy setting (2) with iUsageType (1) not supported! eSpsPpsIdStrategy adjusted to CONSTANT_ID
+[OpenH264] this = 0x0x3488b1503510, Warning:ParamValidation(), AdaptiveQuant(1) is not supported yet for screen content, auto turned off
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 15:38:52.736: gdk_pixbuf_get_width: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 15:38:52.737: gdk_pixbuf_get_height: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): St-WARNING **: 15:38:52.737: Could not load image from file: Impossible d’ouvrir le fichier « /tmp/.org.chromium.Chromium.HdJg13/discord1_5748.png » : Aucun fichier ou dossier de ce type
+
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 15:45:16.010: gdk_pixbuf_get_width: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): GdkPixbuf-CRITICAL **: 15:45:16.010: gdk_pixbuf_get_height: assertion 'GDK_IS_PIXBUF (pixbuf)' failed
+
+(cinnamon:1332): St-WARNING **: 15:45:16.010: Could not load image from file: Impossible d’ouvrir le fichier « /tmp/.org.chromium.Chromium.7pIQV5/discord1_5942.png » : Aucun fichier ou dossier de ce type
+
+[2022-02-04 16:04:31.003] [1825] (audio_device_pulse_linux.cc:1861): Can't query latency
+[OpenH264] this = 0x0x3488b1503510, Warning:[Rc] iDid = 0,iContinualSkipFrames(3) is large
+[OpenH264] this = 0x0x3488b1503510, Warning:[Rc] iDid = 0,iContinualSkipFrames(3) is large
+[2022-02-04 16:16:38.791] [1825] (audio_device_pulse_linux.cc:1861): Can't query latency
+cinnamon-session[1058]: WARNING: t+28078,39311s: Playing logout sound '/usr/share/mint-artwork/sounds/logout.ogg'
+Cjs-Message: 18:29:29.287: JS LOG: [LookingGlass/info] Removing XAppStatusIcon: discord (:1.48/org/x/StatusIcon/Icon)
+Cjs-Message: 18:29:29.322: JS LOG: [LookingGlass/info] Removing XAppStatusIcon: blueberry (:1.72/org/x/StatusIcon/Icon)
+cinnamon-session[1058]: WARNING: t+28078,46225s: Finished playing logout sound
+cinnamon-session[1058]: WARNING: t+28078,46231s: Resuming logout sequence...
+Cjs-Message: 18:29:29.635: JS LOG: [LookingGlass/info] Adding systray: discord1 (24x24px)
+Cjs-Message: 18:29:29.636: JS LOG: [LookingGlass/info] Resized discord1 with normalized size (24x24px)
+cinnamon-session[1058]: WARNING: t+28079,41896s: Requesting system shutdown...
+cinnamon-session[1058]: WARNING: t+28079,42245s: Attempting to shutdown using systemd...
+Gdk-Message: 18:29:30.485: Discord: Fatal IO error 11 (Ressource temporairement non disponible) on X server :0.
+
+Gdk-Message: 18:29:30.491: cinnamon-session: Fatal IO error 11 (Ressource temporairement non disponible) on X server :0.
+

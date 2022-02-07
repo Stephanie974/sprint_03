@@ -1,0 +1,315 @@
+["INFO" - 13:23:04] Extension Name: esbenp.prettier-vscode.
+["INFO" - 13:23:04] Extension Version: 5.5.0.
+["INFO" - 13:23:04] Enabling prettier for languages: ansible, css, graphql, home-assistant, html, javascript, javascriptreact, json, json5, jsonc, less, markdown, mdx, mongo, postcss, scss, typescript, typescriptreact, vue, yaml
+["INFO" - 13:23:04] Enabling prettier for file extensions: .JSON-tmLanguage, ._js, .avsc, .bones, .cjs, .component.html, .css, .es, .es6, .frag, .geojson, .gltf, .gql, .graphql, .graphqls, .gs, .har, .htm, .html, .html.hl, .ice, .inc, .jake, .js, .js.flow, .jsb, .jscad, .jsfl, .jsm, .json, .json5, .jsonc, .jsonl, .jss, .jsx, .less, .markdown, .mcmeta, .md, .mdown, .mdwn, .mdx, .mir, .mjml, .mjs, .mkd, .mkdn, .mkdown, .njs, .pac, .pcss, .postcss, .reek, .ronn, .rviz, .scss, .sjs, .ssjs, .st, .sublime-build, .sublime-commands, .sublime-completions, .sublime-keymap, .sublime-macro, .sublime-menu, .sublime-mousemap, .sublime-project, .sublime-settings, .sublime-syntax, .sublime-theme, .sublime-workspace, .sublime_metrics, .sublime_session, .syntax, .tfstate, .tfstate.backup, .topojson, .ts, .tsx, .vue, .webapp, .webmanifest, .workbook, .xht, .xhtml, .xsjs, .xsjslib, .yaml, .yaml-tmlanguage, .yaml.sed, .yml, .yml.mysql, .yy, .yyp
+["INFO" - 13:23:04] Enabling prettier for range supported languages: graphql, javascript, javascriptreact, json, typescript, typescriptreact
+["INFO" - 13:24:23] Formatting /home/steph/sprint_03/sprint_03/styles.css
+["INFO" - 13:24:23] Using ignore file (if present) at undefined
+["INFO" - 13:24:23] Using bundled version of prettier.
+["INFO" - 13:24:23] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 13:24:23] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:24:23] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/sprint_03/styles.css",
+  "parser": "css"
+}
+["ERROR" - 13:24:23] Error formatting document.
+["ERROR" - 13:24:23] (postcss) CssSyntaxError Unknown word (5:3)
+  3 | *{
+  4 |   margin: 0;
+> 5 |   padding 0;
+    |   ^
+  6 |   box-sizing: border-box;
+  7 | }
+  8 | /* input {
+SyntaxError: (postcss) CssSyntaxError Unknown word (5:3)
+  3 | *{
+  4 |   margin: 0;
+> 5 |   padding 0;
+    |   ^
+  6 |   box-sizing: border-box;
+  7 | }
+  8 | /* input {
+	at e.exports (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-postcss.js:8:41560)
+	at parseWithParser (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-postcss.js:8:37784)
+	at parseScss (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-postcss.js:8:41048)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-postcss.js:8:41369)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 13:24:23] Formatting completed in 94.23584ms.
+["INFO" - 13:25:08] Formatting /home/steph/sprint_03/sprint_03/styles.css
+["INFO" - 13:25:08] Using ignore file (if present) at undefined
+["INFO" - 13:25:08] Using bundled version of prettier.
+["INFO" - 13:25:08] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 13:25:08] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:25:08] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/sprint_03/styles.css",
+  "parser": "css"
+}
+["ERROR" - 13:25:08] Error formatting document.
+["ERROR" - 13:25:08] (postcss) CssSyntaxError Unknown word (5:3)
+  3 | *{
+  4 |   margin: 0;
+> 5 |   padding 0;
+    |   ^
+  6 |   box-sizing: border-box;
+  7 | }
+  8 | /* input {
+SyntaxError: (postcss) CssSyntaxError Unknown word (5:3)
+  3 | *{
+  4 |   margin: 0;
+> 5 |   padding 0;
+    |   ^
+  6 |   box-sizing: border-box;
+  7 | }
+  8 | /* input {
+	at e.exports (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-postcss.js:8:41560)
+	at parseWithParser (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-postcss.js:8:37784)
+	at parseScss (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-postcss.js:8:41048)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-postcss.js:8:41369)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 13:25:08] Formatting completed in 55.655272ms.
+["INFO" - 13:25:38] Formatting /home/steph/sprint_03/sprint_03/styles.css
+["INFO" - 13:25:38] Using ignore file (if present) at undefined
+["INFO" - 13:25:38] Using bundled version of prettier.
+["INFO" - 13:25:38] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 13:25:38] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:25:38] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/sprint_03/styles.css",
+  "parser": "css"
+}
+["ERROR" - 13:25:38] Error formatting document.
+["ERROR" - 13:25:38] (postcss) CssSyntaxError Unknown word (5:3)
+  3 | *{
+  4 |   margin: 0;
+> 5 |   padding 0;
+    |   ^
+  6 |   box-sizing: border-box;
+  7 | }
+  8 | /* input {
+SyntaxError: (postcss) CssSyntaxError Unknown word (5:3)
+  3 | *{
+  4 |   margin: 0;
+> 5 |   padding 0;
+    |   ^
+  6 |   box-sizing: border-box;
+  7 | }
+  8 | /* input {
+	at e.exports (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-postcss.js:8:41560)
+	at parseWithParser (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-postcss.js:8:37784)
+	at parseScss (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-postcss.js:8:41048)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-postcss.js:8:41369)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 13:25:38] Formatting completed in 28.1785ms.
+["INFO" - 13:29:10] Formatting /home/steph/sprint_03/sprint_03/styles.css
+["INFO" - 13:29:10] Using ignore file (if present) at undefined
+["INFO" - 13:29:10] Using bundled version of prettier.
+["INFO" - 13:29:10] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 13:29:10] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:29:10] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/sprint_03/styles.css",
+  "parser": "css"
+}
+["ERROR" - 13:29:10] Error formatting document.
+["ERROR" - 13:29:10] (postcss) CssSyntaxError Unknown word (5:3)
+  3 | *{
+  4 |   margin: 0;
+> 5 |   padding 0;
+    |   ^
+  6 |   box-sizing: border-box;
+  7 | }
+  8 | /* input {
+SyntaxError: (postcss) CssSyntaxError Unknown word (5:3)
+  3 | *{
+  4 |   margin: 0;
+> 5 |   padding 0;
+    |   ^
+  6 |   box-sizing: border-box;
+  7 | }
+  8 | /* input {
+	at e.exports (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-postcss.js:8:41560)
+	at parseWithParser (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-postcss.js:8:37784)
+	at parseScss (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-postcss.js:8:41048)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-postcss.js:8:41369)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 13:29:10] Formatting completed in 20.207021ms.
+["INFO" - 13:30:12] Formatting /home/steph/sprint_03/sprint_03/styles.css
+["INFO" - 13:30:12] Using ignore file (if present) at undefined
+["INFO" - 13:30:12] Using bundled version of prettier.
+["INFO" - 13:30:12] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 13:30:12] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:30:12] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/sprint_03/styles.css",
+  "parser": "css"
+}
+["ERROR" - 13:30:12] Error formatting document.
+["ERROR" - 13:30:12] (postcss) CssSyntaxError Unknown word (5:3)
+  3 | *{
+  4 |   margin: 0;
+> 5 |   padding 0;
+    |   ^
+  6 |   box-sizing: border-box;
+  7 | }
+  8 | /* input {
+SyntaxError: (postcss) CssSyntaxError Unknown word (5:3)
+  3 | *{
+  4 |   margin: 0;
+> 5 |   padding 0;
+    |   ^
+  6 |   box-sizing: border-box;
+  7 | }
+  8 | /* input {
+	at e.exports (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-postcss.js:8:41560)
+	at parseWithParser (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-postcss.js:8:37784)
+	at parseScss (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-postcss.js:8:41048)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-postcss.js:8:41369)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 13:30:12] Formatting completed in 23.943459ms.

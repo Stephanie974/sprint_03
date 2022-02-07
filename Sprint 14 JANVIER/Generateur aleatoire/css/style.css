@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap%22");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap%22");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap%22");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap%22");
+header {
+  background-color: rgba(253, 145, 84, 1);
+  width: 100%;
+  height: 350px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+#menu {
+  width: 100%;
+  height: 200px;
+  background-color: aqua;
+}
+
+#but {
+  font-size: 10px;
+  font-family: "Open Sans", sans-serif;
+  align-items: flex-end;
+  width: auto;
+  margin-left: 370px;
+  background-color: black;
+  color: white;
+  border-radius: 7px;
+  border: 2px solid #070707;
+  text-align: center;
+  width: 148px;
+  height: 33px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+#but:hover {
+  background-color: rgb(47, 143, 221);
+  border: 2px solid #f1f1f1;
+}
+
+#but2 {
+  font-size: 11px;
+  font-family: "Open Sans", sans-serif;
+  margin-left: -340px;
+  align-items: flex-end;
+  background-color: rgba(253, 145, 84, 1);
+  border-radius: 7px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  text-align: center;
+  width: 90px;
+  height: 33px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+#but2:hover {
+  background-color: rgb(216, 25, 143);
+}
+
+h2 {
+  color: white;
+  font-size: 50px;
+  font-family: "Lato", sans-serif;
+}
+#den {
+  background-color: rgb(56, 56, 56);
+  width: 100%;
+  height: 300px;
+  margin-top: 200px;
+}
+
+h6 {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+p {
+  color: #ffffff;
+}
+
+#about {
+  margin-left: 200px;
+  padding-top: 10px;
+}
+
+#aide {
+  margin-left: 450px;
+  margin-top: -250px;
+}
+#about {
+  margin-left: 200px;
+  padding-top: 10px;
+}
+
+#aide {
+  margin-left: 450px;
+  margin-top: -250px;
+}
+#ressources {
+  margin-left: 580px;
+  margin-top: -170px;
+}
+#landing {
+  margin-left: 730px;
+  margin-top: -190px;
+}
+#commercial {
+  margin-left: 940px;
+  margin-top: -250px;
+}
+
+#try {
+  margin-left: 1100px;
+  margin-top: -195px;
+}

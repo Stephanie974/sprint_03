@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exo JS</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body style="height: 100vh; margin: 0">
+    <div style="display: flex; height: 100%">
+        <div id="hover0" style="width: 50%; height: 100%; border: 1px blue solid">
+            <p id="destination0">init0</p>
+        
+            X: <p id="x" style="display: inline;"></p>
+            Y: <P id="y" style="display: inline;"></P>
+        </div>
+        <div style="display: flex; height: 100%"></div>
+        <div id="hover1" style="width: 50%; height: 100%; border: 1px red solid">
+            <p id="destination1">init1</p>
+            X: <p id="x1" style="display: inline;"></p>
+            Y: <p id="y1" style="display: inline;"></p>
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        console.log("Bonne chance");
+
+        var hover1=document.getElementById('hover1');
+        var hover0=document.getElementById('hover0');
+
+        hover1.addEventListener("mousemove", (e) => {
+
+            var x = e.offsetX
+            var y = e.offsetY
+            document.getElementById('x').textContent = x
+            document.getElementById('y').textContent = y
+            
+        })
+        hover0.addEventListener("mousemove", (e) => {
+
+var x1 = e.offsetX
+var y1 = e.offsetY
+document.getElementById('x1').textContent = x1
+document.getElementById('y1').textContent = y1
+})
+
+
+    </script>
+
+
+</body>
+
+</html>

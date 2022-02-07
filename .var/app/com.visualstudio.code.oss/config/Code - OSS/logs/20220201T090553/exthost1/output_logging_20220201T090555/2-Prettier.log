@@ -1,0 +1,161 @@
+["INFO" - 09:05:55] Extension Name: esbenp.prettier-vscode.
+["INFO" - 09:05:55] Extension Version: 5.5.0.
+["INFO" - 09:05:55] Enabling prettier for languages: ansible, css, graphql, home-assistant, html, javascript, javascriptreact, json, json5, jsonc, less, markdown, mdx, mongo, postcss, scss, typescript, typescriptreact, vue, yaml
+["INFO" - 09:05:55] Enabling prettier for file extensions: .JSON-tmLanguage, ._js, .avsc, .bones, .cjs, .component.html, .css, .es, .es6, .frag, .geojson, .gltf, .gql, .graphql, .graphqls, .gs, .har, .htm, .html, .html.hl, .ice, .inc, .jake, .js, .js.flow, .jsb, .jscad, .jsfl, .jsm, .json, .json5, .jsonc, .jsonl, .jss, .jsx, .less, .markdown, .mcmeta, .md, .mdown, .mdwn, .mdx, .mir, .mjml, .mjs, .mkd, .mkdn, .mkdown, .njs, .pac, .pcss, .postcss, .reek, .ronn, .rviz, .scss, .sjs, .ssjs, .st, .sublime-build, .sublime-commands, .sublime-completions, .sublime-keymap, .sublime-macro, .sublime-menu, .sublime-mousemap, .sublime-project, .sublime-settings, .sublime-syntax, .sublime-theme, .sublime-workspace, .sublime_metrics, .sublime_session, .syntax, .tfstate, .tfstate.backup, .topojson, .ts, .tsx, .vue, .webapp, .webmanifest, .workbook, .xht, .xhtml, .xsjs, .xsjslib, .yaml, .yaml-tmlanguage, .yaml.sed, .yml, .yml.mysql, .yy, .yyp
+["INFO" - 09:05:55] Enabling prettier for range supported languages: graphql, javascript, javascriptreact, json, typescript, typescriptreact
+["INFO" - 10:10:06] Formatting /home/steph/sprint_02/style.css
+["INFO" - 10:10:06] Using ignore file (if present) at undefined
+["INFO" - 10:10:06] Using bundled version of prettier.
+["INFO" - 10:10:06] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 10:10:06] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 10:10:06] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_02/style.css",
+  "parser": "css"
+}
+["INFO" - 10:10:07] Formatting completed in 444.665761ms.
+["INFO" - 11:33:35] Formatting /home/steph/sprint_02/contact.html
+["INFO" - 11:33:35] Using ignore file (if present) at undefined
+["INFO" - 11:33:35] Using bundled version of prettier.
+["INFO" - 11:33:35] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 11:33:35] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 11:33:35] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_02/contact.html",
+  "parser": "html"
+}
+["ERROR" - 11:33:35] Error formatting document.
+["ERROR" - 11:33:35] Unexpected closing tag "p". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags (151:13)
+  149 |                 <a href="#"> <i id="icons2" class="fab fa-linkedin-in"></i> </a>
+  150 |               </div> 
+> 151 |             </p>
+      |             ^
+  152 |           </div>
+  153 |   
+  154 |           <div class="try">
+SyntaxError: Unexpected closing tag "p". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags (151:13)
+  149 |                 <a href="#"> <i id="icons2" class="fab fa-linkedin-in"></i> </a>
+  150 |               </div> 
+> 151 |             </p>
+      |             ^
+  152 |           </div>
+  153 |   
+  154 |           <div class="try">
+	at Ft (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:1:52135)
+	at ps (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:2319)
+	at e (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:4291)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:4830)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 11:33:35] Formatting completed in 125.528249ms.
+["INFO" - 11:33:37] Formatting /home/steph/sprint_02/contact.html
+["INFO" - 11:33:37] Using ignore file (if present) at undefined
+["INFO" - 11:33:37] Using bundled version of prettier.
+["INFO" - 11:33:37] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 11:33:37] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 11:33:37] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_02/contact.html",
+  "parser": "html"
+}
+["ERROR" - 11:33:37] Error formatting document.
+["ERROR" - 11:33:37] Unexpected closing tag "p". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags (151:13)
+  149 |                 <a href="#"> <i id="icons2" class="fab fa-linkedin-in"></i> </a>
+  150 |               </div> 
+> 151 |             </p>
+      |             ^
+  152 |           </div>
+  153 |   
+  154 |           <div class="try">
+SyntaxError: Unexpected closing tag "p". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags (151:13)
+  149 |                 <a href="#"> <i id="icons2" class="fab fa-linkedin-in"></i> </a>
+  150 |               </div> 
+> 151 |             </p>
+      |             ^
+  152 |           </div>
+  153 |   
+  154 |           <div class="try">
+	at Ft (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:1:52135)
+	at ps (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:2319)
+	at e (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:4291)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:4830)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 11:33:37] Formatting completed in 54.094705ms.

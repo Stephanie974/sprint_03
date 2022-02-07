@@ -1,0 +1,179 @@
+    1  git--version
+    2  git -- version
+    3  git --version
+    4  pwd
+    5  arduino
+    6  ls
+    7  mkdir test3
+    8  ls
+    9  cd test3
+   10  ls
+   11  ls -l
+   12  touch file.txt
+   13  ls
+   14  cat file.txt
+   15  code.file.txt
+   16  code file.txt
+   17  nano file.txt
+   18  man ls
+   19  man ls
+   20  man -ls
+   21  Man ls
+   22  manls
+   23  man- ls
+   24  man -ls
+   25  HELP ls
+   26  ls man
+   27  ls- man
+   28  ls man
+   29  info ls
+   30  listory
+   31  histabulation
+   32  history
+   33  man -ls
+   34  history
+   35  history > history_log.txt
+   36  cd ..
+   37  echo message que je veux
+   38  pwd
+   39  mkdir welcome
+   40  cdir
+   41  ls
+   42  cd welcome
+   43  ls
+   44  ls- l
+   45  ls -l
+   46  touch exo.txt
+   47  ls
+   48  ls -l
+   49  cd welcome
+   50  echo coucou ça va?
+   51  echo coucou ça va? > exo.txt 
+   52  cat exo.txt 
+   53  ls -l > exo.txt  
+   54  cat exo.txt 
+   55  ls -l >> exo.txt  
+   56  cat exo.txt 
+   57  ls
+   58  rm exo.txt 
+   59  ls
+   60  cd..
+   61  cd ..
+   62  rm welcome
+   63  rm -r welcome
+   64  ls
+   65  mkdir welcome2
+   66  ls
+   67  cd welcome2
+   68  ls
+   69  touch voiture.txt
+   70  cd ..
+   71  ls welcome2
+   72  rm -r welcome2
+   73  ls
+   74  apt-get install git
+   75  mkdir depot_example
+   76  cd depot_example/
+   77  ll
+   78  git status
+   79  git init
+   80  git status
+   81  ll
+   82  touch README.md
+   83  ll
+   84  git status
+   85  git commit
+   86  git status
+   87  ll
+   88  em README.md &
+   89  gti status
+   90  git status
+   91  git add README.md
+   92  git status
+   93  git commit
+   94  git status
+   95  mkdir model
+   96  mkdir model git init
+   97  git init
+   98  rm .git
+   99  rm -r .git
+  100  cd model
+  101  git init
+  102  mkdir memo
+  103  cd memo
+  104  touch git.txt
+  105  touch bash.txt
+  106  ls
+  107  cd ..
+  108  git status
+  109  git add memo
+  110  git status
+  111  git commit 
+  112  git config --global user.email "perianmodely.julie@gmail.com"
+  113  git config --global user.name "julie"
+  114  git commit
+  115  git status
+  116  ls 'C:/'
+  117  ls 'C:/User'
+  118  ls 'C:/Users'
+  119  ls 'C:/Users/julie'
+  120  ls C\:/Users/julie/Notepad++/notepad++.exe 
+  121  git config --global core.editor "'C:/Users/julie/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin" 
+  122  git commit
+  123  ls ..
+  124  ls ../Destock
+  125  ls ../Desktop/
+  126  cp -r ../Desktop/exo/ . 
+  127  ls
+  128  git status
+  129  git add exo 
+  130  git status
+  131  git commit
+  132  git status
+  133  git remote add origin https://github.com/juliexcode/model.git
+  134  git push -u origin master
+  135  history > git.exer.txt
+  136  mkdir sprint_01
+  137  cd sprint-01
+  138  cd sprint_01
+  139  git init
+  140  ls ..
+  141  ls ../Desktop/
+  142  ls ../Desktop/géner\ aléatoir/
+  143  cp -r ../Desktop/géner\ aléatoir/ .
+  144  ls
+  145  git status
+  146  ls
+  147  git add
+  148  git add géner aléatoir
+  149  git commit
+  150  git status
+  151  ls
+  152  git add gener/
+  153  git status
+  154  git commit
+  155  git status
+  156  git remote add origin https://github.com/juliexcode/sprint_01.git
+  157  git push -u origin master
+  158  history > git_gener.txt
+  159  cd lander
+  160  ls
+  161  mkdir sprint_02
+  162  cd sprint_02
+  163  ls
+  164  git init
+  165  git status
+  166  ls
+  167  ls
+  168  git add contact.html
+  169  git status
+  170  git add landerlogo.png
+  171  git add landerlogo2.png
+  172  git add landerlogo3.png
+  173  git add style.css
+  174  git add style2.css
+  175  git status
+  176  git commit
+  177  git remote add origin https://github.com/Stephanie974/Sprint_02.git
+  178  git push -u origin master
+  179  history >> moina.txt

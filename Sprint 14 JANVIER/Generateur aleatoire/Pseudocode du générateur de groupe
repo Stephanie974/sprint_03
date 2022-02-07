@@ -1,0 +1,34 @@
+ - Titre = sert à définir le projet clairement
+
+ - Zone d'insertion: Récupére le nom et prénom
+ - Lorsque la zone d'insertion est completée, le bouton permet d'ajouter le champ récupérer dans la zone "ajouterLigne"
+
+
+ - FUNCTION -> fonction "ajouterLigne" dans une liste
+
+  1 - Aprés avoir récuperer le nom
+  2 - ainsi que le prénom
+  3 - On peut alors Ajouter le "nom, prénom" dans une liste affiché dans la page
+
+ - FUNCTION -> fonction "supprimerLigne"
+
+ 1 - Choisir le nom et prénom sur une meme ligne
+ 2 - BUTTON -> Permettant la suppression de la ligne
+ 3 - Cette fonction permet d'enlever un participant choisi de la liste 
+
+
+ - FUNCTION -> Bouton "nombre de groupes"
+
+  1 - "IF" = Si le nombre de groupes = à '0'ou est vide -> un message d'erreur s'affiche et les groupes ne peuvent pas etre générés
+  2 - "ELSE" = En revanche si le nombre de groupe souhaité et correct la liste se divise bien par le nombre de groupe souhaité 
+  3 - Cette fonction permet de définir le nombre de groupes souhaités
+
+ - FUNCTION -> Bouton "Générer"
+
+  1 - Permet de faire l'action de Diviser la "liste" par le nombre de groupes souhaités
+  2 - La Formation des groupes est ainsi réalisée
+
+ - FUNCTION -> Zone "Résultat"
+
+  1- Composé du nombre de groupe prévu divisé par le nombre de personnes souhaités
+  --> le résultat s'affiche les groupes sont alors crées

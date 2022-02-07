@@ -1,0 +1,13 @@
+{
+    "Pseudocode g\u00e9n\u00e9rateur de groupe": [
+        {
+            "x": 4,
+            "y": 12,
+            "height": 200,
+            "width": 250,
+            "color": "yellow",
+            "title": "",
+            "text": "-fonction ajouter ligne\ndans cette fonction :\n-r\u00e9cuperation des noms\nr\u00e9cup\u00e9ration de pr\u00e9nom\nfinalit\u00e9 : ajouter le nom et le pr\u00e9nom dans une liste afich\u00e9 dans la page\n\n-g\u00e9n\u00e9rer bouton \n-liste/nombre de groupes\n-r\u00e9sultat\n-les diff\u00e9rents groupes\n"
+        }
+    ]
+}

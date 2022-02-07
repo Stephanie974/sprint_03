@@ -1,0 +1,97 @@
+dbus-update-activation-environment: setting DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1001/bus
+dbus-update-activation-environment: setting DISPLAY=:0
+dbus-update-activation-environment: setting XAUTHORITY=/home/steph/.Xauthority
+dbus-update-activation-environment: setting GTK_MODULES=gail:atk-bridge
+dbus-update-activation-environment: setting QT_ACCESSIBILITY=1
+dbus-update-activation-environment: setting SHELL=/bin/bash
+dbus-update-activation-environment: setting QT_ACCESSIBILITY=1
+dbus-update-activation-environment: setting XDG_CONFIG_DIRS=/etc/xdg/xdg-cinnamon:/etc/xdg
+dbus-update-activation-environment: setting XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+dbus-update-activation-environment: setting LANGUAGE=fr_FR
+dbus-update-activation-environment: setting MANDATORY_PATH=/usr/share/gconf/cinnamon.mandatory.path
+dbus-update-activation-environment: setting DESKTOP_SESSION=cinnamon
+dbus-update-activation-environment: setting GTK_MODULES=gail:atk-bridge
+dbus-update-activation-environment: setting PWD=/home/steph
+dbus-update-activation-environment: setting XDG_SESSION_DESKTOP=cinnamon
+dbus-update-activation-environment: setting LOGNAME=steph
+dbus-update-activation-environment: setting XDG_SESSION_TYPE=x11
+dbus-update-activation-environment: setting GPG_AGENT_INFO=/run/user/1001/gnupg/S.gpg-agent:0:1
+dbus-update-activation-environment: setting XAUTHORITY=/home/steph/.Xauthority
+dbus-update-activation-environment: setting XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/steph
+dbus-update-activation-environment: setting GDM_LANG=fr_FR
+dbus-update-activation-environment: setting HOME=/home/steph
+dbus-update-activation-environment: setting IM_CONFIG_PHASE=1
+dbus-update-activation-environment: setting LANG=fr_FR.UTF-8
+dbus-update-activation-environment: setting XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+dbus-update-activation-environment: setting XDG_SESSION_CLASS=user
+dbus-update-activation-environment: setting DEFAULTS_PATH=/usr/share/gconf/cinnamon.default.path
+dbus-update-activation-environment: setting USER=steph
+dbus-update-activation-environment: setting DISPLAY=:0
+dbus-update-activation-environment: setting SHLVL=1
+dbus-update-activation-environment: setting XDG_RUNTIME_DIR=/run/user/1001
+dbus-update-activation-environment: setting GTK3_MODULES=xapp-gtk3-module
+dbus-update-activation-environment: setting XDG_DATA_DIRS=/usr/share/cinnamon:/usr/share/gnome:/home/steph/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+dbus-update-activation-environment: setting PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+dbus-update-activation-environment: setting GDMSESSION=cinnamon
+dbus-update-activation-environment: setting DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1001/bus
+dbus-update-activation-environment: setting _=/usr/bin/dbus-update-activation-environment
+[cinnamon-settings-daemon-smartcard] Failed to start: impossible de trouver un pilote de carte à puce adapté
+** Message: 08:39:30.554: Existing monitor config (/home/steph/.config/cinnamon-monitors.xml) not found at startup. Looking for legacy configuration (monitors.xml)
+[cinnamon-settings-daemon-smartcard] Failed to start: impossible de trouver un pilote de carte à puce adapté
+Cjs-Message: 08:39:31.943: Profiler is disabled. Not setting up signals.
+Clutter-Message: 08:39:31.987: Sync method: PRESENTATION TIME
+Cjs-Message: 08:39:32.373: JS LOG: About to start Cinnamon
+
+(nm-applet:1384): libnotify-WARNING **: 08:39:32.546: Failed to connect to proxy
+
+(nm-applet:1384): nm-applet-WARNING **: 08:39:32.549: Failed to show notification: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.Notifications” on object at path /org/freedesktop/Notifications
+Cjs-Message: 08:39:32.642: JS LOG: [LookingGlass/info] Cinnamon.AppSystem.get_default() started in 259 ms
+Cjs-Message: 08:39:32.656: JS LOG: [LookingGlass/info] loading user theme: /usr/share/themes/Mint-Y-Dark/cinnamon/cinnamon.css
+Cjs-Message: 08:39:32.688: JS LOG: [LookingGlass/info] added icon directory: /usr/share/themes/Mint-Y-Dark/cinnamon
+Cjs-Message: 08:39:32.933: JS LOG: [LookingGlass/info] loaded at Mon Feb 07 2022 08:39:32 GMT+0400 (heure de La Réunion)
+Cjs-Message: 08:39:32.933: JS LOG: Cinnamon started at Mon Feb 07 2022 08:39:32 GMT+0400 (heure de La Réunion)
+Cjs-Message: 08:39:32.959: JS LOG: [LookingGlass/info] ExtensionSystem started in 2 ms
+Cjs-Message: 08:39:32.960: JS LOG: [LookingGlass/info] NaNms
+Cjs-Message: 08:39:32.960: JS LOG: [LookingGlass/info] SearchProviderManager started in 2 ms
+cinnamon-session[1081]: WARNING: t+3,90592s: Detected that screensaver has appeared on the bus
+openGL version 4.2 detected (GL3 Cogl Driver)
+MetaSyncRing disabled: couldn't find required GL extensions, or the minimum safe openGL version was not met
+Cjs-Message: 08:39:33.067: JS LOG: [LookingGlass/info] Loaded applet favorites@cinnamon.org in 33 ms
+Cjs-Message: 08:39:33.075: JS LOG: [LookingGlass/info] Role locked: tray
+Cjs-Message: 08:39:33.079: JS LOG: [LookingGlass/info] Loaded applet systray@cinnamon.org in 12 ms
+Cjs-Message: 08:39:33.094: JS LOG: [LookingGlass/info] Loaded applet removable-drives@cinnamon.org in 15 ms
+Cjs-Message: 08:39:33.130: JS LOG: [LookingGlass/info] Loaded applet keyboard@cinnamon.org in 36 ms
+** Message: 08:39:33.137: nemo-desktop: session is cinnamon, establishing proxy
+Cjs-Message: 08:39:33.164: JS LOG: [LookingGlass/info] Loaded applet printers@cinnamon.org in 34 ms
+Cjs-Message: 08:39:33.172: JS LOG: [LookingGlass/info] Loaded applet xapp-status@cinnamon.org in 7 ms
+St-Message: 08:39:33.174: cogl npot texture sizes SUPPORTED
+Cjs-Message: 08:39:33.200: JS LOG: [LookingGlass/info] Loaded applet show-desktop@cinnamon.org in 28 ms
+Cjs-Message: 08:39:33.214: JS LOG: [LookingGlass/info] Role locked: panellauncher
+Cjs-Message: 08:39:33.218: JS LOG: [LookingGlass/info] Loaded applet grouped-window-list@cinnamon.org in 18 ms
+Cjs-Message: 08:39:33.227: JS LOG: [LookingGlass/info] Role locked: notifications
+Cjs-Message: 08:39:33.238: JS LOG: [LookingGlass/info] Loaded applet notifications@cinnamon.org in 20 ms
+Cjs-Message: 08:39:33.270: JS LOG: [LookingGlass/info] Loaded applet power@cinnamon.org in 31 ms
+Cjs-Message: 08:39:33.308: JS LOG: [LookingGlass/info] Loaded applet calendar@cinnamon.org in 38 ms
+Cjs-Message: 08:39:33.332: JS LOG: [LookingGlass/info] Adding XAppStatusIcon: nm-applet (:1.51/org/x/StatusIcon/Icon)
+
+** (csd-power:1196): CRITICAL **: 08:39:33.353: abs_to_percentage: assertion 'max > min' failed
+Cjs-Message: 08:39:33.387: JS LOG: [LookingGlass/info] Loaded applet sound@cinnamon.org in 79 ms
+Cjs-Message: 08:39:33.444: JS LOG: [LookingGlass/info] Hiding XAppStatusIcon (we have an applet): nm-applet (:1.51/org/x/StatusIcon/Icon)
+Cjs-Message: 08:39:33.455: JS LOG: [LookingGlass/info] Loaded applet network@cinnamon.org in 67 ms
+Cjs-Message: 08:39:33.622: JS LOG: [LookingGlass/info] Loaded applet menu@cinnamon.org in 167 ms
+Cjs-Message: 08:39:33.623: JS LOG: [LookingGlass/info] AppletManager started in 689 ms
+Cjs-Message: 08:39:33.627: JS LOG: [LookingGlass/info] Cinnamon took 1253 ms to start
+Cjs-Message: 08:39:33.663: JS LOG: Unknown network device type, is 14
+Cjs-Message: 08:39:38.192: JS LOG: [LookingGlass/info] Adding XAppStatusIcon: blueberry (:1.73/org/x/StatusIcon/Icon)
+cinnamon-session[1081]: WARNING: t+13,90509s: Detected that screensaver has left the bus
+Cjs-Message: 08:39:56.934: JS LOG: [LookingGlass/info] Adding XAppStatusIcon: mintUpdate.py (:1.77/org/x/StatusIcon/Icon)
+Cjs-Message: 08:40:16.229: JS LOG: [LookingGlass/info] Adding XAppStatusIcon: mintreport (:1.80/org/x/StatusIcon/Icon)
+libva error: /usr/lib/x86_64-linux-gnu/dri/iHD_drv_video.so init failed
+Cjs-Message: 08:47:23.634: JS LOG: [LookingGlass/info] Adding XAppStatusIcon: :1.81 (:1.48/org/x/StatusIcon/Icon)
+Option 'sandbox' is unknown. Ignoring.
+cinnamon-session[1081]: WARNING: t+5000,62956s: Detected that screensaver has appeared on the bus
+cinnamon-session[1081]: WARNING: t+5103,57259s: Detected that screensaver has left the bus
+cinnamon-session[1081]: WARNING: t+8157,21100s: Detected that screensaver has appeared on the bus
+[Updates] Error fetching https://discord.com/api/updates/stable?platform=linux&version=0.0.16: Hostname/IP does not match certificate's altnames: Host: discord.com. is not in the cert's altnames: DNS:controller.access.network, DNS:central.access.network, DNS:wifiaccess.co
+[Updates] Error fetching https://discord.com/api/updates/stable?platform=linux&version=0.0.16: Hostname/IP does not match certificate's altnames: Host: discord.com. is not in the cert's altnames: DNS:controller.access.network, DNS:central.access.network, DNS:wifiaccess.co
+cinnamon-session[1081]: WARNING: t+16411,42018s: Detected that screensaver has left the bus

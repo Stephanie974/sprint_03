@@ -1,0 +1,3 @@
+[2022-02-07 08:55:29.460] [sharedprocess] [info] main {"machineId":"ffc16714-6d65-41b9-80fc-17b89f71560b","windowId":3}
+[2022-02-07 08:56:09.470] [sharedprocess] [info] Starting to clean up unused language packs.
+[2022-02-07 08:56:09.472] [sharedprocess] [info] Skipping directory ba3f70e7e96325e72c66bc4757948a92.fr. Language pack still in use.

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <script>
+     
+      $(document).ready(function () {
+        if (contientItemDansLeTableau("MES_OUTILS", "REPARTISSEUR_GROUPE")) {
+          $("#ajouter-favoris")
+            .find("i")
+            .removeClass("fa-star-o")
+            .addClass("fa-star");
+          $("#ajouter-favoris").find("span").text("Retirer de mes outils");
+        }
+
+        $("#ajouter-favoris").on("click", function () {
+          var nouveauMessage = null;
+          if ($(this).find(".fa-star-o").length > 0) {
+            // ajout
+            $(this).find("i").removeClass("fa-star-o").addClass("fa-star");
+            nouveauMessage = "Retirer de mes outils";
+            ajouterItemAuTableau("MES_OUTILS", "REPARTISSEUR_GROUPE");
+          } else {
+            // retrait
+            $(this).find("i").removeClass("fa-star").addClass("fa-star-o");
+            nouveauMessage = "Ajouter \xE0 mes outils";
+            retirerItemDuTableau("MES_OUTILS", "REPARTISSEUR_GROUPE");
+          }
+
+          $(this).find("span").text(nouveauMessage);
+        });
+      });
+
+    </script>
+    <script>
+   
+
+      $(document).ready(function () {
+        $("#ajouter-ligne").click(function () {
+          var clone = $(".ligne-participants").last().clone();
+          clone.insertAfter($(".ligne-participants").last());
+          clone.find("input").val("").css("background-color", "");
+
+          $(clone)
+            .find(".btn-niveau")
+            .click(function () {
+              ajouterListenerNiveau($(this));
+            });
+        });
+
+        $("#mode").change(function () {
+          if (this.value == "ALEATOIRE") {
+            $(".niveau-participant").addClass("hidden");
+          } else {
+            $(".niveau-participant").removeClass("hidden");
+          }
+        });
+
+        $(".btn-niveau").click(function () {
+          ajouterListenerNiveau($(this));
+        });
+
+        $("#valider-formulaire").click(function () {
+          var indice = 0;
+          $(".ligne-participants").each(function () {
+            var nomChamps = "participants";
+            $($(this).find("input")[0]).attr(
+              "name",
+              nomChamps + "[" + indice + "].nom"
+            );
+            $($(this).find("input")[1]).attr(
+              "name",
+              nomChamps + "[" + indice + "].niveau"
+            );
+            indice++;
+          });
+
+          $("#formulaire").submit();
+        });
+
+        function ajouterListenerNiveau(noeud) {
+          $(noeud)
+            .parent()
+            .find("button")
+            .each(function () {
+              $(this).removeClass("btn-success").addClass("btn-info");
+            });
+          $(noeud).addClass("btn-success").removeClass("btn-info");
+          $(noeud).parent().parent().find("input.niveau").val($(noeud).text());
+        }
+      });
+     
+    </script>
+  </head>
+  <body><div id="all">
+
+            </div>
+			<div id="ancre-formulaire">
+		<section class="bar background-gray no-mb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+						<div class="h1like">Données des groupes à tirer</div>
+
+						<form method="POST" action="/fr/generateur-groupes-aleatoires#bloc-resultat" id="formulaire">
+							<div class="row">
+		                        <div class="col-sm-6">
+		                            <div class="form-group">
+		                                <label for="mode">Type de tirage</label>
+	                                    <select class="form-control" id="mode" name="mode">
+	                                    	<option value="ALEATOIRE">Tirage aléatoire</option>
+	                                    	<option value="PONDERE">Tirage pondéré (par niveau)</option>
+	                                    </select>
+		                            </div>
+		                        </div>
+		                        <div class="col-sm-6">
+		                            <div class="form-group">
+		                                <label for="nbGroupes">Nombre de groupes dans lesquels répartir les participants</label>
+		                                <input type="number" min="1" class="form-control" id="nbGroupes" name="nbGroupes" value="0" />
+		                            </div>
+		                        </div>
+		                    </div>
+							<div class="row">
+								<div class="col-sm-2">
+		                    		<span class="heading">
+		                    			<h3>Participants</h3>
+		                    		</span> 
+								</div>
+								<div class="col-sm-10 bloc-donnees-formulaire">
+									
+										
+		<div class="row ligne-participants">
+			<div class="col-sm-8">
+				<div class="form-group">
+					<label>Nom</label>
+					<input type="text" class="form-control" value="" />
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="form-group niveau-participant hidden">
+					<label>Niveau</label>
+					<div>
+						<button type="button" class="btn-niveau btn btn-info">1</button>
+						<button type="button" class="btn-niveau btn btn-info">2</button>
+						<button type="button" class="btn-niveau btn btn-info">3</button>
+						<button type="button" class="btn-niveau btn btn-info">4</button>
+						<button type="button" class="btn-niveau btn btn-info">5</button>
+					</div>
+					<input type="number" class="hidden niveau" value="" />
+				</div>
+			</div>
+		</div>							
+		<div class="row ligne-participants"><ticipant hidden">
+					<label>Niveau</label>
+					<div>
+						<button type="button" class="btn-niveau btn btn-info">1</button>
+						<button type="button" class="btn-niveau btn btn-info">2</button>
+						<button type="button" class="btn-niveau btn btn-info">3</button>
+						<button type="button" class="btn-niveau btn btn-info">4</button>
+						<button type="button" class="btn-niveau btn btn-info">5</button>
+					</div>
+					<input type="number" class="hidden niveau" value="" />
+				</div>
+			</div>
+		</div>					
+		<div class="row ligne-participants">
+			<div class="col-sm-8">
+				<div class="form-group">
+					<label>Nom</label>
+					<input type="text" class="form-control" value="" />
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="form-group niveau-participant hidden">
+					<label>Niveau</label>
+					<div>
+						<button type="button" class="btn-niveau btn btn-info">1</button>
+						<button type="button" class="btn-niveau btn btn-info">2</button>
+						<button type="button" class="btn-niveau btn btn-info">3</button>
+						<button type="button" class="btn-niveau btn btn-info">4</button>
+						<button type="button" class="btn-niveau btn btn-info">5</button>
+					</div>
+					<input type="number" class="hidden niveau" value="" />
+				</div>
+			</div>
+		</div>					
+		<div class="row ligne-participants">
+			<div class="col-sm-8">
+				<div class="form-group">
+					<label>Nom</label>
+					<input type="text" class="form-control" value="" />
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="form-group niveau-participant hidden">
+					<label>Niveau</label>
+					<div>
+						<button type="button" class="btn-niveau btn btn-info">1</button>
+						<button type="button" class="btn-niveau btn btn-info">2</button>
+						<button type="button" class="btn-niveau btn btn-info">3</button>
+						<button type="button" class="btn-niveau btn btn-info">4</button>
+						<button type="button" class="btn-niveau btn btn-info">5</button>
+					</div>
+					<input type="number" class="hidden niveau" value="" />
+				</div>
+			</div>
+		</div>
+				                    <div class="row">
+				                    	<div class="col-sm-12">
+				                    		<button type="button" class="btn btn-template-primary" id="ajouter-ligne">Ajouter un participant</button>
+				                    	</div>
+				                    </div>
+								</div>
+							</div>
+		                    
+		                    <div class="row">
+		                    	<div class="col-sm-12">
+		                    		<button type="button" class="btn btn-template-primary" id="valider-formulaire">Générer les groupes</button>
+		                    	</div>
+		                    </div>
+		                </form>
+
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+			
+		</div>
+	</div></body>
+</html>

@@ -1,0 +1,30 @@
+body {
+  background-image: linear-gradient(120deg,orange,yellow);
+  font-family: sans-serif;
+}
+
+
+h1{
+  display: flex;
+  font-family:'Mochiy Pop P One', sans-serif;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.names {
+  width: 276px;
+  resize: vertical;
+  display: flex;
+}
+#result {
+  background-color: white;
+  border-radius: 3px;
+  margin-top: 10px;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 300px;
+}

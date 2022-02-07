@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+/* @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap'); */
+*{
+  margin: 0;
+  padding 0;
+  box-sizing: border-box;
+}
+/* input {
+  width: 75%
+margin-right: 0;
+padding:10px;
+border: none;
+font-size: 14px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+} */
+/* .addBtn {
+  width: 25%
+padding:10px; 
+margin-left: 0;
+background: #400;
+color:#555;
+text-align: center;
+font-size: 14px;
+cursor: pointer;
+transition: 0.3s;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-weight: bold;
+}
+.addBtn:hover {
+  background-color: #bbb;
+  color:#FFF;
+} */
+.navi {
+  list-style: none;
+  margin-left: -9px;
+}
+h1 {
+  font-family: "Roboto Mono", monospace;
+  background-color: rgba(255, 183, 3, 1);
+  width: 1330px;
+  /* text-align: center; */
+  height: 100px;
+  font-size: 50px;
+  top: 36px;
+  left: 71px;
+  text-align: center;
+  margin-left: 100px;
+}
+
+h2 {
+  font-family: "Roboto Mono", monospace;
+  background-color: rgba(142, 202, 230, 1);
+  font-size: 30px;
+  margin-left: 100px;
+  margin-top: 5px;
+  margin-right: 100px;
+  text-align: center;
+}
+img {
+  height: 30px;
+  width: 30px;
+}
+.ticket {
+  height: 40px;
+  width: 40px;
+}
+.tete {
+  height: 30px;
+  width: 30px;
+}
+.div1 {
+  text-align: center;
+  margin-left: 0px;
+}
+
+#nom {
+  /* margin-top: 60px;
+  margin-right: 1000px; */
+  font-family: sans-serif;
+  font-size: 20px;
+  margin-left: 300px;
+}
+#aide {
+  width: 200px;
+  height: 60px;
+  background-color: rgba(2, 48, 71, 1);
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 10px;
+  font-family: sans-serif;
+  transition: all 0.5s;
+}
+#aide:hover {
+  background-color: rgba(255, 183, 3, 1);
+  cursor: pointer;
+}
+#submit {
+  margin-top: 40px;
+}
+#entree {
+  margin-left: 90px;
+  width: 305px;
+  margin-right: 50px;
+}
+.div2 {
+  text-align: center;
+}
+h3 {
+  font-family: "Roboto Mono", monospace;
+  background-color: rgba(142, 202, 230, 1);
+  font-size: 30px;
+  margin-left: 100px;
+  margin-top: 10px;
+  margin-right: 100px;
+  text-align: center;
+}
+#suivant {
+  width: 200px;
+  height: 60px;
+  background-color: rgba(2, 48, 71, 1);
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 10px;
+  font-family: sans-serif;
+  transition: all 0.5s;
+}
+#suivant:hover {
+  background-color: rgba(255, 183, 3, 1);
+  cursor: pointer;
+}
+
+#raffraichir {
+  width: 200px;
+  height: 60px;
+  background-color: rgba(2, 48, 71, 1);
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 10px;
+  font-family: sans-serif;
+  transition: all 0.5s;
+}
+#raffraichir:hover {
+  background-color: rgba(255, 183, 3, 1);
+  cursor: pointer;
+}
+#tableau {
+  border-collapse: collapse;
+  width: 700px;
+  height: 60px;
+  margin-top: 60px;
+  margin-left: 450px;
+}
+
+.th1 {
+  width: 300px;
+  height: 30px;
+  border: 2px solid black;
+  padding: 10px;
+  vertical-align: top;
+  text-align: center;
+}
+.th2 {
+  width: 1000px;
+  height: 30px;
+  border: 2px solid black;
+  padding: 10px;
+  vertical-align: top;
+  text-align: center;
+}
+.th3 {
+  width: 1000px;
+  height: 30px;
+  border: 2px solid black;
+  padding: 10px;
+  vertical-align: top;
+  text-align: center;
+}
+.td1 {
+  width: 300px;
+  height: 30px;
+  border: 2px solid black;
+  padding: 10px;
+  vertical-align: top;
+  text-align: center;
+}
+.td2 {
+  width: 1000px;
+  height: 30px;
+  border: 2px solid black;
+  padding: 10px;
+  vertical-align: top;
+  text-align: center;
+}
+.td3 {
+  border: 2px solid black;
+}
+.passe {
+  height: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  vertical-align: top;
+  text-align: center;
+  background-color: rgba(251, 133, 0, 1);
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  font-family: sans-serif;
+  transition: all 0.5s;
+  border-radius: 15px;
+  margin-left: auto;
+  display: block;
+  margin-right: auto;
+}
+.passe:hover {
+  border-radius: 10px;
+  background-color: rgba(2, 48, 71, 1);
+  cursor: pointer;
+}
+.div0 {
+  border-width: 0px 3px 3px 3px;
+  border-style: dashed;
+  border-color: black;
+  padding: 30px;
+}

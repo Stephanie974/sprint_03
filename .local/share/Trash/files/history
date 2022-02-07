@@ -1,0 +1,195 @@
+    1  which bwrap 
+    2  bwrap --args 32 code-oss --no-sandbox --unity-launch
+    3  git --version
+    4  sudo apt install git
+    5  git --version
+    6  pwd
+    7  ls
+    8  mkdir test3
+    9  ls
+   10  cd test3
+   11  ls
+   12  ls-l
+   13  ls -l
+   14  touch file.txt
+   15  ls
+   16  cat file.txt
+   17  code file.txt
+   18  sudo apt install <nom du deb>
+   19  ps -ef | grep -i visu
+   20  ps -ef | grep -i code
+   21  code-oss
+   22  ll /app/share/code-oss/code-oss
+   23  ll /app/share/code-oss/
+   24  ll /app/share/
+   25  ll /appA
+   26  ps -ef | less
+   27  git --version
+   28  man
+   29  man ls
+   30  history
+   31  history > history_log.txt
+   32  cd ..
+   33  cd model
+   34  cd Model
+   35  pwd
+   36  git log
+   37  cd Model
+   38  mkdir Model
+   39  cd Model
+   40  cd
+   41  cd Model
+   42  ls
+   43  cat Model
+   44  git add 
+   45  mkdir SPrint_01
+   46  ls
+   47  MOdel
+   48  mkdir Sprint_02
+   49  ls
+   50  cd
+   51  git checkout Sprint_02
+   52  ls Sprint_02
+   53  cd Sprint_02
+   54  git mv
+   55  git mv Sprint_02
+   56  git mv sprint_02
+   57  cd
+   58  ls
+   59  cat Sprint_02
+   60  git mv
+   61  git mv Sprint_02
+   62  git checkout SPrint_02
+   63  mkdir Sprint_02
+   64  cd Sprint_02
+   65  git mv
+   66  git mv Sprint_02
+   67  PWD
+   68  pwd
+   69  cd Sprint_02
+   70  git mv Sprint_02
+   71  .git mv Sprint_02
+   72  sudo apt install Sprint_02
+   73  ls
+   74  git remote Sprint_02
+   75  remote Sprint_02
+   76  git mv Sprint_02
+   77  git mv --help
+   78  git mv sprint_02
+   79  pwd
+   80  cd Documents
+   81  cd sprint_01
+   82  cd sprint_02
+   83  git add https://www.figma.com/file/kJK5CrfT9GDNTTuX8KfVJw/Untitled
+   84  git remote add https://github.com/Stephanie974/sprint_02.git
+   85  git remote add origin https://github.com/Stephanie974/sprint_02.git
+   86  git remote add master https://github.com/Stephanie974/sprint_02.git
+   87  cat sprint_02
+   88  git config --global https://github.com/Stephanie974/sprint_02.git
+   89  git config --global user.email sturpin677@gmail.com
+   90  git config --global user.name Stephanie974
+   91  git commit
+   92  git status
+   93  git commit
+   94  git remote add master https://github.com/Stephanie974/sprint_02.git
+   95  cat sprint_02
+   96  ls
+   97  git mv wireframe sprint_02
+   98  cd ../..
+   99  git remote add master https://github.com/Stephanie974/sprint_02.git
+  100  git status
+  101  ls
+  102  cd Sprint_02/
+  103  git status
+  104  git checkout SPrint_02
+  105  git checkout Sprint_02
+  106  git remote
+  107  ls
+  108  git remote /home/steph/Documents/sprint_02/wireframe sprint_02
+  109  git remote https://github.com/Stephanie974/sprint_02.git
+  110  git init
+  111  git status
+  112  mkdir wireframe sprint_02
+  113  ls
+  114  git commit
+  115  git add wireframe sprint_02
+  116  git status
+  117  ls
+  118  git remote https://github.com/Stephanie974/sprint_02.git
+  119  git remote add -m
+  120  git remote add -m sprint_02
+  121  git remote add -m sprint_02 https://github.com/Stephanie974/sprint_02.git
+  122  git remote add -f sprint_02 https://github.com/Stephanie974/sprint_02.git
+  123  git add wireframe sprint_02
+  124  git add --help
+  125  git add sprint_01
+  126  git add sprint_02
+  127  ls
+  128  cd
+  129  pwd
+  130  ls
+  131  cd sprint_02
+  132  git push Documents
+  133  git push --set-upstream Documents master
+  134  git push --set-upstream github
+  135  git push --set-upstream sprint_02
+  136  git status
+  137  git commit
+  138  mkdir polices sprint_02
+  139  mkdir polices
+  140  ls
+  141  git push
+  142  git remote add polices https://github.com/Stephanie974/sprint_02.git
+  143  git push polices
+  144  git push --set-upstream polices master
+  145  git push --help
+  146  ls
+  147  git push https://github.com/Stephanie974/sprint_02.git
+  148  git push --set-upstream https://github.com/Stephanie974/sprint_02.git master
+  149  git remote add origin https://github.com/Stephanie974/sprint_02.git
+  150  git status
+  151  git add wireframe/
+  152  git commit
+  153  git status
+  154  git push
+  155  ls
+  156  git push --set-upstream origin master
+  157  git status
+  158  git add contact.html desktop
+  159  git add contact.html .desktop
+  160  git pull
+  161  git branch --set-upstream-to=<distant>/<branche> master
+  162  git pull(1)
+  163  git-pull(1)
+  164  git pull <distant> <branche>
+  165  git branch --set-upstream-to=origin/master
+  166  git branch --set-upstream-to=origin/master master
+  167  git pull
+  168  git log
+  169  cd ..
+  170  mv sprint_02 sprint_02_save
+  171  git clone https://github.com/Stephanie974/sprint_02.git
+  172  git commit
+  173  git status
+  174  ls
+  175  cd sprint_02_save
+  176  ls
+  177  git commit
+  178  git add wireframe sprint_02
+  179  git add wireframe
+  180  ls
+  181  git status
+  182  git add sprint_02
+  183  git push
+  184  git status
+  185  git add wireframe
+  186  git add sprint_02
+  187  git pull
+  188  git push
+  189  git status
+  190  git pull wireframe
+  191  git rm wireframe/wireframe sprint_02
+  192  history
+  193  cd sprint_02
+  194  history> history bach
+  195  history> history

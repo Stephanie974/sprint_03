@@ -1,0 +1,83 @@
+steph@SIMREU052:~$ pwd
+/home/steph
+steph@SIMREU052:~$ lg = "log --graph --pretty=format:'%C(#ff0000)%h -%C(#00ffff bold)%d%Creset %C(#eeeeff)%s %C(#00dd22)(%cr) %C(bold blue)<%an>' --abbrev-commit --date=relative"
+lg : commande introuvable
+steph@SIMREU052:~$ [credential]
+[credential] : commande introuvable
+steph@SIMREU052:~$     helper = cache --timeout=86400
+
+La commande « helper » n'a pas été trouvée, voulez-vous dire :
+
+  commande « helpers » du deb orville-write (2.55-3build1)
+
+Essayez : sudo apt install <nom du deb>
+
+steph@SIMREU052:~$ cat gitconfig
+cat: gitconfig: Aucun fichier ou dossier de ce type
+steph@SIMREU052:~$ /.gitconfig
+bash: /.gitconfig: Aucun fichier ou dossier de ce type
+steph@SIMREU052:~$ ~/.gitconfig
+bash: /home/steph/.gitconfig: Permission non accordée
+steph@SIMREU052:~$ cat ~/.gitconfig 
+[user]
+	email = sturpin677@gmail.com
+	name = Stephanie974
+steph@SIMREU052:~$ nano ~/.gitconfig 
+steph@SIMREU052:~$ git lg
+fatal: ni ceci ni aucun de ses répertoires parents n'est un dépôt git : .git
+steph@SIMREU052:~$ pwd
+/home/steph
+steph@SIMREU052:~$ ls
+* Activitesimplon
+ AFC_PE_-_DWWM2021_-_TURPIN_Stephanie_-_Convention_pret_de_materiel.odt
+ Bureau
+'clé pat.txt'
+'commande git'
+ Documents
+'entrainement Julie'
+ history
+ Images
+ landerphoto.jpg
+'Maquette Lander'
+ model
+ Model
+ Musique
+ Public
+ Signature.jpg
+ sprint_01
+ sprint_02
+ sprint_02_save
+'Sprint 14 JANVIER'
+ Téléchargements
+ th.jpeg
+ Vidéos
+steph@SIMREU052:~$ ls
+ Activitesimplon
+ AFC_PE_-_DWWM2021_-_TURPIN_Stephanie_-_Convention_pret_de_materiel.odt
+ Bureau
+'clé pat.txt'
+'commande git'
+ Documents
+'entrainement Julie'
+ history
+ Images
+ landerphoto.jpg
+'Maquette Lander'
+ model
+ Model
+ Musique
+ Public
+ Signature.jpg
+ sprint_01
+ sprint_02
+ sprint_02_save
+'Sprint 14 JANVIER'
+ Téléchargements
+ th.jpeg
+ Vidéos
+steph@SIMREU052:~$ cd sprint_02
+steph@SIMREU052:~/sprint_02$ git lg
+
+steph@SIMREU052:~/sprint_02$ 
+
+

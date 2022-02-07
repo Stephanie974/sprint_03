@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/steph/sprint_02/contact.html" added="2022-01-26T06:32:30Z" modified="2022-02-01T05:05:52Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="nemo" exec="&apos;/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=code-oss --file-forwarding com.visualstudio.code.oss --no-sandbox --unity-launch @@ %F @@&apos;" modified="2022-02-01T05:05:52Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/sprint_02/style.css" added="2022-01-28T05:53:20Z" modified="2022-02-01T06:09:22Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>xed</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="xed" exec="&apos;xed %u&apos;" modified="2022-02-01T06:09:22Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/mozilla_steph0/AFC_PE_-_DWWM2021_-_TURPIN_Stephanie_-_Convention_pret_de_materiel.docx" added="2022-01-31T04:53:33Z" modified="2022-01-31T04:54:37Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.openxmlformats-officedocument.wordprocessingml.document"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2022-01-31T04:53:33Z" count="1"/>
+          <bookmark:application name="LibreOffice 6.4" exec="&apos;soffice %u&apos;" modified="2022-01-31T04:54:37Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Documents/AFC_PE_-_DWWM2021_-_TURPIN_Stephanie_-_Convention_pret_de_materiel" added="2022-01-31T04:54:22Z" modified="2022-01-31T04:54:37Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="LibreOffice 6.4" exec="&apos;soffice %u&apos;" modified="2022-01-31T04:54:37Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Documents/AFC_PE_-_DWWM2021_-_TURPIN_Stephanie_-_Convention_pret_de_materiel.odt" added="2022-01-31T04:54:38Z" modified="2022-01-31T06:29:41Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.oasis.opendocument.text"/>
+        <bookmark:applications>
+          <bookmark:application name="LibreOffice 6.4" exec="&apos;soffice %u&apos;" modified="2022-01-31T06:22:08Z" count="9"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2022-01-31T06:29:41Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/mozilla_steph0/Signature.jpg" added="2022-01-31T04:58:58Z" modified="2022-01-31T04:58:58Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2022-01-31T04:58:58Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;xviewer %u&apos;" modified="2022-01-31T04:58:58Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Documents/Signature.jpg" added="2022-01-31T04:59:11Z" modified="2022-01-31T04:59:11Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="Visionneur d&apos;images" exec="&apos;xviewer %u&apos;" modified="2022-01-31T04:59:11Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/mozilla_steph0/Proprietes_CSS_de_base.pdf" added="2022-01-31T06:43:45Z" modified="2022-01-31T06:43:45Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2022-01-31T06:43:45Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/T%C3%A9l%C3%A9chargements/Proprietes_CSS_de_base.pdf" added="2022-01-31T06:54:15Z" modified="2022-01-31T06:54:15Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2022-01-31T06:54:15Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/mozilla_steph0/Les_balise_html_de_base.pdf" added="2022-01-31T06:56:21Z" modified="2022-01-31T06:56:21Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2022-01-31T06:56:21Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Documents/history" added="2022-01-31T09:07:56Z" modified="2022-01-31T09:07:56Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2022-01-31T09:07:56Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Documents/commande%20git/history_log.txt" added="2022-01-31T09:09:18Z" modified="2022-01-31T09:09:18Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2022-01-31T09:09:18Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Documents/commande%20git/moina.txt" added="2022-01-31T09:10:16Z" modified="2022-01-31T09:10:16Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2022-01-31T09:10:16Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="https://github.com/Stephanie974/model/tree/main/MEMO%20BASH" added="2022-01-31T09:10:54Z" modified="2022-01-31T09:10:54Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="nemo" exec="&apos;firefox %u&apos;" modified="2022-01-31T09:10:54Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/bash:%20commande%20git%20lg" added="2022-01-31T09:52:38Z" modified="2022-02-01T06:35:36Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>xed</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="xed" exec="&apos;xed %u&apos;" modified="2022-02-01T06:35:36Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/cl%C3%A9%20pat.txt" added="2022-01-31T11:09:21Z" modified="2022-01-31T11:09:21Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>xed</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="xed" exec="&apos;xed %u&apos;" modified="2022-01-31T11:09:21Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/sprint_03/bdf2e7ac-107e-4716-a9a8-5980f33a20b2.png" added="2022-01-31T11:19:37Z" modified="2022-01-31T11:34:44Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2022-01-31T11:19:38Z" count="2"/>
+          <bookmark:application name="Image Viewer" exec="&apos;xviewer %u&apos;" modified="2022-01-31T11:34:44Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Sprint%2014%20JANVIER/Generateur%20aleatoire/css/index.html" added="2022-01-31T11:20:56Z" modified="2022-01-31T11:28:47Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="nemo" exec="&apos;firefox %u&apos;" modified="2022-01-31T11:28:47Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Sprint%2014%20JANVIER/Generateur%20aleatoire/Aide%20au%20g%C3%A9n%C3%A9rateur/Tutorial%20To-Do-List.html" added="2022-01-31T11:21:23Z" modified="2022-01-31T11:29:16Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="nemo" exec="&apos;firefox %u&apos;" modified="2022-01-31T11:29:16Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Sprint%2014%20JANVIER/Generateur%20aleatoire/Aide%20au%20g%C3%A9n%C3%A9rateur/generateurtest.html" added="2022-01-31T11:21:38Z" modified="2022-02-01T10:13:08Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="nemo" exec="&apos;firefox %u&apos;" modified="2022-02-01T10:13:08Z" count="5"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Sprint%2014%20JANVIER/Generateur%20aleatoire/Aide%20au%20g%C3%A9n%C3%A9rateur/index2.html" added="2022-01-31T11:21:58Z" modified="2022-01-31T11:29:30Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="nemo" exec="&apos;firefox %u&apos;" modified="2022-01-31T11:29:30Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Sprint%2014%20JANVIER/Generateur%20aleatoire/Aide%20au%20g%C3%A9n%C3%A9rateur/index.html" added="2022-01-31T11:22:13Z" modified="2022-01-31T11:29:40Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="nemo" exec="&apos;firefox %u&apos;" modified="2022-01-31T11:29:40Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Sprint%2014%20JANVIER/Generateur%20aleatoire/html/index.html" added="2022-01-31T11:22:35Z" modified="2022-02-01T10:12:49Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="nemo" exec="&apos;firefox %u&apos;" modified="2022-02-01T10:12:49Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Maquette%20Lander/contact.html" added="2022-01-31T11:25:44Z" modified="2022-01-31T11:25:44Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="nemo" exec="&apos;firefox %u&apos;" modified="2022-01-31T11:25:44Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Sprint%2014%20JANVIER/random-group-generator/index.html" added="2022-01-31T11:27:39Z" modified="2022-01-31T11:30:13Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="nemo" exec="&apos;firefox %u&apos;" modified="2022-01-31T11:30:13Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Sprint%2014%20JANVIER/Generateur%20aleatoire/Entrainement/index.html" added="2022-01-31T11:28:35Z" modified="2022-01-31T11:28:35Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="nemo" exec="&apos;firefox %u&apos;" modified="2022-01-31T11:28:35Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/mozilla_steph0/ToDo.rar" added="2022-01-31T11:31:50Z" modified="2022-01-31T11:31:50Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.rar"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2022-01-31T11:31:50Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Signature.jpg" added="2022-02-01T04:38:02Z" modified="2022-02-01T04:38:02Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Image Viewer" exec="&apos;xviewer %u&apos;" modified="2022-02-01T04:38:02Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/mozilla_steph0/TURPIN%20St%C3%A9phanie%20-%20Convention%20pr%C3%AAt%20de%20mat%C3%A9riel.pdf" added="2022-02-01T04:43:58Z" modified="2022-02-01T04:43:58Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2022-02-01T04:43:58Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/T%C3%A9l%C3%A9chargements/TURPIN%20St%C3%A9phanie%20-%20Convention%20pr%C3%AAt%20de%20mat%C3%A9riel.pdf" added="2022-02-01T04:44:16Z" modified="2022-02-01T04:44:16Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2022-02-01T04:44:16Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Bureau/TURPIN%20St%C3%A9phanie%20-%20Convention%20pr%C3%AAt%20de%20mat%C3%A9riel.pdf" added="2022-02-01T04:44:47Z" modified="2022-02-01T10:33:07Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2022-02-01T04:47:37Z" count="3"/>
+          <bookmark:application name="Visionneur de documents" exec="&apos;xreader %u&apos;" modified="2022-02-01T10:33:07Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/mozilla_steph0/roboto-mono.zip" added="2022-02-01T06:12:42Z" modified="2022-02-01T06:12:42Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/zip"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2022-02-01T06:12:42Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/sprint_03/index.html" added="2022-02-01T06:23:17Z" modified="2022-02-02T12:20:07Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="nemo" exec="&apos;/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=code-oss --file-forwarding com.visualstudio.code.oss --no-sandbox --unity-launch @@ %F @@&apos;" modified="2022-02-02T12:20:07Z" count="5"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/sprint_02/wireframe%20sprint_02" added="2022-02-01T06:35:58Z" modified="2022-02-01T06:35:58Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>xed</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="nemo" exec="&apos;xed %U&apos;" modified="2022-02-01T06:35:58Z" count="1"/>
+          <bookmark:application name="xed" exec="&apos;xed %u&apos;" modified="2022-02-01T06:35:58Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/landerphoto.jpg" added="2022-02-01T06:37:10Z" modified="2022-02-01T06:37:10Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Image Viewer" exec="&apos;xviewer %u&apos;" modified="2022-02-01T06:37:10Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Sprint%2014%20JANVIER/Generateur%20aleatoire/Aide%20au%20g%C3%A9n%C3%A9rateur/Maquettegenerateur.png" added="2022-02-01T10:13:18Z" modified="2022-02-01T10:13:18Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Image Viewer" exec="&apos;xviewer %u&apos;" modified="2022-02-01T10:13:18Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/T%C3%A9l%C3%A9chargements/TURPIN%20St%C3%A9phanie%20-%20Convention%20pr%C3%AAt%20de%20mat%C3%A9riel(1).pdf" added="2022-02-01T11:47:27Z" modified="2022-02-01T11:47:27Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2022-02-01T11:47:27Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/mozilla_steph0/TURPIN%20St%C3%A9phanie%20-%20Convention%20pr%C3%AAt%20de%20mat%C3%A9riel-1.pdf" added="2022-02-01T11:50:42Z" modified="2022-02-01T11:50:42Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2022-02-01T11:50:42Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Bureau/TURPIN%20St%C3%A9phanie%20-%20Convention%20pr%C3%AAt%20de%20mat%C3%A9riel-1.pdf" added="2022-02-01T11:50:49Z" modified="2022-02-01T11:50:50Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2022-02-01T11:50:50Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/mozilla_steph0/ticket.pdf" added="2022-02-02T06:05:47Z" modified="2022-02-02T06:05:47Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2022-02-02T06:05:47Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/sprint_03/styles.css" added="2022-02-04T06:54:18Z" modified="2022-02-04T06:54:19Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>xed</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="nemo" exec="&apos;xed %U&apos;" modified="2022-02-04T06:54:18Z" count="1"/>
+          <bookmark:application name="xed" exec="&apos;xed %u&apos;" modified="2022-02-04T06:54:19Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/js%20entrainement/sprint_03/index.html" added="2022-02-04T12:58:07Z" modified="2022-02-07T09:18:11Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="nemo" exec="&apos;firefox %u&apos;" modified="2022-02-07T09:18:11Z" count="9"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/js%20entrainement/sprint_03/script.js" added="2022-02-07T04:59:06Z" modified="2022-02-07T04:59:06Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/javascript"/>
+        <bookmark:applications>
+          <bookmark:application name="nemo" exec="&apos;/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=code-oss --file-forwarding com.visualstudio.code.oss --no-sandbox --unity-launch @@ %F @@&apos;" modified="2022-02-07T04:59:06Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/todo/sprint_03/index.html" added="2022-02-07T05:33:21Z" modified="2022-02-07T05:33:21Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="nemo" exec="&apos;/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=code-oss --file-forwarding com.visualstudio.code.oss --no-sandbox --unity-launch @@ %F @@&apos;" modified="2022-02-07T05:33:21Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph" added="2022-02-07T05:35:16Z" modified="2022-02-07T05:35:16Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="nemo-desktop" exec="&apos;nemo %U&apos;" modified="2022-02-07T05:35:16Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/sprint_03/sprint_03/index.html" added="2022-02-07T05:42:54Z" modified="2022-02-07T09:23:01Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="nemo" exec="&apos;/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=code-oss --file-forwarding com.visualstudio.code.oss --no-sandbox --unity-launch @@ %F @@&apos;" modified="2022-02-07T09:23:01Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/Bureau/cl%C3%A9%20pat.txt" added="2022-02-07T09:36:41Z" modified="2022-02-07T09:36:41Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>xed</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="xed" exec="&apos;xed %u&apos;" modified="2022-02-07T09:36:41Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

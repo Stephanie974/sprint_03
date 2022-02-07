@@ -1,0 +1,475 @@
+/*
+   MyLearning script
+   Version: 1.0.5
+*/
+
+/* js-cookie v3.0.0-rc.1 | MIT */
+!function (e, t) { "object" == typeof exports && "undefined" != typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define(t) : (e = e || self, function () { var n = e.Cookies, r = e.Cookies = t(); r.noConflict = function () { return e.Cookies = n, r } }()) }(this, function () { "use strict"; function e(e) { for (var t = 1; t < arguments.length; t++) { var n = arguments[t]; for (var r in n) e[r] = n[r] } return e } var t = { read: function (e) { return e.replace(/(%[\dA-F]{2})+/gi, decodeURIComponent) }, write: function (e) { return encodeURIComponent(e).replace(/%(2[346BF]|3[AC-F]|40|5[BDE]|60|7[BCD])/g, decodeURIComponent) } }; return function n(r, o) { function i(t, n, i) { if ("undefined" != typeof document) { "number" == typeof (i = e({}, o, i)).expires && (i.expires = new Date(Date.now() + 864e5 * i.expires)), i.expires && (i.expires = i.expires.toUTCString()), t = encodeURIComponent(t).replace(/%(2[346B]|5E|60|7C)/g, decodeURIComponent).replace(/[()]/g, escape), n = r.write(n, t); var c = ""; for (var u in i) i[u] && (c += "; " + u, !0 !== i[u] && (c += "=" + i[u].split(";")[0])); return document.cookie = t + "=" + n + c } } return Object.create({ set: i, get: function (e) { if ("undefined" != typeof document && (!arguments.length || e)) { for (var n = document.cookie ? document.cookie.split("; ") : [], o = {}, i = 0; i < n.length; i++) { var c = n[i].split("="), u = c.slice(1).join("="); '"' === u[0] && (u = u.slice(1, -1)); try { var f = t.read(c[0]); if (o[f] = r.read(u, f), e === f) break } catch (e) { } } return e ? o[e] : o } }, remove: function (t, n) { i(t, "", e({}, n, { expires: -1 })) }, withAttributes: function (t) { return n(this.converter, e({}, this.attributes, t)) }, withConverter: function (t) { return n(e({}, this.converter, t), this.attributes) } }, { attributes: { value: Object.freeze(o) }, converter: { value: Object.freeze(r) } }) }(t, { path: "/" }) });
+
+/* Base64Decode@base64.js | https://gist.github.com/chrisveness/e121cffb51481bd1c142 | MIT */
+function Base64Decode(r) { if (!/^[a-z0-9+/]+={0,2}$/i.test(r) || r.length % 4 != 0) throw Error("Not base64 string"); for (var t, e, n, o, h, a = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=", i = [], f = 0; f < r.length; f += 4)t = (h = a.indexOf(r.charAt(f)) << 18 | a.indexOf(r.charAt(f + 1)) << 12 | (n = a.indexOf(r.charAt(f + 2))) << 6 | (o = a.indexOf(r.charAt(f + 3)))) >>> 16 & 255, e = h >>> 8 & 255, h = 255 & h, i[f / 4] = String.fromCharCode(t, e, h), 64 == o && (i[f / 4] = String.fromCharCode(t, e)), 64 == n && (i[f / 4] = String.fromCharCode(t)); return r = i.join("") }
+
+window.MyLearning = {};
+
+MyLearning.pages_read_count = 0;
+MyLearning.total_pages_count = 0;
+MyLearning.user_progress_collected = false;
+
+MyLearning._debug = null;
+
+MyLearning._isDebugMode = function () {
+   if (this._debug !== null) {
+      return this._debug;
+   }
+
+   this._debug = Cookies.get('my_learning.debug')
+
+   if (typeof this._debug === 'undefined' || this._debug === null) {
+      this._debug = false;
+   }
+
+   return this._debug === true || this._debug === 'true';
+}
+
+MyLearning.log = function (message, data) {
+   if (this._isDebugMode()) {
+      if (typeof data === 'undefined') {
+         console.log('MyLearning -> ' + message);
+      } else {
+         console.log('MyLearning -> ' + message, data);
+      }
+   }
+}
+
+MyLearning._version = null;
+
+MyLearning._cacheVersion = function () {
+   // next one will be v2
+   this._version = '1.5';
+
+   // return cached result
+   if (this._version !== null) {
+      this.log('version: ', this._version);
+      return this._version;
+   }
+
+   this._version = Cookies.get('my_learning.version')
+
+   // fallback to v1.5
+   if (typeof this._version === 'undefined' || !this._version) {
+      this._version = '1.5';
+   }
+
+   this.log('version: ', this._version);
+   return this._version;
+}
+
+MyLearning._version_to_base_url_map = {
+   '1': 'https://mypage.w3schools.com',
+   '1.5': 'https://my-learning.w3schools.com',
+   '2': 'https://myl-api-prod.w3schools.com'
+}
+
+MyLearning._version_and_name_to_rel_url_map = {
+   '1': {
+      'api.meta': '/mypage/beta.php',
+      'api.meta_for_default': '/mypage/beta_for_default.php',
+      'api.exercise.get': '/mypage/get_exercise_obj2.php',
+      'api.exercise.set': '/mypage/set_exercise_obj.php',
+      'api.quiz.set_score': '/mypage/set_quiz_score2.php'
+   },
+   '1.5': {
+      'api.meta': '/api/meta/',
+      'api.meta_for_default': '/api/meta-for-default/',
+      'api.exercise.get': '/api/exercise/get/',
+      'api.exercise.set': '/api/exercise/set/',
+      'api.quiz.set_score': '/api/quiz/set-score/'
+   },
+   '2': {
+      'api.meta': '/api/classic/get-set-topic-progress',
+      // 'api.meta_for_default': '/api/meta-for-default/', // deprecated
+      'api.exercise.get': '/api/classic/get-exercises-progress',
+      'api.exercise.set': '/api/classic/set-exercises-progress',
+      'api.quiz.set_score': '/api/classic/set-quiz-progress'
+   }
+}
+
+// usage:
+// MyLearning.getUrl('api.quiz.set_score') -> https://mypage.w3schools.com/mypage/set_quiz_score2.php
+MyLearning.getUrl = function (api_name) {
+   this.log('getUrl: ', api_name);
+
+   this._cacheVersion();
+
+   if (this._isDebugMode()) {
+      if (typeof this._version_to_base_url_map[this._version] === 'undefined') {
+         console.warn('MyLearning -> Version is not valid. this._version: ', this._version);
+
+         return '/';
+      }
+
+      if (typeof this._version_and_name_to_rel_url_map[this._version][api_name] === 'undefined') {
+         console.warn('MyLearning -> Api name is not valid. this._version, api_name: ', this._version, api_name);
+
+         return '/';
+      }
+   }
+
+   return this._version_to_base_url_map[this._version] + this._version_and_name_to_rel_url_map[this._version][api_name];
+}
+
+MyLearning.userAccessTokenIsPresentAndNotExpired = function () {
+   // addapted to work in older browsers
+   var access_token = Cookies.get('accessToken');
+
+   if (typeof access_token !== 'undefined') {
+      try {
+         var access_token_payload_chunk = access_token.split('.')[1];
+         var access_token_payload_chunk_b64decoded;
+
+         if (typeof atob === 'function') {
+            access_token_payload_chunk_b64decoded = atob(access_token_payload_chunk);
+         } else {
+            access_token_payload_chunk_b64decoded = Base64Decode(access_token_payload_chunk);
+         }
+
+         var access_token_payload = JSON.parse(access_token_payload_chunk_b64decoded);
+
+         if (Date.now() < (access_token_payload.exp * 1000)) {
+            return true;
+         }
+      } catch (exc) {
+         if (this._isDebugMode()) {
+            console.warn('MyLearning -> Failed parsing user`s "accessToken": ', exc);
+         }
+
+         return false;
+      }
+   }
+
+   return false;
+}
+
+MyLearning._user_is_logged_in = null; // cache
+
+MyLearning.userIsLoggedIn = function () {
+   // Warning!
+   // The access token may be present and not expired yet invalidated in Cognito / signed out
+   if (this._user_is_logged_in === null) { // cache the bool value
+      this._user_is_logged_in = this.userAccessTokenIsPresentAndNotExpired();
+   }
+
+   this.log('userIsLoggedIn: ', this._user_is_logged_in);
+
+   return this._user_is_logged_in;
+}
+
+// << classic
+
+// < common
+MyLearning.elmIsInViewport = function (x) {
+   var rect = x.getBoundingClientRect();
+   return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /* or $(window).height() */
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */
+   );
+}
+
+MyLearning.elmIsAboveViewport = function (x) {
+   var rect = x.getBoundingClientRect();
+   if (rect.top < 0) return true;
+   return false;
+}
+
+MyLearning.getCircleMeta = function (xx, yy, r, aD) {
+   var aR = (aD - 90) * Math.PI / 180.0;
+   return {
+      x: xx + (r * Math.cos(aR)),
+      y: yy + (r * Math.sin(aR))
+   };
+}
+
+MyLearning.getProfileIconCirclesRendered = function (x, y, r, sa, ea) {
+   var s = this.getCircleMeta(x, y, r, ea);
+   var e = this.getCircleMeta(x, y, r, sa);
+   var f = ea - sa <= 180 ? "0" : "1";
+   return ["M", s.x, s.y, "A", r, r, 0, f, 0, e.x, e.y].join(" ");
+}
+
+MyLearning.loadUser = function (context) {
+   this.log('loadUser -> args: ', [context]);
+
+   if (context === 'default') {
+      this._loadUser();
+   } else if (context === 'footer') {
+      this._footerLoadUser();
+   }
+}
+
+MyLearning.renderAnonymousUser = function () {
+   this.log('renderAnonymousUser');
+
+   var a = document.getElementById("mypagediv");
+   var b = document.getElementById("w3loginbtn");
+   if (a) a.style.display = "none";
+   if (b) b.style.display = "inline";
+}
+// > common
+
+// < default
+MyLearning._loadUser = function () {
+   if (this.userIsLoggedIn()) {
+      this.renderActiveUserLite("B", {});
+   } else {
+      this.renderAnonymousUser();
+   }
+}
+
+MyLearning.renderActiveUserLite = function (cc, obj) {
+   this.log('renderActiveUserLite -> args: ', [cc, obj]);
+
+   var x, degrees = 0, txt = "", txt2 = "", color1 = "rgba(76, 175, 80, 0.1)", color2 = "rgba(76, 175, 80, 1)";
+   var a = document.getElementById("w3loginbtn");
+   var b = document.getElementById("mypagediv");
+   if (a) a.style.display = "none";
+   if (b) {
+      //document.getElementById("loginactioncontainer").style.marginLeft =  "0";
+      if (cc == "Q") {
+         color1 = "rgba(44, 156, 202, 0.1)";
+         color2 = "rgba(44, 156, 202, 1)";
+      }
+      b.style.display = "block";
+      txt += "<a href='https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com%2F'>";
+      //txt += "<a href='https://mypage.w3schools.com/mypage/default.php'>";
+      txt += "<img src='/images/mypagelogo32x32.png' alt='MyLearning' style='position:absolute;top:18px;right:28px'>";
+      txt += '<svg style="position:absolute;top:0;right:0;height:70px;width:70px">';
+      txt += '<path id="mypage_circle1" fill="none" stroke="' + color1 + '" stroke-width="4"/>';
+      txt += '<path id="mypage_circle2" fill="none" stroke="' + color2 + '" stroke-width="4"/>';
+      txt += '</svg>';
+      txt += '</a>';
+      b.innerHTML = "&nbsp;" + txt;
+      document.getElementById("mypage_circle1").setAttribute("d", this.getProfileIconCirclesRendered(26, 35, 24, 0, 359.99));
+      document.getElementById("mypage_circle2").setAttribute("d", this.getProfileIconCirclesRendered(26, 35, 24, 0, degrees));
+   }
+}
+// > default
+
+// < footer
+MyLearning._footerLoadUser = function () {
+   this.log('_footerLoadUser');
+
+   if (!this.userIsLoggedIn()) {
+      this.renderAnonymousUser();
+      return;
+   }
+
+   // show the user active session first and update the progress when we have it on hands
+   this.renderActiveUserWithProgress('T', 'T{"a":0,"b":0}'); // T - unused state, stands for "Temporary/Transitory"
+
+   var x, y, pos, foldername, filename, typ, cc, pathname = window.location.pathname;
+   if (pathname.substr(0, 1) == "/") { pathname = pathname.substr(1); }
+   pos = pathname.indexOf("/");
+   foldername = pathname.substr(0, pos);
+   if (pathname.indexOf("pandas") > -1) { foldername = "python/pandas"; }
+   if (pathname.indexOf("numpy") > -1) { foldername = "python/numpy"; }
+   if (pathname.indexOf("scipy") > -1) { foldername = "python/scipy"; }
+   filename = pathname.substr(pos + 1);
+   typ = foldername;
+   if (foldername == "quiztest") {
+      cc = window.location.href;
+      pos = cc.indexOf("qtest=");
+      typ = cc.substr(pos + 6);
+   }
+   var xhttp = new XMLHttpRequest();
+   xhttp.onreadystatechange = function () {
+      if (this.readyState == 4) {
+         MyLearning.log('_footerLoadUser -> req_res: ', this);
+
+         if (this.status == 200) {
+            y = this.responseText;
+            x = y.substr(0, 1);
+            MyLearning.log('_footerLoadUser -> req_res -> x: ', x);
+
+            if (x == "F" || x == "G" || x == "H" || x == "I" || x == "J" || x == "K" || x == "L" || x == "M" || x == "Q") {
+               MyLearning.user_progress_collected = true;
+               MyLearning.renderActiveUserWithProgress(x, y);
+            }
+         }
+      }
+   };
+   xhttp.open("POST", this.getUrl('api.meta'), true);
+   //xhttp.open("POST", "https://mypage.w3schools.com/mypage/beta.php", true);
+   xhttp.withCredentials = true;
+   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+   xhttp.send("a=" + foldername + "&b=" + filename + "&c=" + typ + "&d=0&p=" + encodeURIComponent(window.location.pathname));
+}
+
+MyLearning.checkIfGotToTheBottomOfThePage = function () {
+   var a = document.getElementById("mypagediv2");
+   var elm_in_or_above_viewport = MyLearning.elmIsInViewport(a) || MyLearning.elmIsAboveViewport(a);
+   // this.log('checkIfGotToTheBottomOfThePage: ', elm_in_or_above_viewport);
+
+   if (elm_in_or_above_viewport) {
+      MyLearning.log('checkIfGotToTheBottomOfThePage: ', true);
+
+      window.removeEventListener("scroll", MyLearning.checkIfGotToTheBottomOfThePage);
+      MyLearning.finishedPage();
+   }
+}
+
+MyLearning.renderActiveUserWithProgress = function (cc, obj) {
+   this.log('renderActiveUserWithProgress -> args: ', [cc, obj]);
+
+   var x, degrees = 0, txt = "", txt2 = "", color1 = "rgba(76, 175, 80, 0.1)", color2 = "rgba(76, 175, 80, 1)", jsonobj;
+   var a = document.getElementById("w3loginbtn");
+   var b = document.getElementById("mypagediv");
+   var c = document.getElementById("mypagediv2");
+   if (a) a.style.display = "none";
+   if (b) {
+      if (cc == "I" || cc == "J" || cc == "H" || cc == "G" || cc == "O" || cc == "Q") {
+         jsonobj = JSON.parse(obj.substr(1));
+         this.pages_read_count = jsonobj.b;
+         this.total_pages_count = jsonobj.a;
+         x = Math.round((this.pages_read_count / this.total_pages_count) * 100);
+         degrees = x * 3.6;
+         if (degrees > 359) degrees = 359.99;
+      }
+      if (cc == "Q") {
+         color1 = "rgba(44, 156, 202, 0.1)";
+         color2 = "rgba(44, 156, 202, 1)";
+      }
+      b.style.display = "block";
+      txt += "<a href='https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com%2F'>";
+      //  txt += "<a href='https://mypage.w3schools.com/mypage/default.php'>";
+      txt2 = txt;
+      txt += "<img src='/images/mypagelogo32x32.png' alt='MYPAGE' style='position:absolute;top:18px;right:28px'>";
+      txt2 += "<img src='/images/mypagelogo32x32.png' alt='MYPAGE' style='position:absolute;top:18px;margin-left:10px;xright:28px'>";
+      if (cc != "F") {
+         txt += '<svg style="position:absolute;top:0;right:0;height:70px;width:70px">';
+         txt += '<path id="mypage_circle1" fill="none" stroke="' + color1 + '" stroke-width="4"/>';
+         txt += '<path id="mypage_circle2" fill="none" stroke="' + color2 + '" stroke-width="4"/>';
+         txt += '</svg>';
+         txt2 += '<svg style="position:absolute;xtop:0;xright:0;height:70px;width:70px">';
+         txt2 += '<path id="mypage2_circle1" fill="none" stroke="' + color1 + '" stroke-width="4"/>';
+         txt2 += '<path id="mypage2_circle2" fill="none" stroke="' + color2 + '" stroke-width="4"/>';
+         txt2 += '</svg>';
+      }
+      if (cc == "J" || cc == "H" || cc == "G") {
+         window.addEventListener("scroll", this.checkIfGotToTheBottomOfThePage);
+         this.checkIfGotToTheBottomOfThePage();
+      }
+      if (cc == "Q") {
+         if (degrees == 359.99) {
+            txt += "<span id='usergetsstar'>&#x2605;</span>";
+         }
+      }
+      txt += '</a>';
+      txt2 += '</a>';
+      b.innerHTML = "&nbsp;" + txt;
+      c.innerHTML = "&nbsp;" + txt2;
+      if (cc != "L" && cc != "F") {
+         document.getElementById("mypage_circle1").setAttribute("d", this.getProfileIconCirclesRendered(26, 35, 24, 0, 359.99));
+         document.getElementById("mypage_circle2").setAttribute("d", this.getProfileIconCirclesRendered(26, 35, 24, 0, degrees));
+         document.getElementById("mypage2_circle1").setAttribute("d", this.getProfileIconCirclesRendered(26, 35, 24, 0, 359.99));
+         document.getElementById("mypage2_circle2").setAttribute("d", this.getProfileIconCirclesRendered(26, 35, 24, 0, degrees));
+      }
+   }
+
+   ga('send', 'event', 'user', 'login');
+}
+
+MyLearning.finishedPage = function () {
+   this.log('finishedPage');
+
+   if (!this.userIsLoggedIn() || !this.user_progress_collected) {
+      this.log('finishedPage -> jumping out');
+      return;
+   }
+
+   var x, y, pos, foldername, filename, typ, pathname = window.location.pathname;
+   if (pathname.substr(0, 1) == "/") { pathname = pathname.substr(1); }
+   pos = pathname.indexOf("/");
+   foldername = pathname.substr(0, pos);
+   if (pathname.indexOf("pandas") > -1) { foldername = "python/pandas"; }
+   if (pathname.indexOf("numpy") > -1) { foldername = "python/numpy"; }
+   if (pathname.indexOf("scipy") > -1) { foldername = "python/scipy"; }
+   filename = pathname.substr(pos + 1);
+   typ = foldername;
+   var xhttp = new XMLHttpRequest();
+   xhttp.onreadystatechange = function () {
+      if (this.readyState == 4) {
+         MyLearning.log('finishedPage -> req_res: ', this);
+
+         if (this.status == 200) {
+            y = this.responseText;
+            x = y.substr(0, 1);
+            if (x == "O") {
+               MyLearning.registerPointForFinishedPage(x);
+            }
+         }
+      }
+   };
+   xhttp.open("POST", this.getUrl('api.meta'), true);
+   //xhttp.open("POST", "https://mypage.w3schools.com/mypage/beta.php", true);
+   xhttp.withCredentials = true;
+   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+   xhttp.send("a=" + foldername + "&b=" + filename + "&c=" + typ + "&d=1&p=" + encodeURIComponent(window.location.pathname));
+}
+
+MyLearning.registerPointForFinishedPage = function (cc) {
+   MyLearning.log('registerPointForFinishedPage -> args: ', [cc]);
+
+   var x, degrees = 0, txt = "", txt2 = "", completed = 0, color1 = "rgba(76, 175, 80, 0.1)", color2 = "rgba(76, 175, 80, 1)";
+   var a = document.getElementById("w3loginbtn");
+   var b = document.getElementById("mypagediv");
+   var c = document.getElementById("mypagediv2");
+   if (c) {
+      this.pages_read_count++;
+      x = Math.round((this.pages_read_count / this.total_pages_count) * 100);
+      degrees = x * 3.6;
+      if (degrees > 359) degrees = 359.99;
+      txt += "<span class='usergetspoint' id='usergetstutpoint'>+1</span>";
+      if (degrees == 359.99) { completed = 1; }
+      if (completed == 1) {
+         txt += "<span id='usergetsstar'>&#x2605;</span>";
+      }
+      c.innerHTML += txt;
+      document.getElementById("mypage_circle1").setAttribute("d", this.getProfileIconCirclesRendered(26, 35, 24, 0, 359.99));
+      document.getElementById("mypage_circle2").setAttribute("d", this.getProfileIconCirclesRendered(26, 35, 24, 0, degrees));
+      document.getElementById("mypage2_circle1").setAttribute("d", this.getProfileIconCirclesRendered(26, 35, 24, 0, 359.99));
+      document.getElementById("mypage2_circle2").setAttribute("d", this.getProfileIconCirclesRendered(26, 35, 24, 0, degrees));
+   }
+}
+// > footer
+// >> classic7U"Ì      aýåaýåCìˆgaý l   `    O^partitionKey=%28https%2Cw3schools.com%29,:https://www.w3schools.com/lib/my-learning.js?v=1.0.5 strongly-framed 1 security-info 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 request-method GET response-head HTTP/2 200 OK
+accept-ranges: bytes
+age: 7981
+cache-control: public,max-age=14400,public
+content-security-policy: frame-ancestors 'self' https://mycourses.w3schools.com;
+content-type: application/javascript
+date: Fri, 04 Feb 2022 11:00:41 GMT
+etag: "0c281a9619d81:0"
+last-modified: Fri, 04 Feb 2022 07:09:08 GMT
+server: ECS (jnb/9DFD)
+x-cache: HIT
+x-content-security-policy: frame-ancestors 'self' https://mycourses.w3schools.com;
+x-powered-by: ASP.NET
+content-length: 19156
+X-Firefox-Spdy: h2
+ original-response-headers accept-ranges: bytes
+age: 7981
+cache-control: public,max-age=14400,public
+content-security-policy: frame-ancestors 'self' https://mycourses.w3schools.com;
+content-type: application/javascript
+date: Fri, 04 Feb 2022 11:00:41 GMT
+etag: "0c281a9619d81:0"
+last-modified: Fri, 04 Feb 2022 07:09:08 GMT
+server: ECS (jnb/9DFD)
+x-cache: HIT
+x-content-security-policy: frame-ancestors 'self' https://mycourses.w3schools.com;
+x-powered-by: ASP.NET
+content-length: 19156
+X-Firefox-Spdy: h2
+ ctid 2 uncompressed-len 0 net-response-time-onstart 317 net-response-time-onstop 318 necko:classified 1   JÔ

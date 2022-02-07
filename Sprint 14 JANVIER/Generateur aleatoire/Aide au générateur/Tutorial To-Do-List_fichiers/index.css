@@ -1,0 +1,62 @@
+.card-deck {
+  padding-right: 2vh;
+  padding-left: 10vh;
+}
+
+.saisie {
+  text-align: center;
+  padding-top: 10vh;
+}
+.htmlCode, .explication{
+    padding-right: 2vh;
+    padding-left: 10vh;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+}
+
+.alertCenter{
+  padding-left: 10vh;
+  padding-right: 2vh;
+
+}
+
+.navbar{
+  font-weight: bolder;
+  font-size: 1.2em;
+  z-index: 1000;
+}
+.jumbotron{
+  text-align: center;
+}
+
+.card-header, .card{
+  color: rgb(1, 43, 128);
+}
+
+
+body{
+  background-color: rgba(13, 14, 13, 0.1);
+}
+
+/* Pour ecran plus grand que 739*/
+@media screen and (min-width: 739px) {
+  .htmlCode, .explication, .alertCenter, .card-deck{
+    padding-right: 25vh;
+    padding-left: 25vh;
+    
+
+  }
+  #navigationBar{
+    background-color: rgba(247, 202, 24, .8)
+  }
+}
+
+/* Pour ecran plus petit que 739px*/
+@media screen and (max-width: 739px){
+
+  .navbar a{
+    font-size: .8vh;
+    font-weight: 900;
+  }
+
+}

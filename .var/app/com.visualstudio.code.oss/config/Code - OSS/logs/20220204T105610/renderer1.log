@@ -1,0 +1,155 @@
+[2022-02-04 14:42:37.064] [renderer1] [error] TreeError [MarkersPanel] Tree element not found: [object Object]: Error: TreeError [MarkersPanel] Tree element not found: [object Object]
+    at t.ObjectTreeModel.getElementLocation (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:132:965)
+    at t.ObjectTreeModel.isCollapsed (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:132:102)
+    at z.isCollapsed (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:1061:208)
+    at W.autoReveal (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6060:155)
+    at W.onActiveEditorChanged (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6057:330)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6056:162
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:111:275
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at e.doHandleActiveEditorChangeEvent (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5522:459)
+    at e.handleActiveEditorChange (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5522:228)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5521:765
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at e.doSetGroupActive (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5711:30)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5710:546
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5685:867
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:3969:519
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2738:688
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at o (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:289:810)
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at HTMLDivElement.s (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:120:649)
+    at HTMLTextAreaElement.focus (<anonymous>)
+    at v.setSelectionRange (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:595:313)
+    at o.writeToTextArea (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:575:711)
+    at m._setAndWriteTextAreaState (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:592:656)
+    at m.writeScreenReaderContent (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:592:786)
+    at m._setHasFocus (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:592:485)
+    at m.focusTextArea (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:591:907)
+    at _.focusTextArea (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2099:339)
+    at W.focus (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2123:891)
+    at Object.focusTextArea (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2119:111)
+    at h (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2013:793)
+    at g._onMouseDown (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2013:827)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2011:654
+    at HTMLDivElement.<anonymous> (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:558:292)
+[2022-02-04 16:29:20.318] [renderer1] [error] TreeError [MarkersPanel] Tree element not found: [object Object]: Error: TreeError [MarkersPanel] Tree element not found: [object Object]
+    at t.ObjectTreeModel.getElementLocation (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:132:965)
+    at t.ObjectTreeModel.isCollapsed (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:132:102)
+    at z.isCollapsed (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:1061:208)
+    at W.autoReveal (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6060:155)
+    at W.onActiveEditorChanged (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6057:330)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6056:162
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:111:275
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at e.doHandleActiveEditorChangeEvent (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5522:459)
+    at e.handleActiveEditorChange (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5522:228)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5521:765
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at e.doSetGroupActive (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5711:30)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5710:546
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5685:867
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:3969:519
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2738:688
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at o (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:289:810)
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at HTMLDivElement.s (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:120:649)
+    at HTMLTextAreaElement.focus (<anonymous>)
+    at v.setSelectionRange (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:595:313)
+    at o.writeToTextArea (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:575:711)
+    at m._setAndWriteTextAreaState (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:592:656)
+    at m.writeScreenReaderContent (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:592:786)
+    at m._setHasFocus (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:592:485)
+    at m.focusTextArea (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:591:907)
+    at _.focusTextArea (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2099:339)
+    at W.focus (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2123:891)
+    at Object.focusTextArea (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2119:111)
+    at h (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2013:793)
+    at g._onMouseDown (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2013:827)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2011:654
+    at HTMLDivElement.<anonymous> (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:558:292)
+[2022-02-04 16:56:01.906] [renderer1] [error] TreeError [MarkersPanel] Tree element not found: [object Object]: Error: TreeError [MarkersPanel] Tree element not found: [object Object]
+    at t.ObjectTreeModel.getElementLocation (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:132:965)
+    at t.ObjectTreeModel.isCollapsed (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:132:102)
+    at z.isCollapsed (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:1061:208)
+    at W.autoReveal (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6060:155)
+    at W.onActiveEditorChanged (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6057:330)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6056:162
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:111:275
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at e.doHandleActiveEditorChangeEvent (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5522:459)
+    at e.handleActiveEditorChange (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5522:228)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5521:765
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at e.doSetGroupActive (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5711:30)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5710:546
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5685:867
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:3969:519
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2738:688
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at o (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:289:810)
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at HTMLDivElement.s (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:120:649)
+    at HTMLTextAreaElement.focus (<anonymous>)
+    at v.setSelectionRange (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:595:313)
+    at o.writeToTextArea (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:575:711)
+    at m._setAndWriteTextAreaState (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:592:656)
+    at m.writeScreenReaderContent (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:592:786)
+    at m._setHasFocus (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:592:485)
+    at m.focusTextArea (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:591:907)
+    at _.focusTextArea (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2099:339)
+    at W.focus (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2123:891)
+    at Object.focusTextArea (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2119:111)
+    at h (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2013:793)
+    at g._onMouseDown (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2013:827)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:2011:654
+    at HTMLDivElement.<anonymous> (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:558:292)
+[2022-02-04 16:56:46.777] [renderer1] [error] TreeError [MarkersPanel] Tree element not found: [object Object]: Error: TreeError [MarkersPanel] Tree element not found: [object Object]
+    at t.ObjectTreeModel.getElementLocation (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:132:965)
+    at t.ObjectTreeModel.isCollapsed (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:132:102)
+    at z.isCollapsed (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:1061:208)
+    at W.autoReveal (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6060:155)
+    at W.onActiveEditorChanged (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6057:330)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6056:162
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:111:275
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at e.doHandleActiveEditorChangeEvent (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5522:459)
+    at e.handleActiveEditorChange (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5522:228)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5521:765
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at e.doSetGroupActive (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5711:30)
+    at e.activateGroup (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5707:801)
+    at e.doOpenEditor (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5692:484)
+    at e.openEditor (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5691:744)
+    at l (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5660:327)
+    at HTMLDivElement.<anonymous> (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5660:504)
+[2022-02-04 16:57:05.651] [renderer1] [error] TreeError [MarkersPanel] Tree element not found: [object Object]: Error: TreeError [MarkersPanel] Tree element not found: [object Object]
+    at t.ObjectTreeModel.getElementLocation (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:132:965)
+    at t.ObjectTreeModel.isCollapsed (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:132:102)
+    at z.isCollapsed (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:1061:208)
+    at W.autoReveal (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6060:155)
+    at W.onActiveEditorChanged (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6057:330)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6056:162
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:111:275
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at e.doHandleActiveEditorChangeEvent (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5522:459)
+    at e.handleActiveEditorChange (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5522:228)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5521:765
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at e.doSetGroupActive (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5711:30)
+    at e.activateGroup (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5707:801)
+    at e.doOpenEditor (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5692:484)
+    at e.openEditor (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5691:744)
+    at l (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5660:327)
+    at HTMLDivElement.<anonymous> (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5660:504)

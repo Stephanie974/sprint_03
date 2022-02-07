@@ -1,0 +1,64 @@
+[2022-02-04 18:28:16.151] [renderer1] [error] TreeError [MarkersPanel] Tree element not found: [object Object]: Error: TreeError [MarkersPanel] Tree element not found: [object Object]
+    at t.ObjectTreeModel.getElementLocation (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:132:965)
+    at t.ObjectTreeModel.isCollapsed (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:132:102)
+    at z.isCollapsed (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:1061:208)
+    at W.autoReveal (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6060:155)
+    at W.onActiveEditorChanged (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6057:330)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6056:162
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:111:275
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at e.doHandleActiveEditorChangeEvent (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5522:459)
+    at e.handleActiveEditorChange (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5522:228)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5522:569
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5692:875
+    at async e.openEditor (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5691:733)
+[2022-02-04 18:28:32.112] [renderer1] [error] TreeError [MarkersPanel] Tree element not found: [object Object]: Error: TreeError [MarkersPanel] Tree element not found: [object Object]
+    at t.ObjectTreeModel.getElementLocation (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:132:965)
+    at t.ObjectTreeModel.isCollapsed (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:132:102)
+    at z.isCollapsed (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:1061:208)
+    at W.autoReveal (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6060:155)
+    at W.onActiveEditorChanged (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6057:330)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6056:162
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:111:275
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at e.doHandleActiveEditorChangeEvent (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5522:459)
+    at e.handleActiveEditorChange (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5522:228)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5522:569
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5692:875
+    at async e.openEditor (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5691:733)
+    at async e.openEditors (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5694:131)
+    at async Promise.all (index 0)
+    at async e.openEditors (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5526:87)
+    at async D.handleDrop (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5584:288)
+[2022-02-04 18:28:33.713] [renderer1] [error] TreeError [MarkersPanel] Tree element not found: [object Object]: Error: TreeError [MarkersPanel] Tree element not found: [object Object]
+    at t.ObjectTreeModel.getElementLocation (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:132:965)
+    at t.ObjectTreeModel.isCollapsed (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:132:102)
+    at z.isCollapsed (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:1061:208)
+    at W.autoReveal (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6060:155)
+    at W.onActiveEditorChanged (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6057:330)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6056:162
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:111:275
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at e.doHandleActiveEditorChangeEvent (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5522:459)
+    at e.handleActiveEditorChange (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5522:228)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5522:569
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5692:875
+    at async e.openEditor (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5691:733)
+[2022-02-04 18:28:48.101] [renderer1] [error] TreeError [MarkersPanel] Tree element not found: [object Object]: Error: TreeError [MarkersPanel] Tree element not found: [object Object]
+    at t.ObjectTreeModel.getElementLocation (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:132:965)
+    at t.ObjectTreeModel.isCollapsed (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:132:102)
+    at z.isCollapsed (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:1061:208)
+    at W.autoReveal (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6060:155)
+    at W.onActiveEditorChanged (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6057:330)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:6056:162
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:111:275
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at e.doHandleActiveEditorChangeEvent (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5522:459)
+    at e.handleActiveEditorChange (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5522:228)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5522:569
+    at c.fire (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:114:893)
+    at file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5692:875
+    at async e.openEditor (file:///app/share/code-oss/resources/app/out/vs/workbench/workbench.desktop.main.js:5691:733)

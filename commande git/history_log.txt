@@ -1,0 +1,29 @@
+    1  git --version
+    2  sudo apt install git
+    3  git --version
+    4  pwd : trouver le dossier " HOME"
+    5  ls : lister les dossiers
+    6  mkdir test3 : nouveau fichier
+    7  ls : lister les dossiers
+    8  cd test3 :se déplace dans le fichier text3
+    9  ls :lister les fichiers
+   10  
+   11  ls -l : voir ce qu'il y a dans le fichier
+   12  touch file.txt : création du fichier texte vide
+   13  ls : lister les fichiers
+   14  cat file.txt: lecture du fichier
+   15  code file.txt : lecture du fichier dans visual studio code mais ne fonctionne pas sur cet ordi
+   16  sudo apt install <nom du deb> : test non fonctionnel
+   17  ps -ef | grep -i visu: test non fonctionnel
+   18  ps -ef | grep -i code: test non fonctionnel
+   19  code-oss: test non fonctionnel
+   20  ll /app/share/code-oss/code-oss: test non fonctionnel
+   21  ll /app/share/code-oss/: test non fonctionnel
+   22  ll /app/share/: test non fonctionnel
+   23* ll /appA: test non fonctionnel
+   24  ps -ef | less: test non fonctionnel
+   25  git --version : utilisation de git ok
+   26  man : vérification des codes et connaitre a quoi ca sert
+   27  man ls
+   28  history : voir ce qu'on a écrit
+   29  history > history_log.txt

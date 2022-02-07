@@ -1,0 +1,4395 @@
+["INFO" - 10:56:13] Extension Name: esbenp.prettier-vscode.
+["INFO" - 10:56:13] Extension Version: 5.5.0.
+["INFO" - 10:56:13] Enabling prettier for languages: ansible, css, graphql, home-assistant, html, javascript, javascriptreact, json, json5, jsonc, less, markdown, mdx, mongo, postcss, scss, typescript, typescriptreact, vue, yaml
+["INFO" - 10:56:13] Enabling prettier for file extensions: .JSON-tmLanguage, ._js, .avsc, .bones, .cjs, .component.html, .css, .es, .es6, .frag, .geojson, .gltf, .gql, .graphql, .graphqls, .gs, .har, .htm, .html, .html.hl, .ice, .inc, .jake, .js, .js.flow, .jsb, .jscad, .jsfl, .jsm, .json, .json5, .jsonc, .jsonl, .jss, .jsx, .less, .markdown, .mcmeta, .md, .mdown, .mdwn, .mdx, .mir, .mjml, .mjs, .mkd, .mkdn, .mkdown, .njs, .pac, .pcss, .postcss, .reek, .ronn, .rviz, .scss, .sjs, .ssjs, .st, .sublime-build, .sublime-commands, .sublime-completions, .sublime-keymap, .sublime-macro, .sublime-menu, .sublime-mousemap, .sublime-project, .sublime-settings, .sublime-syntax, .sublime-theme, .sublime-workspace, .sublime_metrics, .sublime_session, .syntax, .tfstate, .tfstate.backup, .topojson, .ts, .tsx, .vue, .webapp, .webmanifest, .workbook, .xht, .xhtml, .xsjs, .xsjslib, .yaml, .yaml-tmlanguage, .yaml.sed, .yml, .yml.mysql, .yy, .yyp
+["INFO" - 10:56:13] Enabling prettier for range supported languages: graphql, javascript, javascriptreact, json, typescript, typescriptreact
+["INFO" - 11:05:20] Formatting /home/steph/sprint_03/script.js
+["INFO" - 11:05:20] Using ignore file (if present) at undefined
+["INFO" - 11:05:20] Using bundled version of prettier.
+["INFO" - 11:05:20] File Info:
+{
+  "ignored": false,
+  "inferredParser": "babel"
+}
+["INFO" - 11:05:20] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 11:05:20] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/script.js",
+  "parser": "babel"
+}
+["ERROR" - 11:05:20] Error formatting document.
+["ERROR" - 11:05:20] Unexpected token, expected ";" (6:16)
+  4 |   script
+  5 | ></script>;
+> 6 | var table_user document.getElementById("tableau");
+    |                ^
+  7 | var tr_user = document.createElement(tr);
+  8 | var td_user_nom = document.createElement("td1");
+  9 | var td_user_time = document.createElement("td2");
+SyntaxError: Unexpected token, expected ";" (6:16)
+  4 |   script
+  5 | ></script>;
+> 6 | var table_user document.getElementById("tableau");
+    |                ^
+  7 | var tr_user = document.createElement(tr);
+  8 | var td_user_nom = document.createElement("td1");
+  9 | var td_user_time = document.createElement("td2");
+	at t (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:379)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:291160)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 11:05:20] Formatting completed in 95.676188ms.
+["INFO" - 11:24:17] Formatting /home/steph/sprint_03/script.js
+["INFO" - 11:24:17] Using ignore file (if present) at undefined
+["INFO" - 11:24:17] Using bundled version of prettier.
+["INFO" - 11:24:17] File Info:
+{
+  "ignored": false,
+  "inferredParser": "babel"
+}
+["INFO" - 11:24:17] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 11:24:17] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/script.js",
+  "parser": "babel"
+}
+["INFO" - 11:24:17] Formatting completed in 82.558603ms.
+["INFO" - 11:24:42] Formatting /home/steph/sprint_03/script.js
+["INFO" - 11:24:42] Using ignore file (if present) at undefined
+["INFO" - 11:24:42] Using bundled version of prettier.
+["INFO" - 11:24:42] File Info:
+{
+  "ignored": false,
+  "inferredParser": "babel"
+}
+["INFO" - 11:24:42] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 11:24:42] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/script.js",
+  "parser": "babel"
+}
+["INFO" - 11:24:42] Formatting completed in 47.852889ms.
+["INFO" - 11:26:59] Formatting /home/steph/sprint_03/script.js
+["INFO" - 11:26:59] Using ignore file (if present) at undefined
+["INFO" - 11:26:59] Using bundled version of prettier.
+["INFO" - 11:26:59] File Info:
+{
+  "ignored": false,
+  "inferredParser": "babel"
+}
+["INFO" - 11:26:59] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 11:26:59] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/script.js",
+  "parser": "babel"
+}
+["ERROR" - 11:26:59] Error formatting document.
+["ERROR" - 11:26:59] Unexpected token (11:3)
+   9 | 
+  10 | function add_personne() {
+> 11 |   var nom = document.getElementById("input_name").value;
+     |   ^
+  12 |   var date = date_time();
+  13 |   var user = new Person(nom, date);
+  14 |   function Person(nom, date) {
+SyntaxError: Unexpected token (11:3)
+   9 | 
+  10 | function add_personne() {
+> 11 |   var nom = document.getElementById("input_name").value;
+     |   ^
+  12 |   var date = date_time();
+  13 |   var user = new Person(nom, date);
+  14 |   function Person(nom, date) {
+	at t (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:379)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:291160)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 11:26:59] Formatting completed in 66.800151ms.
+["INFO" - 11:28:23] Formatting /home/steph/sprint_03/script.js
+["INFO" - 11:28:23] Using ignore file (if present) at undefined
+["INFO" - 11:28:23] Using bundled version of prettier.
+["INFO" - 11:28:23] File Info:
+{
+  "ignored": false,
+  "inferredParser": "babel"
+}
+["INFO" - 11:28:23] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 11:28:23] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/script.js",
+  "parser": "babel"
+}
+["ERROR" - 11:28:23] Error formatting document.
+["ERROR" - 11:28:23] Unexpected token (11:3)
+   9 | 
+  10 | function add_personne() {
+> 11 |   var nom = document.getElementById("input_name").value;
+     |   ^
+  12 |   var date = date_time();
+  13 |   var user = new Person(nom, date);
+  14 |   function Person(nom, date) {
+SyntaxError: Unexpected token (11:3)
+   9 | 
+  10 | function add_personne() {
+> 11 |   var nom = document.getElementById("input_name").value;
+     |   ^
+  12 |   var date = date_time();
+  13 |   var user = new Person(nom, date);
+  14 |   function Person(nom, date) {
+	at t (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:379)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:291160)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 11:28:23] Formatting completed in 19.998713ms.
+["INFO" - 11:28:50] Formatting /home/steph/sprint_03/script.js
+["INFO" - 11:28:50] Using ignore file (if present) at undefined
+["INFO" - 11:28:50] Using bundled version of prettier.
+["INFO" - 11:28:50] File Info:
+{
+  "ignored": false,
+  "inferredParser": "babel"
+}
+["INFO" - 11:28:50] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 11:28:50] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/script.js",
+  "parser": "babel"
+}
+["ERROR" - 11:28:50] Error formatting document.
+["ERROR" - 11:28:50] Unexpected token (11:3)
+   9 | 
+  10 | function add_personne() {
+> 11 |   var nom = document.getElementById("input_name").value;
+     |   ^
+  12 |   var date = date_time();
+  13 |   var user = new Person(nom, date);
+  14 |   function Person(nom, date) {
+SyntaxError: Unexpected token (11:3)
+   9 | 
+  10 | function add_personne() {
+> 11 |   var nom = document.getElementById("input_name").value;
+     |   ^
+  12 |   var date = date_time();
+  13 |   var user = new Person(nom, date);
+  14 |   function Person(nom, date) {
+	at t (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:379)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:291160)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 11:28:50] Formatting completed in 20.838425ms.
+["INFO" - 11:29:38] Formatting /home/steph/sprint_03/script.js
+["INFO" - 11:29:38] Using ignore file (if present) at undefined
+["INFO" - 11:29:38] Using bundled version of prettier.
+["INFO" - 11:29:38] File Info:
+{
+  "ignored": false,
+  "inferredParser": "babel"
+}
+["INFO" - 11:29:38] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 11:29:38] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/script.js",
+  "parser": "babel"
+}
+["ERROR" - 11:29:38] Error formatting document.
+["ERROR" - 11:29:38] Unexpected token (12:3)
+  10 | 
+  11 | function add_personne() {
+> 12 |   var nom = document.getElementById("input_name").value;
+     |   ^
+  13 |   var date = date_time();
+  14 |   var user = new Person(nom, date);
+  15 |   function Person(nom, date) {
+SyntaxError: Unexpected token (12:3)
+  10 | 
+  11 | function add_personne() {
+> 12 |   var nom = document.getElementById("input_name").value;
+     |   ^
+  13 |   var date = date_time();
+  14 |   var user = new Person(nom, date);
+  15 |   function Person(nom, date) {
+	at t (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:379)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:291160)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 11:29:38] Formatting completed in 23.262099ms.
+["INFO" - 11:30:24] Formatting /home/steph/sprint_03/script.js
+["INFO" - 11:30:24] Using ignore file (if present) at undefined
+["INFO" - 11:30:24] Using bundled version of prettier.
+["INFO" - 11:30:24] File Info:
+{
+  "ignored": false,
+  "inferredParser": "babel"
+}
+["INFO" - 11:30:24] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 11:30:24] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/script.js",
+  "parser": "babel"
+}
+["ERROR" - 11:30:24] Error formatting document.
+["ERROR" - 11:30:24] Unexpected token (12:3)
+  10 | 
+  11 | function add_personne() {
+> 12 |   var nom = document.getElementById("input_name").value;
+     |   ^
+  13 |   var date = date_time();
+  14 |   var user = new Person(nom, date);
+  15 |   function Person(nom, date) {
+SyntaxError: Unexpected token (12:3)
+  10 | 
+  11 | function add_personne() {
+> 12 |   var nom = document.getElementById("input_name").value;
+     |   ^
+  13 |   var date = date_time();
+  14 |   var user = new Person(nom, date);
+  15 |   function Person(nom, date) {
+	at t (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:379)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:291160)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 11:30:24] Formatting completed in 24.299797ms.
+["INFO" - 11:40:32] Formatting /home/steph/sprint_03/script.js
+["INFO" - 11:40:32] Using ignore file (if present) at undefined
+["INFO" - 11:40:32] Using bundled version of prettier.
+["INFO" - 11:40:32] File Info:
+{
+  "ignored": false,
+  "inferredParser": "babel"
+}
+["INFO" - 11:40:32] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 11:40:32] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/script.js",
+  "parser": "babel"
+}
+["ERROR" - 11:40:32] Error formatting document.
+["ERROR" - 11:40:32] Unexpected token (12:3)
+  10 | 
+  11 | function add_personne() {
+> 12 |   var nom = document.getElementById("input_name").value;
+     |   ^
+  13 |   var date = date_time();
+  14 |   var user = new Person(nom, date);
+  15 |   function Person(nom, date) {
+SyntaxError: Unexpected token (12:3)
+  10 | 
+  11 | function add_personne() {
+> 12 |   var nom = document.getElementById("input_name").value;
+     |   ^
+  13 |   var date = date_time();
+  14 |   var user = new Person(nom, date);
+  15 |   function Person(nom, date) {
+	at t (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:379)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:291160)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 11:40:32] Formatting completed in 24.95768ms.
+["INFO" - 11:40:55] Formatting /home/steph/sprint_03/script.js
+["INFO" - 11:40:55] Using ignore file (if present) at undefined
+["INFO" - 11:40:55] Using bundled version of prettier.
+["INFO" - 11:40:55] File Info:
+{
+  "ignored": false,
+  "inferredParser": "babel"
+}
+["INFO" - 11:40:55] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 11:40:55] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/script.js",
+  "parser": "babel"
+}
+["ERROR" - 11:40:55] Error formatting document.
+["ERROR" - 11:40:55] Unexpected token (12:3)
+  10 | 
+  11 | function add_personne() {
+> 12 |   var nom = document.getElementById("input_name").value;
+     |   ^
+  13 |   var date = date_time();
+  14 |   var user = new Person(nom, date);
+  15 |   function Person(nom, date) {
+SyntaxError: Unexpected token (12:3)
+  10 | 
+  11 | function add_personne() {
+> 12 |   var nom = document.getElementById("input_name").value;
+     |   ^
+  13 |   var date = date_time();
+  14 |   var user = new Person(nom, date);
+  15 |   function Person(nom, date) {
+	at t (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:379)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:291160)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 11:40:55] Formatting completed in 23.052067ms.
+["INFO" - 11:48:26] Formatting /home/steph/sprint_03/script.js
+["INFO" - 11:48:26] Using ignore file (if present) at undefined
+["INFO" - 11:48:26] Using bundled version of prettier.
+["INFO" - 11:48:26] File Info:
+{
+  "ignored": false,
+  "inferredParser": "babel"
+}
+["INFO" - 11:48:26] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 11:48:26] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/script.js",
+  "parser": "babel"
+}
+["ERROR" - 11:48:26] Error formatting document.
+["ERROR" - 11:48:26] Unexpected token (12:3)
+  10 | 
+  11 | function add_personne() {
+> 12 |   var nom = document.getElementById("input_name").value;
+     |   ^
+  13 |   var date = date_time();
+  14 |   var user = new Person(nom, date);
+  15 |   function Person(nom, date) {
+SyntaxError: Unexpected token (12:3)
+  10 | 
+  11 | function add_personne() {
+> 12 |   var nom = document.getElementById("input_name").value;
+     |   ^
+  13 |   var date = date_time();
+  14 |   var user = new Person(nom, date);
+  15 |   function Person(nom, date) {
+	at t (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:379)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:291160)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 11:48:26] Formatting completed in 21.982254ms.
+["INFO" - 11:57:42] Formatting /home/steph/sprint_03/script.js
+["INFO" - 11:57:42] Using ignore file (if present) at undefined
+["INFO" - 11:57:42] Using bundled version of prettier.
+["INFO" - 11:57:42] File Info:
+{
+  "ignored": false,
+  "inferredParser": "babel"
+}
+["INFO" - 11:57:42] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 11:57:42] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/script.js",
+  "parser": "babel"
+}
+["ERROR" - 11:57:42] Error formatting document.
+["ERROR" - 11:57:42] Unexpected token (12:3)
+  10 | 
+  11 | function add_personne() {
+> 12 |   var nom = document.getElementById("input_name").value;
+     |   ^
+  13 |   var date = date_time();
+  14 |   var user = new Person(nom, date);
+  15 |   function Person(nom, date) 
+SyntaxError: Unexpected token (12:3)
+  10 | 
+  11 | function add_personne() {
+> 12 |   var nom = document.getElementById("input_name").value;
+     |   ^
+  13 |   var date = date_time();
+  14 |   var user = new Person(nom, date);
+  15 |   function Person(nom, date) 
+	at t (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:379)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:291160)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 11:57:42] Formatting completed in 21.688528ms.
+["INFO" - 11:58:07] Formatting /home/steph/sprint_03/script.js
+["INFO" - 11:58:07] Using ignore file (if present) at undefined
+["INFO" - 11:58:07] Using bundled version of prettier.
+["INFO" - 11:58:07] File Info:
+{
+  "ignored": false,
+  "inferredParser": "babel"
+}
+["INFO" - 11:58:07] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 11:58:07] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/script.js",
+  "parser": "babel"
+}
+["ERROR" - 11:58:07] Error formatting document.
+["ERROR" - 11:58:07] Unexpected token (9:1)
+   7 | {
+   8 | 
+>  9 | var list_user[];
+     | ^
+  10 | 
+  11 | function add_personne() {
+  12 |   var nom = document.getElementById("input_name").value;
+SyntaxError: Unexpected token (9:1)
+   7 | {
+   8 | 
+>  9 | var list_user[];
+     | ^
+  10 | 
+  11 | function add_personne() {
+  12 |   var nom = document.getElementById("input_name").value;
+	at t (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:379)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:291160)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 11:58:07] Formatting completed in 22.083283ms.
+["INFO" - 12:00:23] Formatting /home/steph/sprint_03/script.js
+["INFO" - 12:00:23] Using ignore file (if present) at undefined
+["INFO" - 12:00:23] Using bundled version of prettier.
+["INFO" - 12:00:23] File Info:
+{
+  "ignored": false,
+  "inferredParser": "babel"
+}
+["INFO" - 12:00:23] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 12:00:23] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/script.js",
+  "parser": "babel"
+}
+["ERROR" - 12:00:23] Error formatting document.
+["ERROR" - 12:00:23] Unexpected token (9:1)
+   7 | {
+   8 | 
+>  9 | var list_user[];
+     | ^
+  10 | 
+  11 | function add_personne() {
+  12 |   var nom = document.getElementById("input_name").value;
+SyntaxError: Unexpected token (9:1)
+   7 | {
+   8 | 
+>  9 | var list_user[];
+     | ^
+  10 | 
+  11 | function add_personne() {
+  12 |   var nom = document.getElementById("input_name").value;
+	at t (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:379)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:291160)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 12:00:23] Formatting completed in 19.611975ms.
+["INFO" - 12:55:00] Formatting /home/steph/sprint_03/index.html
+["INFO" - 12:55:00] Using ignore file (if present) at undefined
+["INFO" - 12:55:00] Using bundled version of prettier.
+["INFO" - 12:55:00] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 12:55:00] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 12:55:00] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["ERROR" - 12:55:00] Error formatting document.
+["ERROR" - 12:55:00] Unexpected character "
+" (68:9)
+  66 | raffraichir la liste
+  67 | [11:32]
+> 68 | &#128168
+     |         ^
+  69 | [11:32]
+  70 | ;
+  71 | [11:32]
+SyntaxError: Unexpected character "
+" (68:9)
+  66 | raffraichir la liste
+  67 | [11:32]
+> 68 | &#128168
+     |         ^
+  69 | [11:32]
+  70 | ;
+  71 | [11:32]
+	at Ft (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:1:52135)
+	at ps (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:2319)
+	at e (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:4291)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:4830)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 12:55:00] Formatting completed in 57.899224ms.
+["INFO" - 12:55:44] Formatting /home/steph/sprint_03/index.html
+["INFO" - 12:55:44] Using ignore file (if present) at undefined
+["INFO" - 12:55:44] Using bundled version of prettier.
+["INFO" - 12:55:44] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 12:55:44] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 12:55:44] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["ERROR" - 12:55:44] Error formatting document.
+["ERROR" - 12:55:44] Unexpected character "
+" (69:9)
+  67 | raffraichir la liste
+  68 | [11:32]
+> 69 | &#128168
+     |         ^
+  70 | [11:32]
+  71 | ;
+  72 | [11:32]
+SyntaxError: Unexpected character "
+" (69:9)
+  67 | raffraichir la liste
+  68 | [11:32]
+> 69 | &#128168
+     |         ^
+  70 | [11:32]
+  71 | ;
+  72 | [11:32]
+	at Ft (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:1:52135)
+	at ps (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:2319)
+	at e (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:4291)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:4830)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 12:55:44] Formatting completed in 32.989693ms.
+["INFO" - 12:56:11] Formatting /home/steph/sprint_03/index.html
+["INFO" - 12:56:11] Using ignore file (if present) at undefined
+["INFO" - 12:56:11] Using bundled version of prettier.
+["INFO" - 12:56:11] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 12:56:11] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 12:56:11] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["ERROR" - 12:56:11] Error formatting document.
+["ERROR" - 12:56:11] Unexpected character "
+" (69:9)
+  67 | raffraichir la liste
+  68 | [11:32]
+> 69 | &#128168
+     |         ^
+  70 | [11:32]
+  71 | ;
+  72 | [11:32]
+SyntaxError: Unexpected character "
+" (69:9)
+  67 | raffraichir la liste
+  68 | [11:32]
+> 69 | &#128168
+     |         ^
+  70 | [11:32]
+  71 | ;
+  72 | [11:32]
+	at Ft (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:1:52135)
+	at ps (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:2319)
+	at e (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:4291)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:4830)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 12:56:11] Formatting completed in 26.242555ms.
+["INFO" - 12:56:53] Formatting /home/steph/sprint_03/index.html
+["INFO" - 12:56:53] Using ignore file (if present) at undefined
+["INFO" - 12:56:53] Using bundled version of prettier.
+["INFO" - 12:56:53] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 12:56:53] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 12:56:53] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["ERROR" - 12:56:53] Error formatting document.
+["ERROR" - 12:56:53] Unexpected character "
+" (69:9)
+  67 | raffraichir la liste
+  68 | [11:32]
+> 69 | &#128168
+     |         ^
+  70 | [11:32]
+  71 | ;
+  72 | [11:32]
+SyntaxError: Unexpected character "
+" (69:9)
+  67 | raffraichir la liste
+  68 | [11:32]
+> 69 | &#128168
+     |         ^
+  70 | [11:32]
+  71 | ;
+  72 | [11:32]
+	at Ft (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:1:52135)
+	at ps (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:2319)
+	at e (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:4291)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:4830)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 12:56:53] Formatting completed in 56.558955ms.
+["INFO" - 12:57:13] Formatting /home/steph/sprint_03/index.html
+["INFO" - 12:57:13] Using ignore file (if present) at undefined
+["INFO" - 12:57:13] Using bundled version of prettier.
+["INFO" - 12:57:13] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 12:57:13] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 12:57:13] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["ERROR" - 12:57:13] Error formatting document.
+["ERROR" - 12:57:13] Unexpected character "
+" (69:9)
+  67 | raffraichir la liste
+  68 | [11:32]
+> 69 | &#128168
+     |         ^
+  70 | [11:32]
+  71 | ;
+  72 | [11:32]
+SyntaxError: Unexpected character "
+" (69:9)
+  67 | raffraichir la liste
+  68 | [11:32]
+> 69 | &#128168
+     |         ^
+  70 | [11:32]
+  71 | ;
+  72 | [11:32]
+	at Ft (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:1:52135)
+	at ps (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:2319)
+	at e (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:4291)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:4830)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 12:57:13] Formatting completed in 31.742171ms.
+["INFO" - 12:57:25] Formatting /home/steph/sprint_03/index.html
+["INFO" - 12:57:25] Using ignore file (if present) at undefined
+["INFO" - 12:57:25] Using bundled version of prettier.
+["INFO" - 12:57:25] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 12:57:25] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 12:57:25] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["ERROR" - 12:57:25] Error formatting document.
+["ERROR" - 12:57:25] Unexpected character "
+" (69:9)
+  67 | raffraichir la liste
+  68 | [11:32]
+> 69 | &#128168
+     |         ^
+  70 | [11:32]
+  71 | ;
+  72 | [11:32]
+SyntaxError: Unexpected character "
+" (69:9)
+  67 | raffraichir la liste
+  68 | [11:32]
+> 69 | &#128168
+     |         ^
+  70 | [11:32]
+  71 | ;
+  72 | [11:32]
+	at Ft (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:1:52135)
+	at ps (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:2319)
+	at e (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:4291)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:4830)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 12:57:25] Formatting completed in 24.503304ms.
+["INFO" - 13:01:56] Formatting /home/steph/sprint_03/index.html
+["INFO" - 13:01:56] Using ignore file (if present) at undefined
+["INFO" - 13:01:56] Using bundled version of prettier.
+["INFO" - 13:01:56] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 13:01:56] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:01:56] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 13:01:57] Formatting completed in 356.428502ms.
+["INFO" - 13:02:06] Formatting /home/steph/sprint_03/index.html
+["INFO" - 13:02:06] Using ignore file (if present) at undefined
+["INFO" - 13:02:06] Using bundled version of prettier.
+["INFO" - 13:02:06] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 13:02:06] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:02:06] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 13:02:06] Formatting completed in 171.407494ms.
+["INFO" - 13:02:38] Formatting /home/steph/sprint_03/index.html
+["INFO" - 13:02:38] Using ignore file (if present) at undefined
+["INFO" - 13:02:38] Using bundled version of prettier.
+["INFO" - 13:02:38] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 13:02:38] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:02:38] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 13:02:38] Formatting completed in 154.466091ms.
+["INFO" - 13:03:29] Formatting /home/steph/sprint_03/index.html
+["INFO" - 13:03:29] Using ignore file (if present) at undefined
+["INFO" - 13:03:29] Using bundled version of prettier.
+["INFO" - 13:03:29] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 13:03:29] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:03:29] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 13:03:29] Formatting completed in 127.612427ms.
+["INFO" - 13:04:21] Formatting /home/steph/sprint_03/index.html
+["INFO" - 13:04:21] Using ignore file (if present) at undefined
+["INFO" - 13:04:21] Using bundled version of prettier.
+["INFO" - 13:04:21] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 13:04:21] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:04:21] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 13:04:21] Formatting completed in 117.428132ms.
+["INFO" - 13:04:54] Formatting /home/steph/sprint_03/index.html
+["INFO" - 13:04:54] Using ignore file (if present) at undefined
+["INFO" - 13:04:54] Using bundled version of prettier.
+["INFO" - 13:04:54] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 13:04:54] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:04:54] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 13:04:54] Formatting completed in 139.456541ms.
+["INFO" - 13:05:14] Formatting /home/steph/sprint_03/index.html
+["INFO" - 13:05:14] Using ignore file (if present) at undefined
+["INFO" - 13:05:14] Using bundled version of prettier.
+["INFO" - 13:05:14] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 13:05:14] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:05:14] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 13:05:14] Formatting completed in 135.110232ms.
+["INFO" - 13:05:42] Formatting /home/steph/sprint_03/index.html
+["INFO" - 13:05:42] Using ignore file (if present) at undefined
+["INFO" - 13:05:42] Using bundled version of prettier.
+["INFO" - 13:05:42] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 13:05:42] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:05:42] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 13:05:42] Formatting completed in 183.555779ms.
+["INFO" - 13:07:01] Formatting /home/steph/sprint_03/index.html
+["INFO" - 13:07:01] Using ignore file (if present) at undefined
+["INFO" - 13:07:01] Using bundled version of prettier.
+["INFO" - 13:07:01] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 13:07:01] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:07:01] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 13:07:01] Formatting completed in 118.113083ms.
+["INFO" - 13:08:04] Formatting /home/steph/sprint_03/index.html
+["INFO" - 13:08:04] Using ignore file (if present) at undefined
+["INFO" - 13:08:04] Using bundled version of prettier.
+["INFO" - 13:08:04] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 13:08:04] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:08:04] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 13:08:04] Formatting completed in 118.792522ms.
+["INFO" - 13:09:34] Formatting /home/steph/sprint_03/index.html
+["INFO" - 13:09:34] Using ignore file (if present) at undefined
+["INFO" - 13:09:34] Using bundled version of prettier.
+["INFO" - 13:09:34] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 13:09:34] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:09:34] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 13:09:34] Formatting completed in 119.835108ms.
+["INFO" - 13:10:14] Formatting /home/steph/sprint_03/index.html
+["INFO" - 13:10:14] Using ignore file (if present) at undefined
+["INFO" - 13:10:14] Using bundled version of prettier.
+["INFO" - 13:10:14] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 13:10:14] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:10:14] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 13:10:14] Formatting completed in 119.523098ms.
+["INFO" - 13:11:16] Formatting /home/steph/sprint_03/index.html
+["INFO" - 13:11:16] Using ignore file (if present) at undefined
+["INFO" - 13:11:16] Using bundled version of prettier.
+["INFO" - 13:11:16] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 13:11:16] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:11:16] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 13:11:16] Formatting completed in 133.498796ms.
+["INFO" - 13:11:29] Formatting /home/steph/sprint_03/index.html
+["INFO" - 13:11:29] Using ignore file (if present) at undefined
+["INFO" - 13:11:29] Using bundled version of prettier.
+["INFO" - 13:11:29] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 13:11:29] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:11:29] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 13:11:29] Formatting completed in 174.263687ms.
+["INFO" - 13:19:06] Formatting /home/steph/sprint_03/index.html
+["INFO" - 13:19:06] Using ignore file (if present) at undefined
+["INFO" - 13:19:06] Using bundled version of prettier.
+["INFO" - 13:19:06] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 13:19:06] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:19:06] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["ERROR" - 13:19:06] Error formatting document.
+["ERROR" - 13:19:06] Unexpected closing tag "p". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags (44:53)
+  42 |         <button id="suivant" type="submit"
+  43 |           Au suivant
+> 44 |           style="font-size: 15px"&#128168;></button></p>
+     |                                                     ^
+  45 |           !
+  46 |         </button>
+  47 |         <button id="raffraichir" type="submit">
+SyntaxError: Unexpected closing tag "p". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags (44:53)
+  42 |         <button id="suivant" type="submit"
+  43 |           Au suivant
+> 44 |           style="font-size: 15px"&#128168;></button></p>
+     |                                                     ^
+  45 |           !
+  46 |         </button>
+  47 |         <button id="raffraichir" type="submit">
+	at Ft (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:1:52135)
+	at ps (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:2319)
+	at e (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:4291)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:4830)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 13:19:06] Formatting completed in 30.62939ms.
+["INFO" - 13:19:51] Formatting /home/steph/sprint_03/index.html
+["INFO" - 13:19:51] Using ignore file (if present) at undefined
+["INFO" - 13:19:51] Using bundled version of prettier.
+["INFO" - 13:19:51] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 13:19:51] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:19:51] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["ERROR" - 13:19:51] Error formatting document.
+["ERROR" - 13:19:51] Unexpected closing tag "p". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags (43:64)
+  41 |         <h3>Liste des apprenants.e.s</h3>
+  42 |         <button id="suivant" type="submit"
+> 43 |           Au suivant style="font-size: 15px"&#128168;></button></p>!
+     |                                                                ^
+  44 |         </button>
+  45 |         <button id="raffraichir" type="submit">
+  46 |           Raffraichir la liste
+SyntaxError: Unexpected closing tag "p". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags (43:64)
+  41 |         <h3>Liste des apprenants.e.s</h3>
+  42 |         <button id="suivant" type="submit"
+> 43 |           Au suivant style="font-size: 15px"&#128168;></button></p>!
+     |                                                                ^
+  44 |         </button>
+  45 |         <button id="raffraichir" type="submit">
+  46 |           Raffraichir la liste
+	at Ft (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:1:52135)
+	at ps (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:2319)
+	at e (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:4291)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-html.js:113:4830)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 13:19:51] Formatting completed in 29.777874ms.
+["INFO" - 13:22:10] Formatting /home/steph/sprint_03/index.html
+["INFO" - 13:22:10] Using ignore file (if present) at undefined
+["INFO" - 13:22:10] Using bundled version of prettier.
+["INFO" - 13:22:10] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 13:22:10] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:22:10] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 13:22:10] Formatting completed in 124.226543ms.
+["INFO" - 13:22:27] Formatting /home/steph/sprint_03/index.html
+["INFO" - 13:22:27] Using ignore file (if present) at undefined
+["INFO" - 13:22:27] Using bundled version of prettier.
+["INFO" - 13:22:27] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 13:22:27] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:22:27] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 13:22:27] Formatting completed in 136.057042ms.
+["INFO" - 13:30:25] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 13:30:25] Using ignore file (if present) at undefined
+["INFO" - 13:30:25] Using bundled version of prettier.
+["INFO" - 13:30:25] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 13:30:25] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:30:25] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 13:30:26] Formatting completed in 98.289555ms.
+["INFO" - 13:31:24] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 13:31:24] Using ignore file (if present) at undefined
+["INFO" - 13:31:24] Using bundled version of prettier.
+["INFO" - 13:31:24] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 13:31:24] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:31:24] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 13:31:24] Formatting completed in 59.141901ms.
+["INFO" - 13:31:45] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 13:31:45] Using ignore file (if present) at undefined
+["INFO" - 13:31:45] Using bundled version of prettier.
+["INFO" - 13:31:45] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 13:31:45] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:31:45] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 13:31:45] Formatting completed in 66.429001ms.
+["INFO" - 13:32:14] Formatting /home/steph/sprint_03/index.html
+["INFO" - 13:32:14] Using ignore file (if present) at undefined
+["INFO" - 13:32:14] Using bundled version of prettier.
+["INFO" - 13:32:14] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 13:32:14] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:32:14] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 13:32:14] Formatting completed in 127.945155ms.
+["INFO" - 13:33:00] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 13:33:00] Using ignore file (if present) at undefined
+["INFO" - 13:33:00] Using bundled version of prettier.
+["INFO" - 13:33:00] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 13:33:00] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:33:00] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 13:33:00] Formatting completed in 72.527764ms.
+["INFO" - 13:46:42] Formatting /home/steph/sprint_03/index.html
+["INFO" - 13:46:42] Using ignore file (if present) at undefined
+["INFO" - 13:46:42] Using bundled version of prettier.
+["INFO" - 13:46:42] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 13:46:42] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:46:42] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 13:46:42] Formatting completed in 337.216549ms.
+["INFO" - 13:48:19] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 13:48:19] Using ignore file (if present) at undefined
+["INFO" - 13:48:19] Using bundled version of prettier.
+["INFO" - 13:48:19] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 13:48:19] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:48:19] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 13:48:19] Formatting completed in 110.020943ms.
+["INFO" - 13:49:57] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 13:49:57] Using ignore file (if present) at undefined
+["INFO" - 13:49:57] Using bundled version of prettier.
+["INFO" - 13:49:57] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 13:49:57] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:49:57] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 13:49:57] Formatting completed in 61.887079ms.
+["INFO" - 13:50:49] Formatting /home/steph/sprint_03/index.html
+["INFO" - 13:50:49] Using ignore file (if present) at undefined
+["INFO" - 13:50:49] Using bundled version of prettier.
+["INFO" - 13:50:49] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 13:50:49] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:50:49] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 13:50:49] Formatting completed in 194.373502ms.
+["INFO" - 13:54:32] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 13:54:32] Using ignore file (if present) at undefined
+["INFO" - 13:54:32] Using bundled version of prettier.
+["INFO" - 13:54:32] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 13:54:32] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:54:32] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 13:54:32] Formatting completed in 84.14776ms.
+["INFO" - 13:56:21] Formatting /home/steph/sprint_03/index.html
+["INFO" - 13:56:21] Using ignore file (if present) at undefined
+["INFO" - 13:56:21] Using bundled version of prettier.
+["INFO" - 13:56:21] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 13:56:21] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:56:21] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 13:56:21] Formatting completed in 181.221033ms.
+["INFO" - 13:57:58] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 13:57:58] Using ignore file (if present) at undefined
+["INFO" - 13:57:58] Using bundled version of prettier.
+["INFO" - 13:57:58] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 13:57:58] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:57:58] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 13:57:58] Formatting completed in 73.06291ms.
+["INFO" - 13:59:50] Formatting /home/steph/sprint_03/index.html
+["INFO" - 13:59:50] Using ignore file (if present) at undefined
+["INFO" - 13:59:50] Using bundled version of prettier.
+["INFO" - 13:59:50] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 13:59:50] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 13:59:50] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 13:59:50] Formatting completed in 119.629341ms.
+["INFO" - 14:00:59] Formatting /home/steph/sprint_03/index.html
+["INFO" - 14:00:59] Using ignore file (if present) at undefined
+["INFO" - 14:00:59] Using bundled version of prettier.
+["INFO" - 14:00:59] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 14:00:59] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:00:59] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 14:00:59] Formatting completed in 151.878048ms.
+["INFO" - 14:01:28] Formatting /home/steph/sprint_03/index.html
+["INFO" - 14:01:28] Using ignore file (if present) at undefined
+["INFO" - 14:01:28] Using bundled version of prettier.
+["INFO" - 14:01:28] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 14:01:28] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:01:28] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 14:01:28] Formatting completed in 123.119086ms.
+["INFO" - 14:02:36] Formatting /home/steph/sprint_03/index.html
+["INFO" - 14:02:36] Using ignore file (if present) at undefined
+["INFO" - 14:02:36] Using bundled version of prettier.
+["INFO" - 14:02:36] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 14:02:36] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:02:36] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 14:02:36] Formatting completed in 182.858812ms.
+["INFO" - 14:03:54] Formatting /home/steph/sprint_03/index.html
+["INFO" - 14:03:54] Using ignore file (if present) at undefined
+["INFO" - 14:03:54] Using bundled version of prettier.
+["INFO" - 14:03:54] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 14:03:54] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:03:54] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 14:03:54] Formatting completed in 107.289417ms.
+["INFO" - 14:04:05] Formatting /home/steph/sprint_03/index.html
+["INFO" - 14:04:05] Using ignore file (if present) at undefined
+["INFO" - 14:04:05] Using bundled version of prettier.
+["INFO" - 14:04:05] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 14:04:05] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:04:05] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 14:04:05] Formatting completed in 101.656286ms.
+["INFO" - 14:05:31] Formatting /home/steph/sprint_03/index.html
+["INFO" - 14:05:31] Using ignore file (if present) at undefined
+["INFO" - 14:05:31] Using bundled version of prettier.
+["INFO" - 14:05:31] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 14:05:31] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:05:31] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 14:05:31] Formatting completed in 85.511462ms.
+["INFO" - 14:05:47] Formatting /home/steph/sprint_03/index.html
+["INFO" - 14:05:47] Using ignore file (if present) at undefined
+["INFO" - 14:05:47] Using bundled version of prettier.
+["INFO" - 14:05:47] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 14:05:47] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:05:47] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 14:05:47] Formatting completed in 105.862834ms.
+["INFO" - 14:11:07] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:11:07] Using ignore file (if present) at undefined
+["INFO" - 14:11:07] Using bundled version of prettier.
+["INFO" - 14:11:07] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:11:07] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:11:07] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:11:07] Formatting completed in 72.03416ms.
+["INFO" - 14:12:06] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:12:06] Using ignore file (if present) at undefined
+["INFO" - 14:12:06] Using bundled version of prettier.
+["INFO" - 14:12:06] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:12:06] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:12:06] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:12:06] Formatting completed in 129.575104ms.
+["INFO" - 14:12:21] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:12:21] Using ignore file (if present) at undefined
+["INFO" - 14:12:21] Using bundled version of prettier.
+["INFO" - 14:12:21] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:12:21] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:12:21] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:12:21] Formatting completed in 91.628282ms.
+["INFO" - 14:12:36] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:12:36] Using ignore file (if present) at undefined
+["INFO" - 14:12:36] Using bundled version of prettier.
+["INFO" - 14:12:36] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:12:36] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:12:36] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:12:36] Formatting completed in 76.932536ms.
+["INFO" - 14:12:56] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:12:56] Using ignore file (if present) at undefined
+["INFO" - 14:12:56] Using bundled version of prettier.
+["INFO" - 14:12:56] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:12:56] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:12:56] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:12:56] Formatting completed in 84.410982ms.
+["INFO" - 14:15:44] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:15:44] Using ignore file (if present) at undefined
+["INFO" - 14:15:44] Using bundled version of prettier.
+["INFO" - 14:15:44] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:15:44] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:15:44] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:15:44] Formatting completed in 207.569732ms.
+["INFO" - 14:16:09] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:16:09] Using ignore file (if present) at undefined
+["INFO" - 14:16:09] Using bundled version of prettier.
+["INFO" - 14:16:09] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:16:09] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:16:09] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:16:09] Formatting completed in 88.015407ms.
+["INFO" - 14:17:35] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:17:35] Using ignore file (if present) at undefined
+["INFO" - 14:17:35] Using bundled version of prettier.
+["INFO" - 14:17:35] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:17:35] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:17:35] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:17:35] Formatting completed in 63.898886ms.
+["INFO" - 14:19:05] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:19:05] Using ignore file (if present) at undefined
+["INFO" - 14:19:05] Using bundled version of prettier.
+["INFO" - 14:19:05] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:19:05] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:19:05] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:19:05] Formatting completed in 62.340803ms.
+["INFO" - 14:19:26] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:19:26] Using ignore file (if present) at undefined
+["INFO" - 14:19:26] Using bundled version of prettier.
+["INFO" - 14:19:26] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:19:26] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:19:26] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:19:26] Formatting completed in 67.328486ms.
+["INFO" - 14:23:30] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:23:30] Using ignore file (if present) at undefined
+["INFO" - 14:23:30] Using bundled version of prettier.
+["INFO" - 14:23:30] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:23:30] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:23:30] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:23:30] Formatting completed in 114.680445ms.
+["INFO" - 14:24:00] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:24:00] Using ignore file (if present) at undefined
+["INFO" - 14:24:00] Using bundled version of prettier.
+["INFO" - 14:24:00] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:24:00] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:24:00] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:24:00] Formatting completed in 55.5234ms.
+["INFO" - 14:24:31] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:24:31] Using ignore file (if present) at undefined
+["INFO" - 14:24:31] Using bundled version of prettier.
+["INFO" - 14:24:31] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:24:31] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:24:31] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:24:31] Formatting completed in 59.826541ms.
+["INFO" - 14:25:06] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:25:06] Using ignore file (if present) at undefined
+["INFO" - 14:25:06] Using bundled version of prettier.
+["INFO" - 14:25:06] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:25:06] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:25:06] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:25:06] Formatting completed in 77.292893ms.
+["INFO" - 14:25:23] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:25:23] Using ignore file (if present) at undefined
+["INFO" - 14:25:23] Using bundled version of prettier.
+["INFO" - 14:25:23] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:25:23] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:25:23] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:25:23] Formatting completed in 53.011107ms.
+["INFO" - 14:27:21] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:27:21] Using ignore file (if present) at undefined
+["INFO" - 14:27:21] Using bundled version of prettier.
+["INFO" - 14:27:21] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:27:21] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:27:21] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:27:21] Formatting completed in 81.905505ms.
+["INFO" - 14:28:37] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:28:37] Using ignore file (if present) at undefined
+["INFO" - 14:28:37] Using bundled version of prettier.
+["INFO" - 14:28:37] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:28:37] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:28:37] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:28:37] Formatting completed in 55.068122ms.
+["INFO" - 14:30:13] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:30:13] Using ignore file (if present) at undefined
+["INFO" - 14:30:13] Using bundled version of prettier.
+["INFO" - 14:30:13] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:30:13] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:30:13] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:30:13] Formatting completed in 58.609884ms.
+["INFO" - 14:30:50] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:30:50] Using ignore file (if present) at undefined
+["INFO" - 14:30:50] Using bundled version of prettier.
+["INFO" - 14:30:50] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:30:50] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:30:50] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:30:50] Formatting completed in 53.872188ms.
+["INFO" - 14:32:26] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:32:26] Using ignore file (if present) at undefined
+["INFO" - 14:32:26] Using bundled version of prettier.
+["INFO" - 14:32:26] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:32:26] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:32:26] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:32:26] Formatting completed in 56.327009ms.
+["INFO" - 14:33:41] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:33:41] Using ignore file (if present) at undefined
+["INFO" - 14:33:41] Using bundled version of prettier.
+["INFO" - 14:33:41] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:33:41] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:33:41] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:33:41] Formatting completed in 85.317413ms.
+["INFO" - 14:35:02] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:35:02] Using ignore file (if present) at undefined
+["INFO" - 14:35:02] Using bundled version of prettier.
+["INFO" - 14:35:02] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:35:02] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:35:02] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:35:02] Formatting completed in 70.060019ms.
+["INFO" - 14:35:29] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:35:29] Using ignore file (if present) at undefined
+["INFO" - 14:35:29] Using bundled version of prettier.
+["INFO" - 14:35:29] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:35:29] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:35:29] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:35:29] Formatting completed in 63.768904ms.
+["INFO" - 14:36:50] Formatting /home/steph/sprint_03/index.html
+["INFO" - 14:36:50] Using ignore file (if present) at undefined
+["INFO" - 14:36:50] Using bundled version of prettier.
+["INFO" - 14:36:50] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 14:36:50] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:36:50] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 14:36:51] Formatting completed in 113.779119ms.
+["INFO" - 14:37:10] Formatting /home/steph/sprint_03/index.html
+["INFO" - 14:37:10] Using ignore file (if present) at undefined
+["INFO" - 14:37:10] Using bundled version of prettier.
+["INFO" - 14:37:10] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 14:37:10] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:37:10] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 14:37:10] Formatting completed in 95.436663ms.
+["INFO" - 14:51:59] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:51:59] Using ignore file (if present) at undefined
+["INFO" - 14:51:59] Using bundled version of prettier.
+["INFO" - 14:51:59] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:51:59] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:51:59] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:51:59] Formatting completed in 54.046654ms.
+["INFO" - 14:52:16] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:52:16] Using ignore file (if present) at undefined
+["INFO" - 14:52:16] Using bundled version of prettier.
+["INFO" - 14:52:16] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:52:16] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:52:16] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:52:16] Formatting completed in 56.515943ms.
+["INFO" - 14:52:55] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:52:55] Using ignore file (if present) at undefined
+["INFO" - 14:52:55] Using bundled version of prettier.
+["INFO" - 14:52:55] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:52:55] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:52:55] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:52:55] Formatting completed in 49.550448ms.
+["INFO" - 14:53:35] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 14:53:35] Using ignore file (if present) at undefined
+["INFO" - 14:53:35] Using bundled version of prettier.
+["INFO" - 14:53:35] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 14:53:35] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 14:53:35] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 14:53:35] Formatting completed in 66.609561ms.
+["INFO" - 15:28:31] Formatting /home/steph/sprint_03/index.html
+["INFO" - 15:28:31] Using ignore file (if present) at undefined
+["INFO" - 15:28:31] Using bundled version of prettier.
+["INFO" - 15:28:31] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 15:28:31] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 15:28:31] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 15:28:31] Formatting completed in 90.429119ms.
+["INFO" - 15:29:05] Formatting /home/steph/sprint_03/index.html
+["INFO" - 15:29:05] Using ignore file (if present) at undefined
+["INFO" - 15:29:05] Using bundled version of prettier.
+["INFO" - 15:29:05] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 15:29:05] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 15:29:05] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 15:29:05] Formatting completed in 80.016352ms.
+["INFO" - 15:29:33] Formatting /home/steph/sprint_03/index.html
+["INFO" - 15:29:33] Using ignore file (if present) at undefined
+["INFO" - 15:29:33] Using bundled version of prettier.
+["INFO" - 15:29:33] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 15:29:33] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 15:29:33] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 15:29:33] Formatting completed in 87.929333ms.
+["INFO" - 15:36:48] Formatting /home/steph/sprint_03/index.html
+["INFO" - 15:36:48] Using ignore file (if present) at undefined
+["INFO" - 15:36:48] Using bundled version of prettier.
+["INFO" - 15:36:48] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 15:36:48] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 15:36:48] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 15:36:49] Formatting completed in 81.488758ms.
+["INFO" - 15:37:55] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 15:37:55] Using ignore file (if present) at undefined
+["INFO" - 15:37:55] Using bundled version of prettier.
+["INFO" - 15:37:55] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 15:37:55] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 15:37:55] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 15:37:55] Formatting completed in 64.143394ms.
+["INFO" - 15:38:27] Formatting /home/steph/sprint_03/index.html
+["INFO" - 15:38:27] Using ignore file (if present) at undefined
+["INFO" - 15:38:27] Using bundled version of prettier.
+["INFO" - 15:38:27] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 15:38:27] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 15:38:27] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 15:38:27] Formatting completed in 87.984274ms.
+["INFO" - 15:40:59] Formatting /home/steph/sprint_03/index.html
+["INFO" - 15:40:59] Using ignore file (if present) at undefined
+["INFO" - 15:40:59] Using bundled version of prettier.
+["INFO" - 15:40:59] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 15:40:59] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 15:40:59] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 15:40:59] Formatting completed in 93.36399ms.
+["INFO" - 15:41:47] Formatting /home/steph/sprint_03/index.html
+["INFO" - 15:41:47] Using ignore file (if present) at undefined
+["INFO" - 15:41:47] Using bundled version of prettier.
+["INFO" - 15:41:47] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 15:41:47] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 15:41:47] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 15:41:47] Formatting completed in 86.862729ms.
+["INFO" - 15:42:41] Formatting /home/steph/sprint_03/index.html
+["INFO" - 15:42:41] Using ignore file (if present) at undefined
+["INFO" - 15:42:41] Using bundled version of prettier.
+["INFO" - 15:42:41] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 15:42:41] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 15:42:41] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 15:42:42] Formatting completed in 96.781709ms.
+["INFO" - 15:43:36] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 15:43:36] Using ignore file (if present) at undefined
+["INFO" - 15:43:36] Using bundled version of prettier.
+["INFO" - 15:43:36] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 15:43:36] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 15:43:36] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 15:43:36] Formatting completed in 63.313174ms.
+["INFO" - 15:47:38] Formatting /home/steph/sprint_03/index.html
+["INFO" - 15:47:38] Using ignore file (if present) at undefined
+["INFO" - 15:47:38] Using bundled version of prettier.
+["INFO" - 15:47:38] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 15:47:38] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 15:47:38] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 15:47:38] Formatting completed in 89.335634ms.
+["INFO" - 15:48:26] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 15:48:26] Using ignore file (if present) at undefined
+["INFO" - 15:48:26] Using bundled version of prettier.
+["INFO" - 15:48:26] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 15:48:26] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 15:48:26] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 15:48:26] Formatting completed in 89.307742ms.
+["INFO" - 15:49:12] Formatting /home/steph/sprint_03/index.html
+["INFO" - 15:49:12] Using ignore file (if present) at undefined
+["INFO" - 15:49:12] Using bundled version of prettier.
+["INFO" - 15:49:12] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 15:49:12] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 15:49:12] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 15:49:12] Formatting completed in 88.80549ms.
+["INFO" - 16:05:31] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 16:05:31] Using ignore file (if present) at undefined
+["INFO" - 16:05:31] Using bundled version of prettier.
+["INFO" - 16:05:31] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 16:05:31] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 16:05:31] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 16:05:31] Formatting completed in 48.76869ms.
+["INFO" - 16:05:46] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 16:05:46] Using ignore file (if present) at undefined
+["INFO" - 16:05:46] Using bundled version of prettier.
+["INFO" - 16:05:46] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 16:05:46] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 16:05:46] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 16:05:46] Formatting completed in 58.805061ms.
+["INFO" - 16:06:05] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 16:06:05] Using ignore file (if present) at undefined
+["INFO" - 16:06:05] Using bundled version of prettier.
+["INFO" - 16:06:05] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 16:06:05] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 16:06:05] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 16:06:05] Formatting completed in 50.780426ms.
+["INFO" - 16:06:20] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 16:06:20] Using ignore file (if present) at undefined
+["INFO" - 16:06:20] Using bundled version of prettier.
+["INFO" - 16:06:20] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 16:06:20] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 16:06:20] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 16:06:20] Formatting completed in 54.305647ms.
+["INFO" - 16:09:31] Formatting /home/steph/sprint_03/index.html
+["INFO" - 16:09:31] Using ignore file (if present) at undefined
+["INFO" - 16:09:31] Using bundled version of prettier.
+["INFO" - 16:09:31] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 16:09:31] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 16:09:31] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 16:09:31] Formatting completed in 104.664187ms.
+["INFO" - 16:10:46] Formatting /home/steph/sprint_03/index.html
+["INFO" - 16:10:46] Using ignore file (if present) at undefined
+["INFO" - 16:10:46] Using bundled version of prettier.
+["INFO" - 16:10:46] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 16:10:46] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 16:10:46] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 16:10:46] Formatting completed in 87.170987ms.
+["INFO" - 16:14:20] Formatting /home/steph/sprint_03/index.html
+["INFO" - 16:14:20] Using ignore file (if present) at undefined
+["INFO" - 16:14:20] Using bundled version of prettier.
+["INFO" - 16:14:20] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 16:14:20] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 16:14:20] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 16:14:20] Formatting completed in 113.196135ms.
+["INFO" - 16:15:59] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 16:15:59] Using ignore file (if present) at undefined
+["INFO" - 16:15:59] Using bundled version of prettier.
+["INFO" - 16:15:59] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 16:15:59] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 16:15:59] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 16:15:59] Formatting completed in 58.627151ms.
+["INFO" - 16:16:08] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 16:16:08] Using ignore file (if present) at undefined
+["INFO" - 16:16:08] Using bundled version of prettier.
+["INFO" - 16:16:08] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 16:16:08] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 16:16:08] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 16:16:08] Formatting completed in 64.403034ms.
+["INFO" - 16:18:25] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 16:18:25] Using ignore file (if present) at undefined
+["INFO" - 16:18:25] Using bundled version of prettier.
+["INFO" - 16:18:25] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 16:18:25] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 16:18:25] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 16:18:25] Formatting completed in 66.017473ms.
+["INFO" - 16:18:39] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 16:18:39] Using ignore file (if present) at undefined
+["INFO" - 16:18:39] Using bundled version of prettier.
+["INFO" - 16:18:39] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 16:18:39] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 16:18:39] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 16:18:39] Formatting completed in 58.333457ms.
+["INFO" - 16:19:57] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 16:19:57] Using ignore file (if present) at undefined
+["INFO" - 16:19:57] Using bundled version of prettier.
+["INFO" - 16:19:57] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 16:19:57] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 16:19:57] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 16:19:57] Formatting completed in 63.545851ms.
+["INFO" - 16:26:10] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 16:26:10] Using ignore file (if present) at undefined
+["INFO" - 16:26:10] Using bundled version of prettier.
+["INFO" - 16:26:10] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 16:26:10] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 16:26:10] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 16:26:10] Formatting completed in 46.72353ms.
+["INFO" - 16:26:17] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 16:26:17] Using ignore file (if present) at undefined
+["INFO" - 16:26:17] Using bundled version of prettier.
+["INFO" - 16:26:17] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 16:26:17] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 16:26:17] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 16:26:17] Formatting completed in 58.462078ms.
+["INFO" - 16:28:04] Formatting /home/steph/sprint_03/index.html
+["INFO" - 16:28:04] Using ignore file (if present) at undefined
+["INFO" - 16:28:04] Using bundled version of prettier.
+["INFO" - 16:28:04] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 16:28:04] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 16:28:04] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 16:28:04] Formatting completed in 207.629292ms.
+["INFO" - 16:56:00] Formatting /home/steph/sprint_03/script.js
+["INFO" - 16:56:00] Using ignore file (if present) at undefined
+["INFO" - 16:56:00] Using bundled version of prettier.
+["INFO" - 16:56:00] File Info:
+{
+  "ignored": false,
+  "inferredParser": "babel"
+}
+["INFO" - 16:56:00] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 16:56:00] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/script.js",
+  "parser": "babel"
+}
+["ERROR" - 16:56:00] Error formatting document.
+["ERROR" - 16:56:00] Unexpected token (53:1)
+  51 | // }
+  52 | 
+> 53 | }
+     | ^
+  54 | </script>
+  55 | ne pas oublier le localStorage
+SyntaxError: Unexpected token (53:1)
+  51 | // }
+  52 | 
+> 53 | }
+     | ^
+  54 | </script>
+  55 | ne pas oublier le localStorage
+	at t (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:379)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/parser-babel.js:1:291160)
+	at Object.parse (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:13565:19)
+	at coreFormat (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:14841:25)
+	at format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15063:14)
+	at formatWithCursor (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:15080:12)
+	at /home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54672:12
+	at Object.format (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/node_modules/prettier/index.js:54692:12)
+	at t.default.<anonymous> (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:59979)
+	at Generator.next (<anonymous>)
+	at s (/home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension.js:1:54263)
+["INFO" - 16:56:00] Formatting completed in 27.193893ms.
+["INFO" - 16:56:03] Formatting /home/steph/sprint_03/styles.css
+["INFO" - 16:56:03] Using ignore file (if present) at undefined
+["INFO" - 16:56:03] Using bundled version of prettier.
+["INFO" - 16:56:03] File Info:
+{
+  "ignored": false,
+  "inferredParser": "css"
+}
+["INFO" - 16:56:03] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 16:56:03] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/styles.css",
+  "parser": "css"
+}
+["INFO" - 16:56:03] Formatting completed in 67.606953ms.
+["INFO" - 16:56:06] Formatting /home/steph/sprint_03/index.html
+["INFO" - 16:56:06] Using ignore file (if present) at undefined
+["INFO" - 16:56:06] Using bundled version of prettier.
+["INFO" - 16:56:06] File Info:
+{
+  "ignored": false,
+  "inferredParser": "html"
+}
+["INFO" - 16:56:06] No local configuration (i.e. .prettierrc or .editorconfig) detected, falling back to VS Code configuration
+["INFO" - 16:56:06] Prettier Options:
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "filepath": "/home/steph/sprint_03/index.html",
+  "parser": "html"
+}
+["INFO" - 16:56:06] Formatting completed in 131.028333ms.

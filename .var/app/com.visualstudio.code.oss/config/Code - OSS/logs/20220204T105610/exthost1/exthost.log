@@ -1,0 +1,23 @@
+[2022-02-04 10:56:12.962] [exthost] [info] extension host started
+[2022-02-04 10:56:13.014] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2022-02-04 10:56:13.015] [exthost] [info] ExtensionService#loadCommonJSModule file:///app/share/code-oss/resources/app/extensions/debug-auto-launch/dist/extension
+[2022-02-04 10:56:13.022] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"*"}
+[2022-02-04 10:56:13.022] [exthost] [info] ExtensionService#loadCommonJSModule file:///app/share/code-oss/resources/app/extensions/emmet/dist/extension
+[2022-02-04 10:56:13.050] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.git","_lower":"vscode.git"},"activationEvent":"*"}
+[2022-02-04 10:56:13.050] [exthost] [info] ExtensionService#loadCommonJSModule file:///app/share/code-oss/resources/app/extensions/git/dist/main
+[2022-02-04 10:56:13.081] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"*"}
+[2022-02-04 10:56:13.082] [exthost] [info] ExtensionService#loadCommonJSModule file:///app/share/code-oss/resources/app/extensions/merge-conflict/dist/extension
+[2022-02-04 10:56:13.086] [exthost] [info] ExtensionService#_doActivateExtension vscode.search-result {"startup":true,"extensionId":{"value":"vscode.search-result","_lower":"vscode.search-result"},"activationEvent":"*"}
+[2022-02-04 10:56:13.086] [exthost] [info] ExtensionService#loadCommonJSModule file:///app/share/code-oss/resources/app/extensions/search-result/dist/extension.js
+[2022-02-04 10:56:13.089] [exthost] [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode {"startup":true,"extensionId":{"value":"esbenp.prettier-vscode","_lower":"esbenp.prettier-vscode"},"activationEvent":"*"}
+[2022-02-04 10:56:13.089] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/steph/.vscode-oss/extensions/esbenp.prettier-vscode-5.5.0/dist/extension
+[2022-02-04 10:56:13.205] [exthost] [info] eager extensions activated
+[2022-02-04 10:56:23.119] [exthost] [info] ExtensionService#_doActivateExtension vscode.html-language-features {"startup":false,"extensionId":{"value":"vscode.html-language-features","_lower":"vscode.html-language-features"},"activationEvent":"onLanguage:html"}
+[2022-02-04 10:56:23.119] [exthost] [info] ExtensionService#loadCommonJSModule file:///app/share/code-oss/resources/app/extensions/html-language-features/client/dist/htmlMain
+[2022-02-04 10:56:25.395] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"extensionId":{"value":"vscode.typescript-language-features","_lower":"vscode.typescript-language-features"},"activationEvent":"onLanguage:javascript"}
+[2022-02-04 10:56:25.395] [exthost] [info] ExtensionService#loadCommonJSModule file:///app/share/code-oss/resources/app/extensions/typescript-language-features/dist/extension
+[2022-02-04 10:56:29.412] [exthost] [info] ExtensionService#_doActivateExtension vscode.css-language-features {"startup":false,"extensionId":{"value":"vscode.css-language-features","_lower":"vscode.css-language-features"},"activationEvent":"onLanguage:css"}
+[2022-02-04 10:56:29.412] [exthost] [info] ExtensionService#loadCommonJSModule file:///app/share/code-oss/resources/app/extensions/css-language-features/client/dist/cssMain
+[2022-02-04 10:57:32.517] [exthost] [info] ExtensionService#_doActivateExtension vscode.extension-editing {"startup":false,"extensionId":{"value":"vscode.extension-editing","_lower":"vscode.extension-editing"},"activationEvent":"onLanguage:typescript"}
+[2022-02-04 10:57:32.517] [exthost] [info] ExtensionService#loadCommonJSModule file:///app/share/code-oss/resources/app/extensions/extension-editing/dist/extension
+[2022-02-04 11:15:43.890] [exthost] [warning] INVALID text edit -> must have at least a label
